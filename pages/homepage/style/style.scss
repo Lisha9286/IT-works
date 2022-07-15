@@ -1,4 +1,4 @@
-@import "./variables";
+@import "../../../style_global/variables";
 
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -7,7 +7,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 .wrapper{
-    background-image: url('/assets/backmain.jpg');
+    background-image: url('../../../assets/images/backmain.jpg');
     background-size: cover;
     
     .header{
