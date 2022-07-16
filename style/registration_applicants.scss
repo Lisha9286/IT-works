@@ -1,0 +1,94 @@
+.wrapper {
+
+    background-image: url("../assets/images/backmain.jpg");
+    background-size: cover;
+    height: 120vh;
+
+    .header {
+        display: flex;
+
+        .header__registration {
+            display: flex;
+            flex-basis: 100%;
+            align-items: space-between;
+
+        }
+
+        .header__language {
+            flex-basis: 20%;
+            align-self: center;
+        }
+
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header_logo-reg {
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #2557a7;
+        letter-spacing: 2px;
+        margin-top: 5%;
+    }
+
+    .registration {
+        background-color: white;
+        padding: 33px 55px;
+        border-radius: 10px;
+    }
+
+    .registration__group {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .title-reg {
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 2.5rem;
+        color: white;
+        text-align: center;
+    }
+
+    .form-label {
+        color: $light-gray;
+        font-family: 'Roboto';
+        font-weight: 100;
+    }
+
+    .form-control {
+        background-color: rgb(245, 245, 245);
+    }
+
+    .btn {
+        background-color: #2557a7;
+        color: white;
+        font-family: 'Roboto';
+    }
+
+    .registration__title {
+        font-family: 'Roboto';
+        font-weight: 100;
+    }
+
+    .footer__item-link {
+        font-family: 'Roboto';
+        font-weight: 100;
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer {
+        display: flex;
+    }
+
+    .footer__list {
+        display: flex;
+        justify-content: space-around;
+        flex-basis: 100%;
+    }
+}
