@@ -1,4 +1,4 @@
-@import "../../../style_global/variables";
+@import "./variables";
 
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -6,12 +6,12 @@
 
 @import "~bootstrap/scss/bootstrap";
 
-@import "../pages/homepage/style/style.scss";
-@import "../pages/applicants_main_page/style/style.scss";
-@import "../pages/create-resume_page/style/style.scss";
-@import "../pages/create-vacancy_page/style/style.scss";
-@import "../pages/employers_main_page/style/style.scss";
-@import "../pages/registration_applicants/style/style.scss";
-@import "../pages/registration_employers/style/style.scss";
-@import "../pages/search_applicatns_page/style/style.scss";
-@import "../pages/vacancy_search_page/style/style.scss";
+@import "../style/applicants_main.scss";
+@import "../style/create_resume.scss";
+@import "../style/create_vacancy.scss";
+@import "../style/employers_main.scss";
+@import "../style/homepage.scss";
+@import "../style/registration_applicants.scss";
+@import "../style/registration_employers.scss";
+@import "../style/search_applicants.scss";
+@import "../style/vacancy_search.scss";

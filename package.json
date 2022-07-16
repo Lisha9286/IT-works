@@ -96,7 +96,7 @@
     "yaml": "^1.10.2"
   },
   "scripts": {
-    "watch": "parcel pages/homepage/ru/index.html --open --port 3000",
+    "watch": "parcel index.html --open --port 3000",
     "watch2": "parcel pages/registration_applicants/ru/index.html --open --port 1234",
     "watch3": "parcel pages/registration_employers/ru/index.html --open --port 1235"
   },
