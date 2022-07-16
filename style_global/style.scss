@@ -1,3 +1,11 @@
+@import "../../../style_global/variables";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "~bootstrap/scss/bootstrap";
+
 @import "../pages/homepage/style/style.scss";
 @import "../pages/applicants_main_page/style/style.scss";
 @import "../pages/create-resume_page/style/style.scss";
