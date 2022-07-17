@@ -32,41 +32,48 @@
                         <h3 class="registration__title">Регистрация</h3>
                         <div class="row">
                             <label for="username" class="form-label g-2">Логин</label>
-                            <input class="form-control" type="text" name="username" maxlength="25" minlength="4"
-                                pattern="^[a-zA-Z0-9_.-]*$" id="username" placeholder="Логин" required>
+                            <input class="form-control" type="text" name="username" maxlength="20" minlength="5"
+                                id="username" placeholder="Логин" required>
                         </div>
+                        <div id="errorMessage_1"></div>
                         <div class="row ">
                             <label for="password" class="form-label g-2">Пароль</label>
                             <input class="form-control" type="password" name="Пароль" minlength="6" id="password"
                                 placeholder="Пароль" required>
                         </div>
+                        <div id="errorMessage_2"></div>
+                        <div class="row ">
+                            <label for="password" class="form-label g-2">Потвердите Пароль</label>
+                            <input class="form-control" type="password" name="Пароль" minlength="6" id="passwordRepeat"
+                                placeholder="Потвердите Пароль" required>
+                        </div>
+                        <div id="errorMessage_3"></div>
                         <div class="row">
                             <label for="email" class="form-label g-2">Email</label>
                             <input class="form-control" type="email" name="email" id="email" placeholder="Email"
                                 required>
                         </div>
+                        <div id="errorMessage_4"></div>
+
                         <div class="registration__group g-md-4">
-                            <button class="btn btn-block create-account" type="submit">Вход в аккаунт</button>
+                            <button class="btn btn-block create-account" id="register">Отправить</button>
                         </div>
+                        <div class="success" id="success"></div>
+                        <footer class="footer p-4">
+                            <ul class="footer__list">
+                                <li class="footer__item-reg">
+                                    <a href="#" class="footer__item-link">Главная </a>
+                                </li>
+                                <li class="footer__item-reg">
+                                    <a href="#" class="footer__item-link">Контакты</a>
+                                </li>
+                                <li class="footer__item-reg">
+                                    <a href="#" class="footer__item-link">О нас</a>
+                                </li>
+                            </ul>
+                        </footer>
                 </div>
-                </form>
-            </div>
-        </div>
-        <footer class="footer p-4">
-            <ul class="footer__list">
-                <li class="footer__item-reg">
-                    <a href="#" class="footer__item-link">Главная </a>
-                </li>
-                <li class="footer__item-reg">
-                    <a href="#" class="footer__item-link">Контакты</a>
-                </li>
-                <li class="footer__item-reg">
-                    <a href="#" class="footer__item-link">О нас</a>
-                </li>
-            </ul>
-        </footer>
-    </div>
-    <script src="../../../js/registration.js"></script>
+                <script src="../../../js/registration.js"></script>
 </body>
 
 </html>
