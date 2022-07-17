@@ -99,7 +99,8 @@
     "watch": "parcel index.html --open --port 3000",
     "watch2": "parcel pages/registration_applicants/ru/index.html --open --port 1234",
     "watch3": "parcel pages/registration_employers/ru/index.html --open --port 1235",
-    "watch4": "parcel pages/search_applicants_page/ru/index.html --open --port 1236"
+    "watch4": "parcel pages/search_applicants_page/ru/index.html --open --port 1236",
+    "watch6": "parcel pages/employers_main_page/ru/index.html --open --port 1238"
   },
   "repository": {
     "type": "git",
