@@ -81,9 +81,11 @@ xhttp.send();
     function init() {
         let router = new Router([
             new Route('home', 'index.html', true),            
-            new Route('pravo', 'pravo.html'),
-            new Route('levo', 'levo.html'),
-            new Route('reg', 'registr.html')
+            new Route('applicants', 'applicants.html'),
+            new Route('employers', 'employers.html'),
+            new Route('reg-applicants', 'reg-applicants.html'),
+            new Route('reg-employers', 'reg-employers.html')
+
         ]);
     }
     init();
