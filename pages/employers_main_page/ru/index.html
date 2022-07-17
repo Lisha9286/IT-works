@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../../style_global/style.scss">
     <title>Main Employers</title>
 </head>
-<body>
+<body class="page_employers">
     <div class="wrapper-emp">
         <!-- Sidebar  -->
         <nav id="sidebar">
@@ -61,18 +61,15 @@
                 <div class="container-fluid">
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
+                        <span class="btn__menu">Меню</span>
                     </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-                    <div class=" collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <div class=" justify-content-end" id="navbarSupportedContent">
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href="#" class="btn btn-outline-dark btn-sm me-1" role="button">Войти</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm me-1" role="button">Войти</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="btn btn-dark btn-sm me-3" role="button">Регистрация</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-3" role="button">Регистрация</a>
                             </li>
                             <li class="nav-item active header__box">
                                 <a class="header__lang" href="../../../index.html">EN</a>
@@ -82,18 +79,149 @@
                     </div>
                 </div>
             </nav>
+            <!--Motto-->
+            <div class="row m-3 p-4">
+                <div class="col-12 d-flex justify-content-center">
+            <p class="header__subtitle subtitle__employer">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>
+        </div>
+        </div>
 <!-- Searching form-->
-<div class="d-flex justify-content-center h-50">
-    <div class="search">
-        <input type="text" class="search-input" placeholder="search..." name="">
-        <a href="#" class="search-icon">
-            <i class="bi bi-search"></i>
-        </a>
-    </div>
+<div class="container d-flex justify-content-center"> 
+	<div class="card w-75 mt-5 p-4">
+		<div class="input-group mb-3">
+			<input type="text" class="form-control" placeholder="Поиск">
+			<div class="input-group-append"><button class="btn btn-primary"><i class="class=bi bi-search"></i></button></div>
+		</div>
+</div>
 </div>
 <!-- Searching Form end-->
+<!--Popular titles-->
+<div class="row popular justify-content-center pt-3 pb-3">
+    <div class="col-10 popular__block">
+<div class="popular-title fs-6"> Популярные заголовки</div>
+<div class="row pt-3 ">
+    <div class="col-md-3 col-sm-6 pe-md-0">
+<p class="btn btn-outline-secondary">
+    Lorem ipsum
+</p>
+    </div>
+    <div class="col-md-3 col-sm-6 pe-md-0">
+        <p class="btn btn-outline-secondary">
+            Lorem ipsum
+        </p>
+            </div>
+    <div class="col-md-3 col-sm-6 pe-md-0">
+<p class="btn btn-outline-secondary">
+    Lorem ipsum
+</p>
+    </div>
+    <div class="col-md-3 col-sm-6 pe-md-0">
+<p class="btn btn-outline-secondary">
+    Lorem ipsum
+</p>
+    </div>
+</div>
+<div class="row pt-3">
+    <div class="col-md-3 col-sm-6 pe-md-0">
+        <p class="btn btn-outline-secondary">
+            Lorem ipsum
+        </p>
+    </div>
+    <div class="col-md-3 col-sm-6 pe-md-0">
+        <p class="btn btn-outline-secondary">
+            Lorem ipsum
+        </p>
+    </div>
+    <div class="col-md-3 col-sm-6 pe-md-0">
+        <p class="btn btn-outline-secondary">
+Lorem ipsum
+        </p>
+    </div>
+    <div class="col-md-3 col-sm-6 pe-md-0">
+        <p class="btn btn-outline-secondary">
+Lorem ipsum
+        </p>
+    </div>
+</div>
+</div>
+</div>
+<!-- Information Block-->
+
+<section id="gallery" class="row m-5">
+<div class="wrapper__block__info">
+    <div class="row ">
+        <div class="col-lg-3 md-4 sm-8">
+            <div class="card">
+                <img src="../../../assets/images/Information_Block.jpg" alt="" class="card-img-top">
+                <div class="card-body">
+                <h6 class="card-title">Sunset</h6>
+                <p class="card-text fs-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <a href="" class=" btn btn-outline-secondary btn-sm">Read More</a>
+                </div>
+                </div>
+            </div>
+    <div class="col-lg-3 md-4 sm-8">
+    <div class="card">
+        <img src="../../../assets/images/Information_Block.jpg" alt="" class="card-img-top">
+        <div class="card-body">
+        <h5 class="card-title">Sunset</h5>
+        <p class="card-text fs-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <a href="" class="btn btn-outline-secondary  btn-sm">Read More</a>
+        </div>
+        </div>
+    </div>
+    <div class="col-lg-3 md-4 sm-8">
+    <div class="card">
+        <img src="../../../assets/images/Information_Block.jpg" alt="" class="card-img-top">
+        <div class="card-body">
+        <h5 class="card-title">Sunset</h5>
+        <p class="card-text fs-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <a href="" class="btn btn-outline-secondary  btn-sm">Read More</a>
+        </div>
+    </div>
+    </div>
+    <div class="col-lg-3 md-4 sm-8">
+        <div class="card">
+            <img src="../../../assets/images/Information_Block.jpg" alt="" class="card-img-top">
+            <div class="card-body">
+            <h5 class="card-title">Sunset</h5>
+            <p class="card-text fs-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <a href="" class="btn btn-outline-secondary btn-sm">Read More</a>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</section>
+<!--Information Block ends-->
         </div>
         <!--Page Content end-->
     </div>
+    <footer class="bg-light text-center text-lg-start">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Footer text</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                        aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Footer text</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                        aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+    </footer>
 </body>
 </html>
