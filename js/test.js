@@ -19,6 +19,7 @@ class Registration {
             });
             if (error == 0) {
                 console.log("success");
+                document.querySelector("#success").innerHTML = "Данные успешно отправлены!<br/> Проверьте ваш Email и подтвердите регистрацию.";
                 let user = {
                     username: document.querySelector("#username").value,
                     password: document.querySelector("#password").value,
