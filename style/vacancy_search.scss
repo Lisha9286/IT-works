@@ -1,0 +1,165 @@
+$bgcolor:rgb(8, 65, 229);
+$color:white;
+
+.header{
+    display: flex;
+    align-items: center;
+    height: 170px;
+    background-image: url('../assets/images/backmain.jpg');
+    color: $color;
+}
+
+.header-logotext{
+    width: 300px;
+    margin: 0px 0px 0px 30px;
+
+.header-logotext__logo-name{
+    display: flex;
+    align-items: center;
+    
+    img {
+        height: 70px;
+        width: 100px;
+        border-radius: 10px;
+    }
+    .header-logotext__name{
+        font-weight: 700;
+        font-size: 40px;
+        margin: 0px 0px 0px 10px;
+    }
+}
+
+.header-logotext__slogan{
+    margin: 10px 0px 0px 0px;
+    font-size: 18px;
+}
+}
+
+.header-search__form{
+    width: 820px;
+    height: 50px;
+    border-radius: 10px;
+    border: 7px solid $main-color;
+}
+
+
+.header-search__btn{
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    background-color: $main-color;
+    color: $color;
+    font-weight: 500;
+    font-size: 20px;
+
+    &:hover{
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        background-color: rgb(37, 103, 202);
+    }
+
+    &:active{
+        background-color: rgb(31, 75, 140);
+    }
+}
+
+.main {
+    width: 1500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.search-container__vacancy{
+    width: 700px;
+    border-radius: 10px;
+    border: 1px solid $main-color;
+    margin: 30px 0px 0px 50px;
+}
+
+.filter-vacancy{
+    margin: 50px 0px 0px 0px;
+    font-size: 15px;
+}
+
+.filter-vacancy__container{
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.filter-vacancy__filter-title{
+    margin: 0px 0px 0px 10px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.filter-vacancy__type{
+    margin: 0px 0px 10px 0px;
+}
+
+.filter-vacancy__title{
+    font-weight: 500;
+    margin: 0px 0px 10px 0px;
+}
+
+.filter-vacancy__cities{
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-vacancy__city{
+    padding: 0px 0px 10px 0px;
+    &:last-child{
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+.filter-vacancy__points{
+    width: 200px;
+    height: 40px;
+    border: 1px solid $light-gray;
+    border-radius: 10px;
+}
+
+.filter-vacancy__input-salary{
+    width: 98px;
+    border: 1px solid $light-gray;
+    border-radius: 10px;
+}
+
+.filter-vacancy__point{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px 0px 0px;
+}
+
+.filter-vacancy__change,
+.filter-vacancy__throwoff {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    border: 1px solid $main-color;
+    border-radius: 10px;
+
+    &:hover {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        background-color: rgb(37, 103, 202);
+        color: white;
+    }
+
+    &:active{
+        background-color: rgb(31, 75, 140);
+        color: white;
+    }
+}
+
+.filter-vacancy__throwoff {
+    margin: 10px 0px 0px 0px;
+}
