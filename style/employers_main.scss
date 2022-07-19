@@ -45,7 +45,7 @@ a:focus {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
-.wrapper-emp {
+.wrapper-emp-main {
     display: flex;
     width: 100%;
     align-items: stretch;
@@ -158,29 +158,26 @@ a.article:hover {
     .subtitle__employer {
         font-size: 2em;
     }
+}
+
     /*---------------------
     Searching form Style
     -----------------------*/
     
 
-.bi {
-    color: #fff;
-}
 
 .popular-title {
-font-family: 'Roboto'
-font-size 1.5em;
+font-family: 'Roboto';
 font-weight: 300;
 color: #999;
 text-align: center;
 }
 .card{
 	border: none;
-	border-radius: 20px;
 }
 .form-control{
 	border-radius: 7px;
-	border: 1.5px solid #E3E6ED;
+	border: 1.5px solid #5878FF;
 }
 input.form-control:focus{
 	box-shadow: none;
@@ -190,12 +187,27 @@ input.form-control:focus{
 }
 .btn-primary{
 	background-color: #5878FF!important;
-	border-radius: 7px;
+    border: 1.5px solid #5878FF;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 .btn-primary:focus{
 	box-shadow: none;
 }
+.popular__titles {
+    border: 2px dashed #E3E6ED;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+    transition: 1.3s;
+    &:hover {
+    background-color: #5878FF;
+    color: #fff;
+    border: none;
+    }
 }
+
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
