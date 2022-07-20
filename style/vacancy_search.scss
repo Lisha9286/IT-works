@@ -1,66 +1,41 @@
-$bgcolor:rgb(8, 65, 229);
 $color:white;
 
 .header{
     display: flex;
-    align-items: center;
-    height: 170px;
+    flex-direction: column;
+    width: 250px;
     background-image: url('../assets/images/backmain.jpg');
     color: $color;
 }
 
 .header-logotext{
-    width: 300px;
-    margin: 0px 0px 0px 30px;
+    width: 250px;
+    height: 150px;
+    background-color: rgba(8, 8, 130, 0.363);
+    padding: 10px 0px 0px 10px;
 
 .header-logotext__logo-name{
     display: flex;
     align-items: center;
+    justify-content: center;
     
     img {
-        height: 70px;
-        width: 100px;
+        height: 50px;
+        width: 80px;
         border-radius: 10px;
     }
     .header-logotext__name{
         font-weight: 700;
-        font-size: 40px;
-        margin: 0px 0px 0px 10px;
+        font-size: 30px;
+        padding: 0px 0px 0px 10px;
     }
 }
 
 .header-logotext__slogan{
-    margin: 10px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
     font-size: 18px;
+    text-align: center;
 }
-}
-
-.header-search__form{
-    width: 820px;
-    height: 50px;
-    border-radius: 10px;
-    border: 7px solid $main-color;
-}
-
-
-.header-search__btn{
-    height: 50px;
-    width: 200px;
-    border-radius: 10px;
-    border: none;
-    background-color: $main-color;
-    color: $color;
-    font-weight: 500;
-    font-size: 20px;
-
-    &:hover{
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-        background-color: rgb(37, 103, 202);
-    }
-
-    &:active{
-        background-color: rgb(31, 75, 140);
-    }
 }
 
 .main {
@@ -69,41 +44,45 @@ $color:white;
     justify-content: space-around;
 }
 
-.search-container__vacancy{
-    width: 700px;
-    border-radius: 10px;
-    border: 1px solid $main-color;
-    margin: 30px 0px 0px 50px;
-}
 
 .filter-vacancy{
     margin: 50px 0px 0px 0px;
     font-size: 15px;
 }
 
-.filter-vacancy__container{
-    display: flex;
-    align-items: center;
 
-    img {
-        width: 25px;
-        height: 25px;
+.filter-vacancy__filter-title{
+    padding: 10px 0px 10px 10px;
+    font-weight: 500;
+    font-size: 20px;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.526);
+    }
+    &:active{
+        background-color: rgba(10, 10, 112, 0.347);
     }
 }
 
-.filter-vacancy__filter-title{
-    margin: 0px 0px 0px 10px;
+.filter-vacancy__filter-sectitle{
+    padding: 10px 0px 10px 10px;
+    background-color: rgba(10, 10, 112, 0.347);
     font-weight: 500;
     font-size: 20px;
+    display: none;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.526);
+    }
 }
 
-.filter-vacancy__type{
-    margin: 0px 0px 10px 0px;
+.filter-vacancy__typies{
+    display: none;
+    margin: 0px 0px 0px 10px;
 }
+
+
 
 .filter-vacancy__title{
     font-weight: 500;
-    margin: 0px 0px 10px 0px;
 }
 
 .filter-vacancy__cities{
@@ -112,9 +91,9 @@ $color:white;
 }
 
 .filter-vacancy__city{
-    padding: 0px 0px 10px 0px;
+    padding: 0px 0px 10px 10px;
     &:last-child{
-        padding: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 10px;
     }
 }
 
