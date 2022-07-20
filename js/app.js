@@ -63,7 +63,7 @@ hasChanged: function (scope, r){
 },
 goToRoute: function(htmlName) {
     (function(scope){
-        let url = 'smthng/' + htmlName,
+        let url = 'views' + htmlName,
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
            if(this.readyState === 4 && this.status === 200) {
@@ -77,17 +77,4 @@ xhttp.send();
 
 };
 
-(function () {
-    function init() {
-        let router = new Router([
-            new Route('home', 'index.html', true),            
-            new Route('applicants', 'applicants.html'),
-            new Route('employers', 'employers.html'),
-            new Route('reg-applicants', 'reg-applicants.html'),
-            new Route('reg-employers', 'reg-employers.html')
-
-        ]);
-    }
-    init();
-}());
 
