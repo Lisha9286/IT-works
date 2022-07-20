@@ -10,6 +10,7 @@
 </head>
 
 <body class="page_employers">
+    <div id="app"></div>
     <div class="wrapper-emp-main">
         <!-- Sidebar  -->
         <nav id="sidebar">
@@ -19,7 +20,7 @@
             <ul class="list-unstyled components">
                 <p>Работа в мире IT</p>
                 <li>
-                    <a href="#">Главная</a>
+                    <a href="./index.html">Главная</a>
                 </li>
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
@@ -41,21 +42,21 @@
                         class="dropdown-toggle">Работодателям</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="#">Главная</a>
+                            <a href="./index.html">Главная</a>
                         </li>
                         <li>
-                            <a href="#">Создать вакансию</a>
+                            <a href="./views/new-vacancy.html">Создать вакансию</a>
                         </li>
                         <li>
-                            <a href="#">Поиск работника /стажера</a>
+                            <a href="./views/search.html">Поиск работника /стажера</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">О Нас</a>
+                    <a href="./views/about.html">О Нас</a>
                 </li>
                 <li>
-                    <a href="#">Контакты</a>
+                    <a href="./views/contacts.html">Контакты</a>
                 </li>
             </ul>
         </nav>
@@ -92,7 +93,8 @@
                                             <div class="row form-reg m-4">
                                                 <div class="col-md-12">
                                                     <form class="row sign-up_form" novalidate>
-                                                        <h3 class="registration__title text-center">Вход на сайт</h3>
+                                                        <h3 class="registration__title text-center">Вход на сайт
+                                                        </h3>
                                                         <div class="row">
                                                             <label for="username" class="form-label g-2">Логин</label>
                                                             <input class="form-control" type="text" name="username"
@@ -300,6 +302,8 @@
         </div>
     </footer>
     <script type="module" src="./js/employers_signup.js"></script>
+    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/empl-app.js"></script>
 </body>
 
 </html>
