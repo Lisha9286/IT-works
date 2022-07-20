@@ -130,15 +130,3 @@ function sendPost(user) {
         })
         .catch((error) => console.log(error));
 }
-
-async function test() {
-    let url = "test.json";
-    let response = await fetch(url);
-    let heroes = await response.json();
-
-    console.log(heroes);
-    // users.forEach((element) => {
-    //     console.log(user.username);
-    // });
-}
-document.querySelector("#register").addEventListener("click", test);
