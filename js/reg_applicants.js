@@ -18,9 +18,8 @@ class Registration {
                 }
             });
             if (error == 0) {
-                console.log("success");
                 document.querySelector("#success").innerHTML = "Данные успешно отправлены!<br/> Проверьте ваш Email и подтвердите регистрацию.";
-                setTimeout(() => document.querySelector("#success").remove(), 6000);
+                setTimeout(() => document.querySelector("#success").remove(), 10000);
                 let user = {
                     username: document.querySelector("#username").value,
                     password: document.querySelector("#password").value,
@@ -74,7 +73,6 @@ class Registration {
                     this.setStatus(field, `${errorIcon}<span class="errorText">Пароль не может быть короче 6 символов</span>`, "error");
                     return false;
                 } else if (!field.value.match(fieldFormat)) {
-                    console.log(field.value);
                     this.setStatus(field, `${errorIcon}<span class="errorText">Пароль должен включать прописные и заглавные буквы, цифры и спецсимволы (!@#$%^&*).</span>`, "error");
                     return false;
                 }

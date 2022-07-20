@@ -37,11 +37,7 @@ class Registration {
             if (field.id == "username") {
                 const fieldFormat = /^[a-zA-Z0-9_.-]*$/;
                 if (!field.value.match(fieldFormat)) {
-                    this.setStatus(
-                        field,
-                        `${errorIcon}<span class="errorText">Логин может включать латинские буквы (a-z), цифры, нижнее подчеркивание (_), тире (-) и точку (.).</span></span>`,
-                        "error"
-                    );
+                    this.setStatus(field, `${errorIcon}<span class="errorText">Логин указан неверно</span></span>`, "error");
                     return false;
                 }
                 if (field.validity.tooShort || field.validity.tooLong) {
