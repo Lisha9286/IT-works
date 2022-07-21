@@ -1,4 +1,5 @@
 .page_employers {
+    width: 100%;
     font-family: 'Roboto', sans-serif;
     background: #fafafa;
 }
@@ -33,6 +34,14 @@ a:focus {
     outline: none !important;
     border: none;
 }
+.nav__logo {
+    &-img {
+        height: 70px;
+        width: 100px;
+        border-radius: 10px;
+    }
+
+}
 
 .line {
     width: 100%;
@@ -45,22 +54,21 @@ a:focus {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
-.wrapper-emp-main {
+.wrapper__emp-main {
     display: flex;
     width: 100%;
     align-items: stretch;
 }
 
+
 #sidebar {
-    max-width: 250px;
+    position: relative;
+    max-width: 17em;
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
 }
 
-#sidebar.active {
-    margin-left: -250px;
-}
 
 #sidebar .sidebar-header {
     padding: 20px;
@@ -88,23 +96,6 @@ a:focus {
     background: #fff;
 }
 
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
-}
-
-a[data-toggle="collapse"] {
-    position: relative;
-}
-
-.dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
 
 ul ul a {
     font-size: 0.9em !important;
@@ -124,10 +115,6 @@ ul.CTAs a {
     margin-bottom: 5px;
 }
 
-a.download {
-    background: #fff;
-    color: #7386D5;
-}
 
 a.article,
 a.article:hover {
@@ -140,7 +127,7 @@ a.article:hover {
 ----------------------------------------------------- */
 
 #content {
-    width: 100%;
+    flex-basis: 75%;
     padding: 20px;
     transition: all 0.3s;
 
@@ -185,11 +172,12 @@ input.form-control:focus{
 	background-color: #F7F8FD;
 	letter-spacing: 1px;
 }
-.btn-primary{
+.btn__search-employermain{
 	background-color: #5878FF!important;
     border: 1.5px solid #5878FF;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    margin: 0;
 }
 .btn-primary:focus{
 	box-shadow: none;
