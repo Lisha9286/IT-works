@@ -1,5 +1,5 @@
 .wrapper {
-    background-image: url('../assets/images/backmain.jpg');
+    background-image: url('/assets/images/backmain.jpg');
     background-size: cover;
 
     .header {
@@ -128,3 +128,6 @@
 .header__block {
     margin-bottom: 30%;
 }
+.linka{
+text-decoration: none;
+color: white;}

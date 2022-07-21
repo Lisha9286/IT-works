@@ -1,3 +1,4 @@
+
 const btn1=document.querySelector ('.filter-vacancy__filter-title')
 const btn2=document.querySelector ('.filter-vacancy__filter-sectitle')
 
@@ -14,3 +15,8 @@ btn2.onclick = function()  {
     document.querySelector(".filter-vacancy__filter-title").setAttribute("style", "display: block"); 
 }
 
+fetch("data.json")
+    .then(function (res) {
+        return res.json();
+    })
+    .catch((error) => console.log(error));
