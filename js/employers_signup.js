@@ -22,6 +22,8 @@ class Registration {
             });
             if (error == 0) {
                 console.log("success");
+                localStorage.setItem("username", document.querySelector("#username").value);
+                localStorage.setItem("password", document.querySelector("#password").value);
                 this.form.submit();
             }
         });

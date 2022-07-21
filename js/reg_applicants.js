@@ -7,6 +7,7 @@ class Registration {
 
     validateOnSubmit() {
         let self = this;
+        // let users = [];
 
         this.form.addEventListener("submit", (e) => {
             e.preventDefault();
@@ -26,7 +27,9 @@ class Registration {
                     email: document.querySelector("#email").value,
                 };
                 sendPost(user);
-                let inputs = document.querySelectorAll("input");
+                // users.push(user);
+                // localStorage.setItem("users", JSON.stringify(users));
+                // let inputs = document.querySelectorAll("input");
                 inputs.forEach((e) => {
                     e.value = "";
                 });

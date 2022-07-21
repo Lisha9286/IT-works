@@ -1,0 +1,239 @@
+$bgcolor:rgb(8, 65, 229);
+$color:white;
+
+.search-container {
+    display: flex;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+    max-width: 250px;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.sidebar-inner {
+    position: fixed;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+.search-header{
+        display: flex;
+        align-items: center;
+        height: 170px;
+        background-image: url('../assets/images/backmain.jpg');
+        color: $color;
+    }
+    
+.search-logotext{
+        width: 300px;
+        margin: 0px 0px 0px 30px;
+
+        &__logo-name{
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 70px;
+                width: 100px;
+                border-radius: 10px;
+            }
+        }
+
+        &__name{
+            font-weight: 700;
+            font-size: 40px;
+            margin: 0px 0px 0px 10px;
+        }
+
+        &__slogan{
+            margin: 10px 0px 0px 0px;
+            font-size: 18px;
+        }
+    }
+
+.search-header__input{
+    width: 820px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid $main-color;
+}
+
+
+.search-header__btn{
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    border: 2px solid $main-color;
+    color: $main-color;
+    font-weight: 700;
+    font-size: 20px;
+
+    &:hover{
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        background-color: rgb(223, 223, 223);
+    }
+
+    &:active{
+        background-color: rgb(31, 75, 140);
+        color: $color;
+    }
+}
+
+.search{
+    background-color: rgb(252, 252, 252);
+    color: #3a3a3a;
+    padding: 30px;
+}
+
+.search__box {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.search__input {
+    max-width: 60%;
+    margin-right: 15px;
+}
+
+.search__card {
+    max-width: 700px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px rgb(206, 206, 206) solid;
+    box-shadow: 15px 10px 20px 10px rgb(240, 240, 240);
+    border-radius: 10px;
+}
+
+.search__card-subtitle {
+    font-size: 12px;
+    color: #686868;
+    line-height: 19px
+}
+
+
+.filter__card {
+    margin-bottom: 10px;
+}
+
+.filter__card-title {
+    font-weight: bold;
+}
+
+.filter__title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.filter__card-title {
+    margin-bottom: 8px;
+}
+
+.filter__change {
+    margin-bottom: 8px;
+    text-decoration: underline;
+    color: rgb(32, 32, 112);
+}
+
+.filter__throwoff {
+    margin-bottom: 8px;
+    text-decoration: underline;
+    color: rgb(32, 32, 112);
+}
+
+.input-salary {
+    max-width: 90px;
+    margin-bottom: 10px;
+}
+
+.search__card {
+    max-width: 700px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px rgb(206, 206, 206) solid;
+    box-shadow: 15px 10px 20px 10px rgb(240, 240, 240);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search__card-photo {
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+}
