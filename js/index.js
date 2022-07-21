@@ -18,27 +18,27 @@ btn2.onclick = function()  {
 const container = document.querySelector('.search-container');
 
 document.addEventListener("DOMContentLoaded", function (e) {
-    getSuperheroes();
+    getvaca();
 });
 
-function getSuperheroes() {
+function getvaca() {
     fetch('./data.json')
         .then(response => response.json())
-        .then(heroes => {
-            let heroesCards = '';
-            for (let hero of heroes) {
+        .then(vacas => {
+            let vacaCards = '';
+            for (let vaca of vacas) {
                 heroesCards += `
                 <div class="card">
-                    <img class="card__img" src="${hero.albumId}" alt="image">
+                    <img class="card__img" src="${vaca.albumId}" alt="image">
                     <div class="card__content">
-                        <p class="card__text">albumId: ${hero.albumId}</p>
-                        <p class="card__text">title: ${hero.albumId}</p>
+                        <p class="card__text">albumId: ${vaca.albumId}</p>
+                        <p class="card__text">title: ${vaca.albumId}</p>
                     </div>
                 </div>
                     `
 
             }
-            container.innerHTML = heroesCards;
+            container.innerHTML = vacaCards;
 
         })
         .catch(error => console.log(error));
