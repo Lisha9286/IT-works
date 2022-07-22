@@ -20,10 +20,12 @@ a:focus {
     transition: all 0.3s;
 }
 
+/*---------------------------------
+  Navbar Style
+----------------------------------*/
 
 
-
-.navbar {
+.navbar-empl {
     display: flex;
     justify-content:space-between;
     padding: 15px 10px;
@@ -33,7 +35,7 @@ a:focus {
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
-.beispiel {
+.navbar-empl__logo {
     display: flex;
 }
 .header__second {
@@ -104,7 +106,6 @@ a:focus {
     }
 }
 
-
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
@@ -129,18 +130,11 @@ a:focus {
     }
 }
 
-    /*---------------------
+/*-------------------------
     Searching form Style
-    -----------------------*/
+-----------------------*/
     
 
-
-.popular-title {
-font-family: 'Roboto';
-font-weight: 300;
-color: #999;
-text-align: center;
-}
 .card{
 	border: none;
 }
@@ -154,11 +148,8 @@ input.form-control:focus{
 	background-color: #F7F8FD;
 	letter-spacing: 1px;
 }
-.btn__search-employermain{
-	background-color: #5878FF!important;
+#btn__search-employermain{
     border: 1.5px solid #5878FF;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
     margin: 0;
 }
 .btn-primary:focus{
@@ -174,6 +165,12 @@ input.form-control:focus{
     background-color: rgb(163, 73, 164);
     color: #fff;
     border: none;
+    }
+    .popular-title {
+        font-family: 'Roboto';
+        font-weight: 300;
+        color: #999;
+        text-align: center;
     }
 }
 
