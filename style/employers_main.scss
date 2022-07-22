@@ -20,7 +20,12 @@ a:focus {
     transition: all 0.3s;
 }
 
+
+
+
 .navbar {
+    display: flex;
+    justify-content:space-between;
     padding: 15px 10px;
     background: #fff;
     border: none;
@@ -28,7 +33,13 @@ a:focus {
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
-
+.beispiel {
+    display: flex;
+}
+.header__second {
+    color:#004BBA;
+    font-weight: 700;
+}
 .navbar-btn {
     box-shadow: none;
     outline: none !important;
@@ -37,10 +48,9 @@ a:focus {
 .nav__logo {
     &-img {
         height: 70px;
-        width: 100px;
+        max-width: 100%;
         border-radius: 10px;
     }
-
 }
 
 .line {
@@ -61,73 +71,45 @@ a:focus {
 }
 
 
-#sidebar {
+.sidebar-empl {
     position: relative;
-    max-width: 17em;
-    background: #7386D5;
+    width: 17em;
+    background-image: url(../assets/images/backmain.jpg);
     color: #fff;
     transition: all 0.3s;
 }
 
 
-#sidebar .sidebar-header {
+.sidebar-empl__header {
     padding: 20px;
-    background: #6d7fcc;
+    background-color: rgba(8, 8, 130, 0.363);
 }
 
-#sidebar ul.components {
+.sidebar-empl__list{
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
 }
 
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
+.sidebar-empl {
+    li a {
+        padding: 15px;
+        font-size: 1.1em;
+        display: block;
+    }
 }
 
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
+.sidebar-empl {
+    ul li a:hover {
+        color: rgb(8, 8, 130);;
+        background: #fff;
+    }
 }
 
-#sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
-}
-
-
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #6d7fcc;
-}
-
-ul.CTAs {
-    padding: 20px;
-}
-
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-
-a.article,
-a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
-}
 
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
 
 #content {
-    flex-basis: 75%;
     padding: 20px;
     transition: all 0.3s;
 
@@ -189,7 +171,7 @@ input.form-control:focus{
     cursor: pointer;
     transition: 1.3s;
     &:hover {
-    background-color: #5878FF;
+    background-color: rgb(163, 73, 164);
     color: #fff;
     border: none;
     }
@@ -198,21 +180,43 @@ input.form-control:focus{
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
-
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
+@include media-breakpoint-down(md) {
+    .sidebar-empl {
+        max-width: 5em;
+        background: #0168FF;
+        h3 {
+            font: size 0.9em; ;
+        }
+        li a {
+            font-size: 1.7em;
+            text-align: center;
+        }
     }
 
-    #sidebar.active {
-        margin-left: 0;
+.sidebar-empl__item{
+    display: none;
     }
-
-    #sidebarCollapse span {
-        display: none;
+.sidebar-empl__header {
+        padding: 10px;
     }
+.subtitle__employer {
+    font-size: 1.5em !important;
 }
-
+#content {
+    padding: 5px;
+}
+.header__first {
+        padding: 0;
+        font-size: 1em;
+    }
+.navbar {
+    flex-wrap: nowrap;
+}
+.btn-outline-secondary  {
+width: 101.7px;
+margin-bottom: 7px;
+}
+}
 /* ---------------------------------------------------
     MODAL STYLES
 ----------------------------------------------------- */
@@ -235,3 +239,4 @@ input.form-control:focus{
 .input-border {
     border: 1px solid #d93025 !important;
 }
+
