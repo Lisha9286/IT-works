@@ -104,7 +104,7 @@
     "watch5": "parcel employers_main.html --open --port 3004",
     "watch6": "parcel pages/create-resume_page/ru/index.html --open --port 3005",
     "watch7": "parcel pages/vacancy_search_page/ru/index.html --open --port 1237",
-    "watch8": "parcel applicants_main.html --open --port 3004"
+    "watch8": "parcel applicants_main.html --open --port 3006"
   
   },
   "repository": {
