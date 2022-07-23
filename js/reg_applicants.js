@@ -131,3 +131,12 @@ function sendPost(user) {
         })
         .catch((error) => console.log(error));
 }
+
+async function test() {
+    let url = "data.json";
+    let response = await fetch(url);
+    let users = await response.json();
+    console.log(users);
+}
+
+test();
