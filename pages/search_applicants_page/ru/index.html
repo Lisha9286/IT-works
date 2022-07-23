@@ -6,29 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkIT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../style_global/style.scss">
 </head>
 
 <body>
     <main class="search container-fluid">
         <div class="row">
-            <div class="search__result col-9">
+            <div class="search__result col-lg-9">
                 <div class="search__box">
-                    <input class="search__input form-control" type="text" />
-                    <button class="search__btn btn btn-primary col-2">Найти</button>
+                    <input class="search__input form-control" id="inputSearchApp" type="text" placeholder="Поиск резюме"/>
+                    <button class="search__btn btn btn-primary col-2" id="btnSearchApp">Найти</button>
                 </div>
-                <div class="search__card">
-                    <div> 
-                    <h5 class="search__card-title card-title">Должность <span class="card-title">Уровень</span></h5>
-                    <div class="search__card-subtitle">Опыт работы</div>
-                    <div class="search__card-experience">100 лет</div>
-                    <div class="search__card-subtitle">Ожидаемая заработная плата</div>
-                    <div class="search__card-salary">2000$</div>
-                    </div>
-                    <image src="https://www.meme-arsenal.com/memes/cde26802734184eebce9bc9b160b83ff.jpg" class="search__card-photo" alt="photo" />
-                </div>
-                
+                <div id="cards">
 
+
+                </div>
             </div>
 
             <div class="filter col-2 ">
@@ -37,14 +30,29 @@
                 <div class="filter__throwoff">Сбросить</div>
                 <div class="filter__card">
                     <div class="filter__card-title">Город</div>
+                    <select class="form-select">
+                        <option selected value="Псков">Псков</option>
+                        <option value="Вологда">Вологда</option>
+                        <option value="Кострома">Кострома</option>
+                        <option value="Нарва">Нарва</option>
+                        <option value="Тбилиси">Тбилиси</option>
+                        <option value="Петрозаводск">Петрозаводск</option>
+                        <option value="Бобруйск">Бобруйск</option>
+                        <option value="Ужгород">Ужгород</option>
+                        <option value="Гданьск">Гданьск</option>
+                        <option value="Сараево">Сараево</option>
+                        <option value="Тулун">Тулун</option>
+                        <option value="Уфа">Уфа</option>
+                        <option value="Конь-Колодезь">Конь-Колодезь</option>
+                    </select>
                 </div>
                 <div class=" filter__card">
                     <div class="filter__card-title">Уровень позиции</div>
-                    <div><input class="filter__card-input form-check-input" type="checkbox" name="junior" />
+                    <div><input class="filter__card-input form-check-input" id="junior" value="junior" type="checkbox" name="junior" />
                         <label class="filter__card-label" for="junior">Junior</label></div>
-                    <div><input class="filter__card-input form-check-input" type="checkbox" name="middle" />
+                    <div><input class="filter__card-input form-check-input" id="middle" value="middle" type="checkbox" name="middle" />
                         <label class="filter__card-label" for="middle">Middle</label></div>
-                    <div><input class="filter__card-input form-check-input" type="checkbox" name="senior" />
+                    <div><input class="filter__card-input form-check-input" id="senior" value="senior" type="checkbox" name="senior" />
                         <label class="filter__card-label" for="senior">Senior</label></div>
                 </div>
                 <div class="filter__card">
@@ -59,7 +67,7 @@
                         <label class="filter__card-label " name="large">Более 6 лет</label></div>
                 </div>
                 <div class="filter__card">
-                    <div class="filter__card-title">Уровень дохода</div>
+                    <div class="filter__card-title">Уровень дохода $</div>
                     <div class="filter__card-salary">
                         <input class="input-salary" type="number" placeholder="от" />
                         <input class="input-salary" type="number" placeholder="до" /></div>
@@ -69,11 +77,11 @@
                 </div>
                 <div class="filter__card">
                     <div class="filter__card-title">Формат работы</div>
-                    <div><input class="filter__card-input form-check-input" type="checkbox" />
+                    <div><input class="filter__card-input form-check-input" value="eдаленный" type="checkbox" />
                         <label class="filter__card-label">Удаленный</label></div>
-                    <div><input class="filter__card-input form-check-input" type="checkbox" />
+                    <div><input class="filter__card-input form-check-input" value="jфис" type="checkbox" />
                         <label class="filter__card-label">Офис</label></div>
-                    <div><input class="filter__card-input form-check-input" type="checkbox" />
+                    <div><input class="filter__card-input form-check-input" value="гибрид" type="checkbox" />
                         <label class="filter__card-label">Гибрид</label></div>
                 </div>
                 <div class="filter__change">Применить</div>
@@ -81,6 +89,7 @@
             </div>
         </div>
     </main>
+    <script src="/js/search_applicants.js"></script>
 </body>
 
 </html>
