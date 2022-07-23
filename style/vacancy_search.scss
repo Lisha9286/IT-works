@@ -1,25 +1,35 @@
 $color:white;
-
-.body__container {
+.body {
     display: flex;
+    flex-direction: row-reverse;
 }
 
-.header{
+.header {
+    width: 100%;
+    height: 120px;
+    padding: 20px 20px 0px 20px;
+    margin: 0px 20px 0px 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.aside{
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 700px;
-    background-image: url('../assets/images/backmain.jpg');
+    width: 320px;
+    height: 100%;
     color: $color;
+    background-image: url('../assets/images/backmain.jpg');
 }
 
-.header-logotext{
-    width: 300px;
+.aside-logotext{
+    width: 320px;
     height: 120px;
     background-color: rgba(8, 8, 130, 0.363);
     padding: 10px 0px 0px 10px;
 
-.header-logotext__logo-name{
+.aside-logotext__logo-name{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,15 +39,17 @@ $color:white;
         width: 80px;
         border-radius: 10px;
     }
-    .header-logotext__name{
+    .aside-logotext__name{
+        font-family: 'Roboto', sans-serif;
         font-weight: 700;
         font-size: 30px;
         padding: 0px 0px 0px 10px;
     }
 }
 
-.header-logotext__slogan{
+.aside-logotext__slogan{
     padding: 10px 0px 0px 0px;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     text-align: center;
 }
@@ -46,6 +58,13 @@ $color:white;
 .header-search{
     display: flex;
     padding: 20px 10px 0px 10px;
+
+    .header__btnvaca {
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        margin: 0px 0px 0px 20px;
+    }
 }
 
 .main {
@@ -64,6 +83,7 @@ $color:white;
 
 .filter-vacancy__filter-title{
     padding: 10px 0px 10px 10px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 20px;
     &:hover {
@@ -77,6 +97,7 @@ $color:white;
 .filter-vacancy__filter-sectitle{
     padding: 10px 0px 10px 10px;
     background-color: rgba(10, 10, 112, 0.347);
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 20px;
     display: none;
@@ -86,27 +107,47 @@ $color:white;
 }
 
 .filter-vacancy__typies{
-    display: none;
     margin: 0px 0px 0px 10px;
 }
 
-
+.filter-vacancy__type{
+    margin: 20px 0px 0px 0px;
+}
 
 .filter-vacancy__title{
-    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.filter-vacancy__cities{
+.filter-vacancy__cities2 {
     display: flex;
     flex-direction: column;
+    min-height: 100px;
+  }
+
+.filter-vacancy__cities1 {
+    overflow-y: scroll;
+    background-color: rgba(31, 75, 140, 0);
+    width: 290px;
+    height: 100px;
+    &::-webkit-scrollbar {
+        width: 12px;
+        background-color: rgb(0, 99, 255);
+        border-radius: 10px;
+        
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+  }
 }
 
-.filter-vacancy__city{
-    padding: 0px 0px 10px 10px;
-    &:last-child{
-        padding: 0px 0px 0px 10px;
+  .form-check-input{
+    &:checked{
+        background-color: rgb(31, 75, 140);
     }
-}
+  }
 
 .filter-vacancy__points{
     width: 270px;
@@ -116,7 +157,7 @@ $color:white;
 }
 
 .filter-vacancy__input-salary{
-    width: 98px;
+    width: 133px;
     border: 1px solid $light-gray;
     border-radius: 10px;
 }
@@ -137,24 +178,42 @@ $color:white;
     height: 40px;
     border: 1px solid $main-color;
     border-radius: 10px;
+}
 
+.filter-vacancy__change {
+    background-color:  rgba(10, 10, 112, 0.438);
     &:hover {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-        background-color: rgb(37, 103, 202);
+        background-color: rgba(10, 10, 112, 0.679);
         color: white;
     }
 
     &:active{
-        background-color: rgb(31, 75, 140);
+        background-color: rgba(6, 6, 79, 0.679);
         color: white;
     }
 }
 
 .filter-vacancy__throwoff {
     margin: 10px 0px 0px 0px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+        &:hover {
+            box-shadow: 0px 0px 3px 3px rgba(10, 10, 112, 0.595);
+            color: rgb(0, 0, 0);
+        }
+    
+        &:active{
+            box-shadow: inset 0px 0px 3px 3px rgba(10, 10, 112, 0.595);
+            color: rgb(0, 0, 0);
+        }
+    }
+
+.filter-vacancy__btns{
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-
 
 .search-container__card {
     border: 1px solid;

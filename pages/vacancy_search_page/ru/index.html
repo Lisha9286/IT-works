@@ -9,39 +9,67 @@
     <link rel="stylesheet" href="../../../style_global/style.scss">
 </head>
 
-<body>
-    <div class="body__container">
-        <aside class="header">
-            <div class="header-logotext">
-                <div class="header-logotext__logo-name">
-                    <img src="../../../assets/images/logo.png" alt="logo">
-                    <div class="header-logotext__name">WorkIT</div>
-                </div>
-                <div class="header-logotext__slogan">Твоя первая работа в сфере IT</div>
+<body class="body">
+    <header class="header">
+        <div class="header-search mb-3">
+            <input type="text" class="form-control" placeholder="Поиск">
+            <div class="input-group-append">
+                <button class="header__btnvaca btn-primary">
+                    <i class="bi-search"></i>
+                </button>
             </div>
-            <div class="header-search mb-3">
-                <input type="text" class="form-control" placeholder="Поиск">
-                <div class="input-group-append">
-                    <button class="btn btn-primary">
-                        <i class="bi-search"></i>
-                    </button>
+        </div>
+    </header>
+    <div>
+        <aside class="aside">
+            <div class="aside-logotext">
+                <div class="aside-logotext__logo-name">
+                    <img src="../../../assets/images/logo.png" alt="logo">
+                    <div class="aside-logotext__name">WorkIT</div>
                 </div>
+                <div class="aside-logotext__slogan">Твоя первая работа в сфере IT</div>
             </div>
             <div class="filter-vacancy">
-                <div class="filter-vacancy__filter-title">Фильтер</div>
-                <div class="filter-vacancy__filter-sectitle">Скрыть фильтер</div>
+                <div class="filter-vacancy__filter-title">Фильтр</div>
+                <div class="filter-vacancy__filter-sectitle">Фильтр</div>
                 <div class="filter-vacancy__typies">
                     <div class="filter-vacancy__type">
                         <div class="filter-vacancy__cities">
                             <label class="filter-vacancy__title">Город </label>
-                            <select class="filter-vacancy__points">
-                                <option class="filter-vacancy__city" value="Choose">Выберите Город</option>
-                                <option class="filter-vacancy__city" value="Belgorod">Белгород</option>
-                                <option class="filter-vacancy__city" value="Moscow">Москва</option>
-                                <option class="filter-vacancy__city" value="Tula">Тула</option>
-                                <option class="filter-vacancy__city" value="Samara">Самара</option>
-                                <option class="filter-vacancy__city" value="Sochi">Сочи</option>
-                            </select>
+                            <div class="filter-vacancy__cities1">
+                                <div class="filter-vacancy__cities2">
+                                    <div class="filter-vacancy__point">
+                                        <label class="filter-vacancy__card-label " for="аzov">Азов </label>
+                                        <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                            name="zero" />
+                                    </div>
+                                    <div class="filter-vacancy__point">
+                                        <label class="filter-vacancy__card-label" for="belgorod">Белгород</label>
+                                        <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                            name="zero" />
+                                    </div>
+                                    <div class="filter-vacancy__point">
+                                        <label class="filter-vacancy__card-label " for="volgograd">Волгоград</label>
+                                        <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                            name="zero" />
+                                    </div>
+                                    <div class="filter-vacancy__point">
+                                        <label class="filter-vacancy__card-label " for="moscow">Москва</label>
+                                        <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                            name="zero" />
+                                    </div>
+                                    <div class="filter-vacancy__point">
+                                        <label class="filter-vacancy__card-label " for="rostov">Ростов-на-Дону</label>
+                                        <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                            name="zero" />
+                                    </div>
+                                    <div class="filter-vacancy__point">
+                                        <label class="filter-vacancy__card-label " for="tula">Тула</label>
+                                        <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                            name="zero" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="filter-vacancy__type">
@@ -103,8 +131,10 @@
                             <input class="filter__card-input form-check-input" type="checkbox" />
                         </div>
                     </div>
-                    <div class="filter-vacancy__change">Применить</div>
-                    <div class="filter-vacancy__throwoff">Собросить</div>
+                    <div class="filter-vacancy__btns">
+                        <div class="filter-vacancy__change">Применить</div>
+                        <div class="filter-vacancy__throwoff">Собросить</div>
+                    </div>
                 </div>
                 <div class="filter-vacancy__filter-title">О нас</div>
                 <div class="filter-vacancy__filter-title">На главную</div>
@@ -112,26 +142,20 @@
                 <div class="filter-vacancy__filter-title">Новости</div>
             </div>
         </aside>
+
         <main class="main">
             <div class="search-container">
-                <div class="header-logotext__slogan">Твоя первая работа с сфере IT</div>
+
             </div>
-            <div class="header-search">
-                <input class="header-search__form" type="text" />
-                <button class="header-search__btn">Найти</button>
-            </div>
-            </header>
             <main class="main">
                 <div class="search-container">
-                </div>
-                <div class="filter-vacancy">
-                    <div class="filter-vacancy__container">
-                        <img src="../../../assets/images/filter.png" alt="filter">
-                        <div class="filter-vacancy__filter-title">Фильтр</div>
 
-                    </div>
+
+                </div>
+
             </main>
     </div>
+
     <script src="../../../js/index.js"></script>
 
 </body>
