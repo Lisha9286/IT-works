@@ -22,6 +22,8 @@ class Registration {
             });
             if (error == 0) {
                 console.log("success");
+                localStorage.setItem("username", document.querySelector("#username_sign-in").value);
+                localStorage.setItem("password", document.querySelector("#password_sign-in").value);
                 this.form.submit();
             }
         });
@@ -78,6 +80,6 @@ class Registration {
 
 const form = document.querySelector(".sign-up_form");
 if (form) {
-    const fields = ["username", "password"];
+    const fields = ["username_sign-in", "password_sign-in"];
     const validator = new Registration(form, fields);
 }
