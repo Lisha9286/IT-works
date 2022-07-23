@@ -20,6 +20,43 @@ a:focus {
     transition: all 0.3s;
 }
 
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+
+.sidebar-empl {
+    position: relative;
+    width: 17em;
+    background-image: url(../assets/images/backmain.jpg);
+    color: #fff;
+    transition: all 0.3s;
+}
+
+
+.sidebar-empl__header {
+    padding: 20px;
+    background-color: rgba(8, 8, 130, 0.363);
+}
+
+.sidebar-empl__list{
+    padding: 20px 0;
+}
+
+.sidebar-empl {
+    li a {
+        padding: 15px;
+        font-size: 1.1em;
+        display: block;
+    }
+}
+
+.sidebar-empl {
+    ul li a:hover {
+        color: rgb(8, 8, 130);;
+        background: #fff;
+    }
+}
 /*---------------------------------
   Navbar Style
 ----------------------------------*/
@@ -62,49 +99,6 @@ a:focus {
     margin: 40px 0;
 }
 
-/* ---------------------------------------------------
-    SIDEBAR STYLE
------------------------------------------------------ */
-
-.wrapper__emp-main {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-}
-
-
-.sidebar-empl {
-    position: relative;
-    width: 17em;
-    background-image: url(../assets/images/backmain.jpg);
-    color: #fff;
-    transition: all 0.3s;
-}
-
-
-.sidebar-empl__header {
-    padding: 20px;
-    background-color: rgba(8, 8, 130, 0.363);
-}
-
-.sidebar-empl__list{
-    padding: 20px 0;
-}
-
-.sidebar-empl {
-    li a {
-        padding: 15px;
-        font-size: 1.1em;
-        display: block;
-    }
-}
-
-.sidebar-empl {
-    ul li a:hover {
-        color: rgb(8, 8, 130);;
-        background: #fff;
-    }
-}
 
 /* ---------------------------------------------------
     CONTENT STYLE
