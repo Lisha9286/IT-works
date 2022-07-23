@@ -1,6 +1,6 @@
 [{
     "name":"Вася",
-    "keyWords": ["developer","разработчик", "программист"],
+    "keyWords": ["developer","разработчик", "программист", "frontend"],
     "age": "27",
     "experience": "1",
     "level": "junior",
@@ -12,7 +12,7 @@
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист"],
+    "keyWords": ["developer","разработчик", "программист", "backend"],
     "age": "27",
     "experience": "2",
     "level": "junior",
@@ -24,7 +24,7 @@
 },
 {
     "name":"Владлен",
-    "keyWords": ["developer","разработчик", "программист"],
+    "keyWords": ["developer","разработчик", "программист", "java"],
     "age": "27",
     "experience": "3",
     "level": "junior",
@@ -36,7 +36,7 @@
 },
 {
     "name":"Георгий",
-    "keyWords": ["developer","разработчик", "программист"],
+    "keyWords": ["developer","разработчик", "программист", "javascript"],
     "age": "27",
     "experience": "4",
     "level": "middle",
@@ -48,7 +48,7 @@
 },
 {
     "name":"Евгения",
-    "keyWords": ["developer","разработчик", "программист"],
+    "keyWords": ["developer","разработчик", "программист", "python"],
     "age": "27",
     "experience": "5",
     "level": "middle",
@@ -60,7 +60,7 @@
 },
 {
     "name":"Мария",
-    "keyWords": ["developer","разработчик", "программист"],
+    "keyWords": ["developer","разработчик", "программист", "c", "c#"],
     "age": "27",
     "experience": "6",
     "level": "middle",
@@ -72,7 +72,7 @@
 },
 {
     "name":"Михаил",
-    "keyWords": ["developer","разработчик", "программист"],
+    "keyWords": ["developer","разработчик", "программист", "c++"],
     "age": "27",
     "experience": "7",
     "level": "middle",
@@ -84,7 +84,7 @@
 },
 {
     "name":"Глеб",
-    "keyWords": ["developer","разработчик", "программист"],
+    "keyWords": ["developer","разработчик", "программист", "1-c"],
     "age": "27",
     "experience": "8",
     "level": "middle",
@@ -96,7 +96,7 @@
 },
 {
     "name":"Ольга",
-    "keyWords": ["developer","разработчик", "программист"],
+    "keyWords": ["developer","разработчик", "программист", "php"],
     "age": "27",
     "experience": "9",
     "level": "senior",
@@ -108,7 +108,7 @@
 },
 {
     "name":"Александра",
-    "keyWords": ["developer","разработчик", "программист"],
+    "keyWords": ["developer","разработчик", "программист", "ruby", "ruby on rails"],
     "age": "27",
     "experience": "10",
     "level": "senior",
@@ -120,7 +120,7 @@
 },
 {
     "name":"Владислав",
-    "keyWords": ["developer","разработчик", "программист"],
+    "keyWords": ["developer","разработчик", "программист", "flutter"],
     "age": "27",
     "experience": "11",
     "level": "senior",
@@ -132,7 +132,7 @@
 },
 {
     "name":"Светлана",
-    "keyWords": ["developer"],
+    "keyWords": ["developer", "fullstack", "арзработчик", "программист"],
     "age": "27",
     "experience": "12",
     "level": "senior",
