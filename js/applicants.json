@@ -72,7 +72,7 @@
 },
 {
     "name":"Михаил",
-    "keyWords": ["developer","разработчик", "программист", "c++"],
+    "keyWords": ["developer","разработчик", "программист", "c++", "+"],
     "age": "27",
     "experience": "7",
     "level": "middle",

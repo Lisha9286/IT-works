@@ -29,7 +29,7 @@ class Registration {
                 sendPost(user);
                 // users.push(user);
                 // localStorage.setItem("users", JSON.stringify(users));
-                // let inputs = document.querySelectorAll("input");
+                let inputs = document.querySelectorAll("input");
                 inputs.forEach((e) => {
                     e.value = "";
                 });
@@ -131,12 +131,3 @@ function sendPost(user) {
         })
         .catch((error) => console.log(error));
 }
-
-async function test() {
-    let url = "data.json";
-    let response = await fetch(url);
-    let users = await response.json();
-    console.log(users);
-}
-
-test();

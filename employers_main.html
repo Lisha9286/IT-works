@@ -15,23 +15,28 @@
         <nav class="sidebar-empl">
             <div class="sidebar-empl__wrapper sticky-top">
                 <div class="sidebar-empl__header">
-                <h3 class="py-4">Меню</h3>
+                    <h3 class="py-4">Меню</h3>
                 </div>
                 <ul class=" sidebar-empl__list list-unstyled components flex-md justify-content-md-center">
                     <li>
-                        <a  href="#"> <i class="bi bi-pencil-square pe-2"></i><span class="sidebar-empl__item"> Создать Вакансию</span></a>
+                        <a href="#"> <i class="bi bi-pencil-square pe-2"></i><span class="sidebar-empl__item"> Создать
+                                Вакансию</span></a>
                     </li>
                     <li>
-                        <a href="./index.html"><i class="bi bi-house-door pe-2"></i><span class="sidebar-empl__item">Главная</span></a>
+                        <a href="./index.html"><i class="bi bi-house-door pe-2"></i><span
+                                class="sidebar-empl__item">Главная</span></a>
                     </li>
                     <li>
-                        <a href="./views/new-vacancy.html"><i class="bi bi-newspaper pe-2"></i><span class="sidebar-empl__item">Новости</span></a>
+                        <a href="./views/new-vacancy.html"><i class="bi bi-newspaper pe-2"></i><span
+                                class="sidebar-empl__item">Новости</span></a>
                     </li>
                     <li>
-                        <a href="./views/about.html"><i class="bi bi-person pe-2"></i> <span class="sidebar-empl__item"> О Нас</span></a>
+                        <a href="./views/about.html"><i class="bi bi-person pe-2"></i> <span class="sidebar-empl__item">
+                                О Нас</span></a>
                     </li>
                     <li>
-                        <a href="./views/contacts.html"><i class="bi bi-envelope pe-2"></i> <span class="sidebar-empl__item">Контакты</span> </a>
+                        <a href="./views/contacts.html"><i class="bi bi-envelope pe-2"></i> <span
+                                class="sidebar-empl__item">Контакты</span> </a>
                     </li>
                 </ul>
             </div>
@@ -40,68 +45,133 @@
         <div id="content">
             <nav class="navbar-empl navbar-expand-lg navbar-light bg-light d-flex ">
                 <div class="navbar-empl__logo">
-                        <a href="#">
-                            <img class="nav__logo-img" src="./assets/images/logo.png" alt="logo"></a>
-                            <h3 class="header__second pt-3"> Работодателям</h3></div>
-                    <ul class="nav navbar-nav nav-empl__links d-flex">
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-outline-secondary btn-sm me-1 btn-signin__employer" data-bs-toggle="modal"
-                                data-bs-target="#modal_sign-up" id="sign-up">Войти</button>
-                        </li>
-                        <!-- Modal -->
-                        <div class="modal fade" id="modal_sign-up" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="modal_sign-upLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <div>
-                                            <h2 class="modal-title" id="modal_sign-upLabel">WorkIt</h2>
-                                            <h6>Твоя свежая кровь в мире IT</h6>
+                    <a href="#">
+                        <img class="nav__logo-img" src="./assets/images/logo.png" alt="logo"></a>
+                    <h3 class="header__second pt-3"> Работодателям</h3>
+                </div>
+                <ul class="nav navbar-nav nav-empl__links d-flex">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-secondary btn-sm me-1 btn-signin__employer"
+                            data-bs-toggle="modal" data-bs-target="#modal_sign-in" id="sign-up">Войти</button>
+                    </li>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal_sign-in" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="modal_sign-inLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-bg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div>
+                                        <img class="nav__logo-img" src="./assets/images/logo.png" alt="logo">
+                                        <p class="header__subtitle subtitle__employer">Твоя первая работа в мире IT</p>
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row form-reg m-4">
+                                        <div class="col-md-12">
+                                            <form class="row sign-up_form" novalidate>
+                                                <h3 class="registration__title text-center header__second">Вход на сайт
+                                                </h3>
+                                                <div class="row">
+                                                    <label for="username_sign-in" class="form-label g-2">Логин</label>
+                                                    <input class="form-control" type="text" name="username"
+                                                        maxlength="20" minlength="5" id="username_sign-in"
+                                                        placeholder="Логин" required>
+                                                    <div class="error-message"></div>
+                                                </div>
+                                                <div class="row ">
+                                                    <label for="password_sign-in" class="form-label g-2">Пароль</label>
+                                                    <input class="form-control" type="password" name="Пароль"
+                                                        minlength="6" id="password_sign-in" placeholder="Пароль"
+                                                        required>
+                                                    <div class="error-message"></div>
+                                                </div>
+                                                <div class="row mt-4">
+                                                    <button class="btn btn-primary" type="submit">Войти</button>
+                                                </div>
+                                            </form>
                                         </div>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="row form-reg m-4">
-                                            <div class="col-md-12">
-                                                <form class="row sign-up_form" novalidate>
-                                                    <h3 class="registration__title text-center">Вход на сайт
-                                                    </h3>
-                                                    <div class="row">
-                                                        <label for="username" class="form-label g-2">Логин</label>
-                                                        <input class="form-control" type="text" name="username"
-                                                            maxlength="20" minlength="5" id="username"
-                                                            placeholder="Логин" required>
-                                                        <div class="error-message"></div>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <label for="password" class="form-label g-2">Пароль</label>
-                                                        <input class="form-control" type="password" name="Пароль"
-                                                            minlength="6" id="password" placeholder="Пароль" required>
-                                                        <div class="error-message"></div>
-                                                    </div>
-                                                    <div class="row mt-4">
-                                                        <button class="btn btn-primary" type="submit">Войти</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Закрыть</button>
-                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Закрыть</button>
                                 </div>
                             </div>
                         </div>
-                        <li class="nav-item">
-                            <a href="./pages/registration_employers/ru/reg-employers.html"
-                                class="btn btn-outline-primary btn-sm me-3" role="button">Регистрация</a>
-                        </li>
-                        <li class="nav-item active header__box pt-1">
-                            <a class="header__lang" href="#">EN</a>
-                        </li>
-                    </ul>
+                    </div>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-primary btn-sm me-3" data-bs-toggle="modal"
+                            data-bs-target="#modal_sign-up">Регистрация</button>
+                    </li>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal_sign-up" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="modal_sign-upLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div>
+                                        <img class="nav__logo-img" src="./assets/images/logo.png" alt="logo">
+                                        <p class="header__subtitle subtitle__employer">Твоя первая работа в мире IT</p>
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row form-reg m-4 d-flex justify-content-center">
+                                        <div class="col-md-8">
+                                            <form class="registration__form row" novalidate>
+                                                <h3 class="registration__title text-center header__second">Регистрация
+                                                </h3>
+                                                <div class="row">
+                                                    <label for="username" class="form-label g-2">Логин</label>
+                                                    <input class="form-control" type="text" name="username"
+                                                        maxlength="20" minlength="5" id="username" placeholder="Логин"
+                                                        required>
+                                                    <div class="error-message"></div>
+                                                </div>
+                                                <div class="row ">
+                                                    <label for="password" class="form-label g-2">Пароль</label>
+                                                    <input class="form-control" type="password" name="Пароль"
+                                                        minlength="6" id="password" placeholder="Пароль" required>
+                                                    <div class="error-message"></div>
+                                                </div>
+                                                <div class="row ">
+                                                    <label for="password" class="form-label g-2">Потвердите
+                                                        Пароль</label>
+                                                    <input class="form-control" type="password" name="Пароль"
+                                                        minlength="6" id="passwordRepeat"
+                                                        placeholder="Потвердите Пароль" required>
+                                                    <div class="error-message"></div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="email" class="form-label g-2">Email</label>
+                                                    <input class="form-control" type="email" name="email" id="email"
+                                                        placeholder="Email" required>
+                                                    <div class="error-message"></div>
+                                                </div>
+
+                                                <div class=" row registration__group mt-4">
+                                                    <button class="btn btn-primary btn-block create-account"
+                                                        type="submit" id="register">Отправить</button>
+                                                </div>
+                                                <div class="success" id="success"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <li class="nav-item active header__box pt-1">
+                        <a class="header__lang" href="#">EN</a>
+                    </li>
+                </ul>
             </nav>
             <!--Motto-->
             <div class="row m-3 p-4">
@@ -266,7 +336,8 @@
             </footer>
         </div>
     </div>
-    <script type="module" src="./js/employers_signup.js"></script>
+    <script type="module" src="./js/employers_sign-in.js"></script>
+    <script type="module" src="./js/reg_applicants.js"></script>
 </body>
 
 </html>
