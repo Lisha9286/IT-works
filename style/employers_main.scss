@@ -25,6 +25,12 @@ a:focus {
     transition: all 0.3s;
 }
 
+.btn-primary:focus {
+    box-shadow: none !important;
+}
+.btn:focus {
+    box-shadow: none!important;
+}
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -106,7 +112,7 @@ Navbar Style
 .btn-signin__employer:hover {
     @include button-lilac-hover;
     }
-.btn-signin__employer:focus  {
+.btn-signin__employer:active  {
     @include button-lilac-hover;
     box-shadow: none !important;
 }
@@ -180,12 +186,13 @@ Navbar Style
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
-@include media-breakpoint-down(md) {
+@media only screen and (min-width: 596px) and (max-width: 767px)
+{
     .sidebar-empl {
         max-width: 5em;
         background: #0168FF;
         h3 {
-            font: size 0.9em; ;
+            font-size: 1.3em;
         }
         li a {
             font-size: 1.7em;
@@ -200,7 +207,7 @@ Navbar Style
         padding: 10px;
     }
 .subtitle__employer {
-    font-size: 1.5em !important;
+    font-size: 1.3em !important;
 }
 #content {
     padding: 5px;
@@ -215,6 +222,61 @@ Navbar Style
 .btn-outline-secondary  {
 width: 101.7px;
 margin-bottom: 7px;
+}
+}
+@media only screen and  (max-width: 595px) {
+
+.sidebar-empl {
+        max-width: 4em;
+        background: #0168FF;
+        h3 {
+            font-size: 0.9em;
+        }
+        li a {
+            font-size: 1.7em;
+            text-align: center;
+        }
+    }
+
+.sidebar-empl__item{
+    display: none;
+    }
+.sidebar-empl__header {
+        padding: 5px;
+    }
+.subtitle__employer {
+    font-size: 0.9em !important;
+}
+#content {
+    padding: 5px;
+}
+.header__first {
+        padding: 0;
+        font-size: 1em;
+    }
+.navbar {
+    flex-wrap: nowrap;
+}
+.btn-outline-secondary  {
+width: 101.7px;
+margin-bottom: 7px;
+} 
+.popular__title-secondrow {
+    .popular__titles {
+        display: none;
+    }
+}
+.navbar-empl {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__second {
+    font-size: 1.3em;
+}
+.nav-empl__links {
+    display: flex;
+    flex-direction: row;
 }
 }
 
