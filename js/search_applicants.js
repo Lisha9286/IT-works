@@ -23,6 +23,20 @@ document.addEventListener("DOMContentLoaded", async function () {
             class="search__card-photo" alt="photo" />
     </div>`
     };
+    
+    let arrCity = [];
+
+    //получение массива уникальных городов соискателей из JSON
+    for (card of cards) {
+        arrCity.push(card.city);
+    }
+    let uniqArrCity = [...new Set(arrCity)]
+    console.log(uniqArrCity);
+
+    //добавление городов в выпадающий список
+    for (uniqCity of uniqArrCity) {
+        document.querySelector('#cities').innerHTML += `<option>${uniqCity}</option>`
+    }
 });
 
 let btnSearch = document.querySelector('#btnSearchApp');
