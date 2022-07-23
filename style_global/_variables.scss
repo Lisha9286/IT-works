@@ -3,6 +3,7 @@ $minor-color: #06f;
 $deep-gray: #333;
 $light-gray: #BDBDBD;
 $background: #E5E5E5;
+$bodycolor: #fafafa;
 
 @font-face {
     font-family: 'Roboto';
@@ -39,4 +40,26 @@ ul {
 
 li {
     list-style: none;
+}
+
+/* Миксин для сиреневой кнопки ( class="btn btn-primary + задать свой уникальный класс)*/
+@mixin button-lilac {
+border: 1px rgb(163, 73, 164) solid;
+color:rgb(163, 73, 164)
+}
+@mixin button-lilac-hover {
+        background-color: rgb(163, 73, 164);
+        color: white;
+    
+}
+/* Миксин для поля поиск*/
+@mixin searching-form {
+    border-radius: 7px;
+	border: 1.5px solid #5878FF;
+}
+@mixin searching-form-focus {
+    box-shadow: none;
+	border: 1.5px solid #E3E6ED;
+	background-color: #F7F8FD;
+	letter-spacing: 1px;
 }
