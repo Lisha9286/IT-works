@@ -50,6 +50,7 @@ color:rgb(163, 73, 164)
 @mixin button-lilac-hover {
         background-color: rgb(163, 73, 164);
         color: white;
+        border: 1px rgb(163, 73, 164) solid;
     
 }
 /* Миксин для поля поиск*/
