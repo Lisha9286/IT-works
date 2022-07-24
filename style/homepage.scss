@@ -1,21 +1,14 @@
-.wrapper {
-    background-image: url('/assets/images/backmain.jpg');
-    background-size: cover;
+.homepage__wrapper {
+    background-color: $bodycolor;
+    
 
-    .header {
-        display: flex;
+    .homepage__header {
 
-        .header__box {
-            display: flex;
+        
 
-            margin-top: 20px;
-            justify-content: end;
-
-        }
-
-        .header__login {
-            width: 24px;
-            margin-left: 10px;
+        .header__logo{
+            max-width: 100px;
+            margin-right: 0 auto;
         }
 
         .header__lang {
@@ -25,22 +18,26 @@
         }
     }
 
-    .header__title {
-        font-family: 'Roboto';
-        font-weight: 700;
-        font-size: 2rem;
-        color: white;
-        letter-spacing: 2px;
+    .header__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-top: 20px;
+
+    }
+
+    .header-top{
         margin-top: 5%;
     }
 
     .header__subtitle {
         font-family: 'Roboto';
-        font-weight: 300;
+        font-weight: 400;
         font-size: 3rem;
-        margin-bottom: 2%;
-        padding-top: 1%;
-        color: $deep-gray;
+        text-transform: uppercase;
+        text-shadow: 1px rgb(162, 73, 164);
+        margin-bottom: 4%;
+        color: $light-gray;
 
     }
 
@@ -95,27 +92,31 @@
     }
 
     .header__border {
-        width: 17%;
+        width: 30%;
         margin: 0 auto;
-        border-bottom: solid 2px rgba(255, 255, 255, 0.459);
-
+        border-bottom: solid 2px $minor-color;
     }
 
 }
 
-.button-main {
+.homepage__button {
     align-self: center;
-    font-family: 'Arial';
+    font-family: 'Roboto';
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.2rem;
-    margin-top: 7%;
     width: 18em;
     height: 6em;
     border-radius: 3px;
-    background-color: white;
+    margin: 10px 50px;
+    background-color: rgb(0, 102, 255);
     color: $deep-gray;
     border: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; 
+}
+
+.homepage__button:hover{
+    background-color: rgb(162, 73, 164);
 }
 
 .btn-title {
@@ -123,11 +124,17 @@
     justify-self: center;
 }
 
-
-
 .header__block {
+    margin-top: 7%;
     margin-bottom: 30%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
 .linka{
 text-decoration: none;
-color: white;}
+color: $background;
+
+
+}
