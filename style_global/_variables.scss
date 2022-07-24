@@ -45,7 +45,8 @@ li {
 /* Миксин для сиреневой кнопки ( class="btn btn-primary + задать свой уникальный класс)*/
 @mixin button-lilac {
 border: 1px rgb(163, 73, 164) solid;
-color:rgb(163, 73, 164)
+color:rgb(163, 73, 164);
+width: 101.7px;
 }
 @mixin button-lilac-hover {
         background-color: rgb(163, 73, 164);
