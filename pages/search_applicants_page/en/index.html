@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../../../style_global/style.scss">
     <title>Document</title>
 </head>
+
 <body class="page-searching-applicants">
     <div class="wrapper-empl d-flex">
         <!-- Sidebar  -->
@@ -33,8 +35,8 @@
                                 О Нас</span></a>
                     </li>
                     <li>
-                        <a href="#"><i class="bi bi-envelope pe-2"></i> <span
-                                class="sidebar-empl__item">Контакты</span> </a>
+                        <a href="#"><i class="bi bi-envelope pe-2"></i> <span class="sidebar-empl__item">Контакты</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -57,91 +59,94 @@
             </div>
             <!-- Searching form-->
             <div class="container searching">
-            <div class="searching__form searching__form-applicants">
-                <div class="card w-100 mt-1 p-2">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Поиск">
-                        <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"><i
-                                    class="class=bi bi-search bi_employer"></i></button></div>
-                                    
+                <div class="searching__form searching__form-applicants">
+                    <div class="card w-100 mt-1 p-2">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Поиск" id="inputSearchApp">
+                            <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"
+                                    id="btnSearchApp"><i class="class=bi bi-search bi_employer"></i></button></div>
+
+                        </div>
+                        <div class="searching__result">
+                            <div id="cards">Lorem Ipsum</div>
+                            <div>Lorem Ipsum</div>
+                            <div>Lorem Ipsum</div>
+                            <div>Lorem Ipsum</div>
+                            <div>Lorem Ipsum</div>
+                            <div>Lorem Ipsum</div>
+                            <div>Lorem Ipsum</div>
+                        </div>
                     </div>
-                    <div class="searching__result">
-                        <div id="cards">Lorem Ipsum</div>
-                        <div>Lorem Ipsum</div>
-                        <div>Lorem Ipsum</div>
-                        <div>Lorem Ipsum</div>
-                        <div>Lorem Ipsum</div>
-                        <div>Lorem Ipsum</div>
-                        <div>Lorem Ipsum</div>
+                </div>
+                <div class="row searching__filters mt-1 ms-3 p-2">
+                    <div class="filter">
+                        <div class="filter__title">Условия поиска</div>
+                        <div class="filter__change">Применить</div>
+                        <div class="filter__throwoff">Сбросить</div>
+                        <div class="filter__card">
+                            <div class="filter__card-title">Город</div>
+                            <select class="form-select" id="cities">
+                                <option selected value="Псков">Псков</option>
+                                <option value="Вологда">Вологда</option>
+                                <option value="Кострома">Кострома</option>
+                                <option value="Нарва">Нарва</option>
+                                <option value="Тбилиси">Тбилиси</option>
+                                <option value="Петрозаводск">Петрозаводск</option>
+                                <option value="Бобруйск">Бобруйск</option>
+                                <option value="Ужгород">Ужгород</option>
+                                <option value="Гданьск">Гданьск</option>
+                                <option value="Сараево">Сараево</option>
+                                <option value="Тулун">Тулун</option>
+                                <option value="Уфа">Уфа</option>
+                                <option value="Конь-Колодезь">Конь-Колодезь</option>
+                            </select>
+                        </div>
+                        <div class=" filter__card">
+                            <div class="filter__card-title">Уровень позиции</div>
+                            <div><input class="filter__card-input form-check-input" id="junior" value="junior"
+                                    type="checkbox" name="junior" />
+                                <label class="filter__card-label" for="junior">Junior</label></div>
+                            <div><input class="filter__card-input form-check-input" id="middle" value="middle"
+                                    type="checkbox" name="middle" />
+                                <label class="filter__card-label" for="middle">Middle</label></div>
+                            <div><input class="filter__card-input form-check-input" id="senior" value="senior"
+                                    type="checkbox" name="senior" />
+                                <label class="filter__card-label" for="senior">Senior</label></div>
+                        </div>
+                        <div class="filter__card">
+                            <div class="filter__card-title">Опыт работы</div>
+                            <div><input class="filter__card-input form-check-input" type="checkbox" name="zero" />
+                                <label class="filter__card-label " for="zero">Нет опыта </label></div>
+                            <div><input class="filter__card-input form-check-input" type="checkbox" name="small" />
+                                <label class="filter__card-label " for="small">От 1 года до 3 лет </label></div>
+                            <div><input class="filter__card-input form-check-input" type="checkbox" name="medium" />
+                                <label class="filter__card-label " for="medium">От 3 до 6 лет</label></div>
+                            <div><input class="filter__card-input form-check-input" type="checkbox" name="large" />
+                                <label class="filter__card-label " name="large">Более 6 лет</label></div>
+                        </div>
+                        <div class="filter__card">
+                            <div class="filter__card-title">Уровень дохода $</div>
+                            <div class="filter__card-salary">
+                                <input class="input-salary" type="number" placeholder="от" />
+                                <input class="input-salary" type="number" placeholder="до" /></div>
+                            <div>
+                                <input class="filter__card-input form-check-input" type="checkbox" name="salary" />
+                                <label class="filter__card-label" for="salary">Указан доход</label></div>
+                        </div>
+                        <div class="filter__card">
+                            <div class="filter__card-title">Формат работы</div>
+                            <div><input class="filter__card-input form-check-input" value="eдаленный" type="checkbox" />
+                                <label class="filter__card-label">Удаленный</label></div>
+                            <div><input class="filter__card-input form-check-input" value="jфис" type="checkbox" />
+                                <label class="filter__card-label">Офис</label></div>
+                            <div><input class="filter__card-input form-check-input" value="гибрид" type="checkbox" />
+                                <label class="filter__card-label">Гибрид</label></div>
+                        </div>
+                        <div class="filter__change">Применить</div>
+                        <div class="filter__throwoff">Собросить</div>
                     </div>
                 </div>
             </div>
-            <div class="row searching__filters mt-1 ms-3 p-2">
-                <div class="filter">
-                    <div class="filter__title">Условия поиска</div>
-                    <div class="filter__change">Применить</div>
-                    <div class="filter__throwoff">Сбросить</div>
-                    <div class="filter__card">
-                        <div class="filter__card-title">Город</div>
-                        <select class="form-select">
-                            <option selected value="Псков">Псков</option>
-                            <option value="Вологда">Вологда</option>
-                            <option value="Кострома">Кострома</option>
-                            <option value="Нарва">Нарва</option>
-                            <option value="Тбилиси">Тбилиси</option>
-                            <option value="Петрозаводск">Петрозаводск</option>
-                            <option value="Бобруйск">Бобруйск</option>
-                            <option value="Ужгород">Ужгород</option>
-                            <option value="Гданьск">Гданьск</option>
-                            <option value="Сараево">Сараево</option>
-                            <option value="Тулун">Тулун</option>
-                            <option value="Уфа">Уфа</option>
-                            <option value="Конь-Колодезь">Конь-Колодезь</option>
-                        </select>
-                    </div>
-                    <div class=" filter__card">
-                        <div class="filter__card-title">Уровень позиции</div>
-                        <div><input class="filter__card-input form-check-input" id="junior" value="junior" type="checkbox" name="junior" />
-                            <label class="filter__card-label" for="junior">Junior</label></div>
-                        <div><input class="filter__card-input form-check-input" id="middle" value="middle" type="checkbox" name="middle" />
-                            <label class="filter__card-label" for="middle">Middle</label></div>
-                        <div><input class="filter__card-input form-check-input" id="senior" value="senior" type="checkbox" name="senior" />
-                            <label class="filter__card-label" for="senior">Senior</label></div>
-                    </div>
-                    <div class="filter__card">
-                        <div class="filter__card-title">Опыт работы</div>
-                        <div><input class="filter__card-input form-check-input" type="checkbox" name="zero" />
-                            <label class="filter__card-label " for="zero">Нет опыта </label></div>
-                        <div><input class="filter__card-input form-check-input" type="checkbox" name="small" />
-                            <label class="filter__card-label " for="small">От 1 года до 3 лет </label></div>
-                        <div><input class="filter__card-input form-check-input" type="checkbox" name="medium" />
-                            <label class="filter__card-label " for="medium">От 3 до 6 лет</label></div>
-                        <div><input class="filter__card-input form-check-input" type="checkbox" name="large" />
-                            <label class="filter__card-label " name="large">Более 6 лет</label></div>
-                    </div>
-                    <div class="filter__card">
-                        <div class="filter__card-title">Уровень дохода $</div>
-                        <div class="filter__card-salary">
-                            <input class="input-salary" type="number" placeholder="от" />
-                            <input class="input-salary" type="number" placeholder="до" /></div>
-                        <div>
-                            <input class="filter__card-input form-check-input" type="checkbox" name="salary" />
-                            <label class="filter__card-label" for="salary">Указан доход</label></div>
-                    </div>
-                    <div class="filter__card">
-                        <div class="filter__card-title">Формат работы</div>
-                        <div><input class="filter__card-input form-check-input" value="eдаленный" type="checkbox" />
-                            <label class="filter__card-label">Удаленный</label></div>
-                        <div><input class="filter__card-input form-check-input" value="jфис" type="checkbox" />
-                            <label class="filter__card-label">Офис</label></div>
-                        <div><input class="filter__card-input form-check-input" value="гибрид" type="checkbox" />
-                            <label class="filter__card-label">Гибрид</label></div>
-                    </div>
-                    <div class="filter__change">Применить</div>
-                    <div class="filter__throwoff">Собросить</div>
-                </div>
-            </div>
-        </div>
             <!-- Searching Form end-->
             <footer class="bg-light text-center text-lg-start">
                 <div class="container p-4">
@@ -169,6 +174,7 @@
             </footer>
         </div>
     </div>
-    <script src="/js/search_applicants.js"></script>
+    <script src="../../../js/search_applicants.js"></script>
 </body>
+
 </html>
