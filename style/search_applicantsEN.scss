@@ -15,7 +15,9 @@
 .searching__form {
 flex-grow: 1;
 }
-
+.navbar-empl__logo {
+    width:100%;
+}
 .navbar-apl {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     background-color: #fff;
@@ -24,7 +26,6 @@ flex-grow: 1;
 }
 .header__second-appl {
     font-size: 1.3em;
-    font-weight: 500;
 }
 .subtitle__apllsearch {
     font-size: 1em;
