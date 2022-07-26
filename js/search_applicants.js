@@ -1,8 +1,8 @@
-let cards, card
-const list = document.querySelector('#cards');
+let cards, card;
+const list = document.querySelector("#cards");
 
 function searchResult(element) {
-        list.innerHTML += `
+    list.innerHTML += `
         <div class="search__card">
             <div>
                 <h5 class="search__card-title card-title">${element.occupation}<span class="card-title"> ${element.level}</span></h5>
@@ -13,17 +13,23 @@ function searchResult(element) {
             </div>
         <image src="${element.photo}" class="search__card-photo" alt="photo" />
         </div>`;
-    
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-    let url = 'applicants.json';
+    let url = "https://raw.githubusercontent.com/nas-tay/WorkIT-project/main/js/applicants.json";
     let response = await fetch(url);
     cards = await response.json();
 
-    for (card of cards) {
-        searchResult(card);
-    };
+    if (localStorage.getItem("searchRequest")) {
+        console.log("ok");
+        let searchRequest = localStorage.getItem("searchRequest");
+        document.querySelector("#inputSearchApp").value = searchRequest;
+        serchApp(searchRequest);
+    } else {
+        for (card of cards) {
+            searchResult(card);
+        }
+    }
 
     let arrCity = [];
 
@@ -36,19 +42,19 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     //создание выпадающего списка из массива уникальных городов
     for (uniqCity of uniqArrCity) {
-        document.querySelector('#cities').innerHTML += `<option>${uniqCity}</option>`
+        document.querySelector("#cities").innerHTML += `<option>${uniqCity}</option>`;
     }
 });
 
+const searchText = document.querySelector("#inputSearchApp").value;
 
-function serchApp() {
+function serchApp(searchText) {
     list.innerHTML = "";
-    const searchText = document.querySelector('#inputSearchApp').value;
     for (card of cards) {
         if (!searchText == "") {
             const search = new RegExp(searchText, "gi");
             const rez = search.test(card.keyWords);
-            console.log(rez)
+            console.log(rez);
             if (rez) {
                 searchResult(card);
             }
@@ -56,20 +62,19 @@ function serchApp() {
         if (searchText == "") {
             searchResult(card);
         }
-
-    };
+    }
 }
 
 function createObject() {
     //объект с параметрами из фильтра
     const filterObject = {
-        city: document.querySelector('#city').value,
+        city: document.querySelector("#cities").value,
         jobFormat: [],
         level: [],
-        minSalary: +document.querySelector('#minSalary').value,
-        maxSalary: +document.querySelector('#maxSalary').value,
+        minSalary: +document.querySelector("#minSalary").value,
+        maxSalary: +document.querySelector("#maxSalary").value,
         experience: [],
-    }
+    };
 
     // функция получения свойств-массивов объекта из фильтра
     function getFilter(filter, objectPush) {
@@ -80,9 +85,9 @@ function createObject() {
         });
     }
 
-    const level = document.querySelectorAll('.level');
-    const jobFormat = document.querySelectorAll('.format');
-    const experience = document.querySelectorAll('.experience')
+    const level = document.querySelectorAll(".level");
+    const jobFormat = document.querySelectorAll(".format");
+    const experience = document.querySelectorAll(".experience");
 
     getFilter(level, filterObject.level);
     getFilter(jobFormat, filterObject.jobFormat);
@@ -90,28 +95,28 @@ function createObject() {
     console.log(filterObject);
 }
 
-const btnSearch = document.querySelector('#btnSearchApp');
-const inputSearchApp = document.querySelector('#inputSearchApp');
-const btnFilter = document.querySelector('#btnFilter');
-const btnReboot = document.querySelector('#btnReboot');
+const btnSearch = document.querySelector("#btnSearchApp");
+const inputSearchApp = document.querySelector("#inputSearchApp");
+const btnFilter = document.querySelector("#btnFilter");
+const btnReboot = document.querySelector("#btnReboot");
 
-btnSearch.addEventListener('click', () => {
+btnSearch.addEventListener("click", () => {
     serchApp();
     createObject();
 });
-btnFilter.addEventListener('click', () => {
+btnFilter.addEventListener("click", () => {
     createObject();
 });
-inputSearchApp.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
+inputSearchApp.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
         serchApp();
         createObject();
     }
 });
 
-btnReboot.addEventListener('click', () => {
+btnReboot.addEventListener("click", () => {
     const inputs = document.querySelectorAll("input");
-    inputs.forEach(item => {
+    inputs.forEach((item) => {
         item.checked = false;
         item.value = "";
     });

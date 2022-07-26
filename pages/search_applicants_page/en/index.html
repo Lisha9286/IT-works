@@ -79,7 +79,8 @@
                         <div class="filter__card">
                             <div class="filter__card-title">Город</div>
                             <select class="form-select" id="cities">
-                                <option selected value="Псков">Псков</option>
+                                <option selected value="none">- не выбран -</option>
+                                <option value="Псков">Псков</option>
                                 <option value="Вологда">Вологда</option>
                                 <option value="Кострома">Кострома</option>
                                 <option value="Нарва">Нарва</option>
@@ -96,47 +97,54 @@
                         </div>
                         <div class=" filter__card">
                             <div class="filter__card-title">Уровень позиции</div>
-                            <div><input class="filter__card-input form-check-input" id="junior" value="junior"
+                            <div><input class="filter__card-input form-check-input level" id="junior" value="junior"
                                     type="checkbox" name="junior" />
                                 <label class="filter__card-label" for="junior">Junior</label></div>
-                            <div><input class="filter__card-input form-check-input" id="middle" value="middle"
+                            <div><input class="filter__card-input form-check-input level" id="middle" value="middle"
                                     type="checkbox" name="middle" />
                                 <label class="filter__card-label" for="middle">Middle</label></div>
-                            <div><input class="filter__card-input form-check-input" id="senior" value="senior"
+                            <div><input class="filter__card-input form-check-input level" id="senior" value="senior"
                                     type="checkbox" name="senior" />
                                 <label class="filter__card-label" for="senior">Senior</label></div>
                         </div>
                         <div class="filter__card">
                             <div class="filter__card-title">Опыт работы</div>
-                            <div><input class="filter__card-input form-check-input" type="checkbox" name="zero" />
+                            <div><input class="filter__card-input form-check-input experience" type="checkbox"
+                                    name="zero" />
                                 <label class="filter__card-label " for="zero">Нет опыта </label></div>
-                            <div><input class="filter__card-input form-check-input" type="checkbox" name="small" />
+                            <div><input class="filter__card-input form-check-input experience" type="checkbox"
+                                    name="small" />
                                 <label class="filter__card-label " for="small">От 1 года до 3 лет </label></div>
-                            <div><input class="filter__card-input form-check-input" type="checkbox" name="medium" />
+                            <div><input class="filter__card-input form-check-input experience" type="checkbox"
+                                    name="medium" />
                                 <label class="filter__card-label " for="medium">От 3 до 6 лет</label></div>
-                            <div><input class="filter__card-input form-check-input" type="checkbox" name="large" />
+                            <div><input class="filter__card-input form-check-input experience" type="checkbox"
+                                    name="large" />
                                 <label class="filter__card-label " name="large">Более 6 лет</label></div>
                         </div>
                         <div class="filter__card">
                             <div class="filter__card-title">Уровень дохода $</div>
                             <div class="filter__card-salary">
-                                <input class="input-salary" type="number" placeholder="от" />
-                                <input class="input-salary" type="number" placeholder="до" /></div>
+                                <input class="input-salary" type="number" placeholder="от" id="minSalary" />
+                                <input class="input-salary" type="number" placeholder="до" id="maxSalary" /></div>
                             <div>
                                 <input class="filter__card-input form-check-input" type="checkbox" name="salary" />
                                 <label class="filter__card-label" for="salary">Указан доход</label></div>
                         </div>
                         <div class="filter__card">
                             <div class="filter__card-title">Формат работы</div>
-                            <div><input class="filter__card-input form-check-input" value="eдаленный" type="checkbox" />
+                            <div><input class="filter__card-input form-check-input format" value="eдаленный"
+                                    type="checkbox" />
                                 <label class="filter__card-label">Удаленный</label></div>
-                            <div><input class="filter__card-input form-check-input" value="jфис" type="checkbox" />
+                            <div><input class="filter__card-input form-check-input format" value="jфис"
+                                    type="checkbox" />
                                 <label class="filter__card-label">Офис</label></div>
-                            <div><input class="filter__card-input form-check-input" value="гибрид" type="checkbox" />
+                            <div><input class="filter__card-input form-check-input format" value="гибрид"
+                                    type="checkbox" />
                                 <label class="filter__card-label">Гибрид</label></div>
                         </div>
-                        <div class="filter__change">Применить</div>
-                        <div class="filter__throwoff">Сбросить</div>
+                        <div class="filter__change" id="btnFilter">Применить</div>
+                        <div class="filter__throwoff" id="btnReboot">Сбросить</div>
                     </div>
                 </div>
             </div>
