@@ -3,7 +3,8 @@ $minor-color: #06f;
 $deep-gray: #333;
 $light-gray: #BDBDBD;
 $background: #E5E5E5;
-$bodycolor: #fafafa;
+$bodycolor: #F7F9FC;
+$cardsshadow:rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
 @font-face {
     font-family: 'Roboto';
@@ -33,6 +34,7 @@ $bodycolor: #fafafa;
     font-style: normal;
 }
 
+
 ul {
     margin-left: 0;
     padding-left: 0;
@@ -45,7 +47,8 @@ li {
 /* Миксин для сиреневой кнопки ( class="btn btn-primary + задать свой уникальный класс)*/
 @mixin button-lilac {
 border: 1px rgb(163, 73, 164) solid;
-color:rgb(163, 73, 164)
+color:rgb(163, 73, 164);
+width: 101.7px;
 }
 @mixin button-lilac-hover {
         background-color: rgb(163, 73, 164);
