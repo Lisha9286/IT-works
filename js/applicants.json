@@ -1,6 +1,6 @@
 [{
     "name":"Василий",
-    "keyWords": ["developer","разработчик", "программист", "frontend","junior", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "frontend","junior", "Офис", "Гибрид", "Frontend developer"],
     "age": "27",
     "experience": "1",
     "level": "junior",
@@ -14,7 +14,7 @@
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
     "age": "27",
     "experience": "2",
     "level": "junior",
@@ -28,7 +28,7 @@
 },
 {
     "name":"Василий",
-    "keyWords": ["developer","разработчик", "программист", "frontend","junior", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "frontend","junior", "Офис", "Гибрид", "Frontend developer"],
     "age": "27",
     "experience": "1",
     "level": "junior",
@@ -42,7 +42,7 @@
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
     "age": "27",
     "experience": "2",
     "level": "junior",
@@ -56,7 +56,7 @@
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
     "age": "27",
     "experience": "2",
     "level": "junior",
@@ -70,7 +70,7 @@
 },
 {
     "name":"Владлен",
-    "keyWords": ["developer","разработчик", "программист", "java", "junior", "Удаленно", "Офис", "Удаленка", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "java", "junior", "Удаленно", "Офис", "Удаленка", "Гибрид", "Java Developer"],
     "age": "27",
     "experience": "3",
     "level": "junior",
@@ -84,7 +84,7 @@
 },
 {
     "name":"Георгий",
-    "keyWords": ["developer","разработчик", "программист", "javascript", "js","middle", "Удаленно", "Удаленка", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "javascript", "js","middle", "Удаленно", "Удаленка", "Гибрид", "Javascript Developer"],
     "age": "27",
     "experience": "4",
     "level": "middle",
@@ -98,7 +98,7 @@
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
     "age": "27",
     "experience": "2",
     "level": "junior",
@@ -112,7 +112,7 @@
 },
 {
     "name":"Евгения",
-    "keyWords": ["developer","разработчик", "программист", "python","middle", "Удаленно", "Удаленка", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "python","middle", "Удаленно", "Удаленка", "Гибрид", "Python Developer"],
     "age": "27",
     "experience": "5",
     "level": "middle",
@@ -126,7 +126,7 @@
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
     "age": "27",
     "experience": "2",
     "level": "junior",
@@ -140,7 +140,7 @@
 },
 {
     "name":"Мария",
-    "keyWords": ["developer","разработчик", "программист", "C#","middle", "Удаленно", "Удаленка", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "C#","middle", "Удаленно", "Удаленка", "Гибрид", "C# Developer"],
     "age": "27",
     "experience": "6",
     "level": "middle",
@@ -154,7 +154,7 @@
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
     "age": "27",
     "experience": "2",
     "level": "junior",
@@ -168,7 +168,7 @@
 },
 {
     "name":"Михаил",
-    "keyWords": ["developer","разработчик", "программист", "C++","middle", "Удаленно", "Удаленка", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "C++","middle", "Удаленно", "Удаленка", "Гибрид", "C++ Developer"],
     "age": "27",
     "experience": "7",
     "level": "middle",
@@ -182,7 +182,7 @@
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
     "age": "27",
     "experience": "2",
     "level": "junior",
@@ -196,7 +196,7 @@
 },
 {
     "name":"Глеб",
-    "keyWords": ["developer","разработчик", "программист", "1-C", "1C", "1 C","middle", "Удаленно", "Удаленка","Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "1-C", "1C", "1 C","middle", "Удаленно", "Удаленка","Гибрид", "1-C разработчик"],
     "age": "27",
     "experience": "8",
     "level": "middle",
@@ -210,7 +210,7 @@
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
     "age": "27",
     "experience": "2",
     "level": "junior",
@@ -224,7 +224,7 @@
 },
 {
     "name":"Ольга",
-    "keyWords": ["developer","разработчик", "программист", "php","senior", "Удаленно", "Удаленка","Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "php","senior", "Удаленно", "Удаленка","Гибрид", "PHP Developer"],
     "age": "27",
     "experience": "9",
     "level": "senior",
@@ -238,7 +238,7 @@
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
     "age": "27",
     "experience": "2",
     "level": "junior",
@@ -252,7 +252,7 @@
 },
 {
     "name":"Александра",
-    "keyWords": ["developer","разработчик", "программист", "ruby", "ruby on rails", "senior", "Удаленка", "Удаленно", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "ruby", "ruby on rails", "senior", "Удаленка", "Удаленно", "Гибрид", "Ruby on Rails Developer"],
     "age": "27",
     "experience": "10",
     "level": "senior",
@@ -266,7 +266,7 @@
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
     "age": "27",
     "experience": "2",
     "level": "junior",
@@ -280,7 +280,7 @@
 },
 {
     "name":"Владислав",
-    "keyWords": ["developer","разработчик", "программист", "flutter", "senior", "Удаленно", "Удаленка", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "flutter", "senior", "Удаленно", "Удаленка", "Гибрид", "Flutter developer"],
     "age": "27",
     "experience": "11",
     "level": "senior",
@@ -294,7 +294,7 @@
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
     "age": "27",
     "experience": "2",
     "level": "junior",
@@ -308,7 +308,7 @@
 },
 {
     "name":"Светлана",
-    "keyWords": ["developer", "Fullstack","разработчик", "программист", "senior", "Удаленно", "Удаленка","Гибрид"],
+    "keyWords": ["developer", "Fullstack","разработчик", "программист", "senior", "Удаленно", "Удаленка","Гибрид", "Fullstack Developer"],
     "age": "27",
     "experience": "12",
     "level": "senior",
