@@ -42,46 +42,40 @@
             </div>
         </nav>
         <!-- Page Content  -->
-        <div id="content">
-            <nav class="navbar-empl navbar-expand-lg navbar-light bg-light d-flex ">
-                <div class="navbar-empl__logo">
-                    <a href="#">
-                        <img class="nav__logo-img" src="../../../assets/images/logo.png" alt="logo"></a>
-                    <h3 class="header__second pt-3"> Работодателям</h3>
+        <div id="content-appl">
+            <nav class="container  navbar-empl navbar-expand-lg navbar-light bg-light navbar-apl">
+                <div class=" row navbar-empl__logo">
+                    <a class=" col-2 ms-2" href="#">
+                        <img class="nav__logo-img logo-appl" src="../../../assets/images/logo.png" alt="logo"></a>
+                        <div class="col-8">
+                    <h3 class="header__second header__second-appl  pt-3"> Работодателям</h3>
+                    <p class=" subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>
                 </div>
-            </nav>
+            </div>
+            </nav> 
             <!--Motto-->
             <div class="row m-1 p-1">
                 <div class="col-12 d-flex justify-content-start">
-                    <p class="header__subtitle subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>
+                <!--  <p class="header__subtitle subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>-->  
                 </div>
             </div>
             <!-- Searching form-->
             <div class="container searching">
                 <div class="searching__form searching__form-applicants">
                     <div class="card w-100 mt-1 p-2">
-                        <div class="input-group mb-3">
+                        <div class="input-group">
                             <input type="text" class="form-control" placeholder="Поиск" id="inputSearchApp">
                             <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"
                                     id="btnSearchApp"><i class="class=bi bi-search bi_employer"></i></button></div>
-
                         </div>
-                        <div class="searching__result">
-                            <div id="cards">Lorem Ipsum</div>
-                            <div>Lorem Ipsum</div>
-                            <div>Lorem Ipsum</div>
-                            <div>Lorem Ipsum</div>
-                            <div>Lorem Ipsum</div>
-                            <div>Lorem Ipsum</div>
-                            <div>Lorem Ipsum</div>
+                        <div class="pt-3 w-100 searching__result">
+                            <div id="cards">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row searching__filters mt-1 ms-3 p-2">
                     <div class="filter">
-                        <div class="filter__title">Условия поиска</div>
-                        <div class="filter__change">Применить</div>
-                        <div class="filter__throwoff">Сбросить</div>
                         <div class="filter__card">
                             <div class="filter__card-title">Город</div>
                             <select class="form-select" id="cities">
