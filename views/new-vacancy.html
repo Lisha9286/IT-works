@@ -1,1 +1,146 @@
-<div>gogogogo</div>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkIT</title>
+    <link rel="stylesheet" href="../style_global/style.scss">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container header justify-content-center">
+            <div class="row">
+                <div class="header__box">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <h1>WorkIT</h1>
+                            </div>
+                            <div class="col-md-1"><a class="header__lang"
+                                    href="../pages/create-vacancy_page/en/index.html">EN</a>
+                                <a href=""><img class="header__login" src="../assets/images/logo.png" alt=""></a>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h2>Твоя первая работа в мире IT</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container mt-5">
+            <div class="create-vacancy col-md-7 m-auto">
+                <form class="create-vacancy__name p-2 rounded bg">
+                    <div class="row m-3">
+                        <input type="text" class="form-control" name="vacancy"
+                            placeholder="Название вакансии/ стажировки">
+                    </div>
+                </form>
+                <form class="create-vacancy__income p-2 rounded bg mt-1">
+                    <p class="text-center fw-bold text-uppercase text-dark">Уровень дохода</p>
+                    <div class="row m-3">
+                        <div class="col">
+                            <input type="text" class="form-control" name="from" placeholder="от:">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" name="to" placeholder="до:">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" name="currency" placeholder="валюта:">
+                        </div>
+                    </div>
+                </form>
+                <form class="create-vacancy__description p-2 rounded bg mt-1">
+                    <p class="text-center fw-bold text-uppercase text-dark">Описание вакансии</p>
+                    <div class="row m-3">
+                        <input type="text" class="form-control" name="obligations" placeholder="Обязанности">
+                    </div>
+                    <div class="row m-3">
+                        <input type="text" class="form-control" name="skills" placeholder="Требования/навыки">
+                    </div>
+                    <div class="row m-3">
+                        <input type="text" class="form-control" name="conditions" placeholder="Условия">
+                    </div>
+                    <div class="row m-3">
+                        <input type="text" class="form-control" name="add" placeholder="Дополнительно">
+                    </div>
+                </form>
+                <form class="create-vacancy__contact p-2 rounded bg mt-1">
+                    <p class="text-center fw-bold text-uppercase text-dark">Контакты</p>
+                    <div class="row m-3">
+                        <input type="text" class="form-control" name="name" placeholder="Имя">
+                    </div>
+                    <div class="row m-3">
+                        <input type="text" class="form-control" name="surname" placeholder="Фамилия">
+                    </div>
+                    <div class="row m-3">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+                            required>
+                    </div>
+                    <div class="row m-3">
+                        <input type="tel" class="form-control" id="typePhone" name="tel" placeholder="+7(000)000-00-00">
+                    </div>
+                </form>
+                <form class="create-vacancy__location p-2 rounded bg mt-1">
+                    <p class="text-center fw-bold text-uppercase text-dark">Место расположения</p>
+                    <div class="row m-3">
+                        <input type="text" class="form-control" name="country" placeholder="Страна">
+                    </div>
+                    <div class="row m-3">
+                        <input type="text" class="form-control" name="locality" placeholder="Населенный пункт">
+                    </div>
+                    <div class="row m-3">
+                        <input type="email" class="form-control" name="index" id="exampleFormControlInput1"
+                            placeholder="Индекс">
+                    </div>
+                </form>
+                <form class="create-vacancy__submit p-2 rounded bg mt-1 mb-5">
+                    <div class="row m-3">
+                        <button type="submit" class="btn btn-primary btn-block" name="btn">Разместить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer class="bg-light text-center text-lg-start">
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Footer text</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                            aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Footer text</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                            aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2020 Copyright:
+                <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+</body>
+
+</html>

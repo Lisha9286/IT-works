@@ -1,16 +1,19 @@
 const { async } = require("regenerator-runtime");
-
-let btn = document.querySelector('.header-search__btn'), keyword;
-btn.addEventListener('click', (e)=>{
+const input = document.querySelector('.header-search__form');
+function click(e){
     e.preventDefault();
     keyWord();
     getResultArr()
-})
-
-
+}
+let btn = document.querySelector('.header-search__btn'), keyword;
+btn.addEventListener('click', click )
+input.addEventListener('keydown', function(e) {
+    if (e.keyCode === 13) {
+      click();
+    }
+  });
  function keyWord() {
-    let input = document.querySelector('.header-search__form'),
-    key = input.value;
+    let key = input.value;
     keyword = key.toLowerCase();
     console.log(keyword);
     input.value = "";
