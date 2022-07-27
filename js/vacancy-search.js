@@ -1,17 +1,19 @@
 const { async } = require("regenerator-runtime");
-const input = document.querySelector('.header-search__form');
-function click(e){
-    e.preventDefault();
+const input = document.querySelector('.form-control');
+function click(){
     keyWord();
     getResultArr()
 }
-let btn = document.querySelector('.header-search__btn'), keyword;
-btn.addEventListener('click', click )
-input.addEventListener('keydown', function(e) {
-    if (e.keyCode === 13) {
-      click();
-    }
+let btn = document.querySelector('.header__btnvaca'), keyword;
+btn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    click()} );
+input.addEventListener('keydown', (e)=>{
+    if (e.keyCode === 13){
+    e.preventDefault();
+    click();}
   });
+
  function keyWord() {
     let key = input.value;
     keyword = key.toLowerCase();
@@ -20,7 +22,7 @@ input.addEventListener('keydown', function(e) {
     return keyword}
 
     async function fetchToDo () {
-    const responce = await fetch('https://raw.githubusercontent.com/nas-tay/WorkIT-project/dasha-new/js/data.json')
+    const responce = await fetch('../dist/vac.json')
     try {
       data = await responce.json()
     return data
@@ -33,9 +35,8 @@ input.addEventListener('keydown', function(e) {
         const data = await fetchToDo()
         let resultArr = [];
         data.forEach((el) => {
-            if(el.title.includes(keyword)){
+            if(el.keyWords.includes(keyword.toLowerCase())){
         resultArr.push(el)};
-       // 
         });
         console.log(resultArr);
         resultArr.forEach(el => new Card(el.exp, el.level, el.title, el.url).newCard())
