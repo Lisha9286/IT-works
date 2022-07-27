@@ -1,172 +1,111 @@
-$color:white;
-.body {
-    display: flex;
-    flex-direction: row-reverse;
+.page-searching-applicants {
+    background-color: #F7F9FC;
+    font-family: 'Roboto';
 }
-
-.header {
+#content-appl {
     width: 100%;
-    height: 120px;
-    padding: 20px 20px 0px 20px;
-    margin: 0px 20px 0px 20px;
-    background-color: rgb(255, 255, 255);
+    padding: 5px 20px 20px 20px;
+    transition: all 0.3s;
+}
+.searching {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+.searching__form {
+flex-grow: 1;
+}
+.navbar-empl__logo {
+    width:100%;
+}
+.navbar-apl {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+.header__second-appl {
+    font-size: 1.3em;
+}
+.subtitle__apllsearch {
+    font-size: 1em;
+    font-weight: 500;
+}
+.searching__filters {
+    flex-basis: 23%;
+    background-color: #fff;
+    box-shadow: $cardsshadow;
+    border-radius: 4px;
+    justify-self: flex-start;
+}
+.search__card {
+    max-width: 700px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px rgb(206, 206, 206) solid;
+    box-shadow: 15px 10px 20px 10px rgb(240, 240, 240);
+    border-radius: 10px;
 }
 
 
-.aside{
-    display: flex;
-    flex-direction: column;
-    width: 320px;
-    height: 100%;
-    color: $color;
-    background-image: url('../assets/images/backmain.jpg');
-}
-
-.aside-logotext{
-    width: 320px;
-    height: 120px;
-    background-color: rgba(8, 8, 130, 0.363);
-    padding: 10px 0px 0px 10px;
-
-.aside-logotext__logo-name{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    img {
-        height: 50px;
-        width: 80px;
-        border-radius: 10px;
-    }
-    .aside-logotext__name{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 30px;
-        padding: 0px 0px 0px 10px;
-    }
-}
-
-.aside-logotext__slogan{
-    padding: 10px 0px 0px 0px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    text-align: center;
-}
-}
-
-.header-search{
-    display: flex;
-    padding: 20px 10px 0px 10px;
-
-    .header__btnvaca {
-        width: 100px;
-        height: 40px;
-        border-radius: 10px;
-        margin: 0px 0px 0px 20px;
-    }
-}
-
-.main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 50px 0px 0px 0px;
-}
-
-
-.filter-vacancy{
-    margin: 50px 0px 0px 0px;
-    font-size: 15px;
+.search__card-subtitle {
+    font-size: 12px;
+    color: #686868;
+    line-height: 19px
 }
 
 
 .filter-vacancy__filter-title{
-    padding: 10px 0px 10px 10px;
+    padding: 10px 0px 10px 0px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.526);
-    }
-    &:active{
-        background-color: rgba(10, 10, 112, 0.347);
-    }
-}
-
-.filter-vacancy__filter-sectitle{
-    padding: 10px 0px 10px 10px;
-    background-color: rgba(10, 10, 112, 0.347);
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    display: none;
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.526);
-    }
-}
-
-.filter-vacancy__typies{
-    margin: 0px 0px 0px 10px;
-}
-
-.filter-vacancy__type{
-    margin: 20px 0px 0px 0px;
 }
 
 .filter-vacancy__title{
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
+    margin: 20px 0px 0px 0px;
 }
 
-.filter-vacancy__cities2 {
-    display: flex;
-    flex-direction: column;
-    min-height: 100px;
-  }
-
-.filter-vacancy__cities1 {
-    overflow-y: scroll;
-    background-color: rgba(31, 75, 140, 0);
-    width: 290px;
-    height: 100px;
-    &::-webkit-scrollbar {
-        width: 12px;
-        background-color: rgb(0, 99, 255);
-        border-radius: 10px;
-        
-    }
-    &::-webkit-scrollbar-thumb {
-        background-color: rgb(255, 255, 255);
-        border-radius: 10px;
-  }
-}
-
-  .form-check-input{
-    &:checked{
-        background-color: rgb(31, 75, 140);
-    }
-  }
-
-.filter-vacancy__points{
-    width: 270px;
+.filter-vacancy__cities {
+    width: 240px;
     height: 40px;
     border: 1px solid $light-gray;
     border-radius: 10px;
 }
 
 .filter-vacancy__input-salary{
-    width: 133px;
+    max-width: 118px;
     border: 1px solid $light-gray;
     border-radius: 10px;
 }
 
 .filter-vacancy__point{
-    width: 270px;
+    max-width: 240px;
     display: flex;
     justify-content: space-between;
     margin: 5px 0px 0px 0px;
+}
+
+.search__card {
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px rgb(206, 206, 206) solid;
+    box-shadow: 15px 10px 20px 10px rgb(240, 240, 240);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.filter-vacancy__btns{
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .filter-vacancy__change,
@@ -176,47 +115,90 @@ $color:white;
     justify-content: center;
     width: 200px;
     height: 40px;
-    border: 1px solid $main-color;
+    border: none;
     border-radius: 10px;
+    margin: 20px 0px 0px 0px;
 }
 
 .filter-vacancy__change {
-    background-color:  rgba(10, 10, 112, 0.438);
+    color: white;
+    background-color:  rgb(162, 73, 164);
     &:hover {
-        background-color: rgba(10, 10, 112, 0.679);
-        color: white;
+        background-color: rgb(135, 56, 136);
     }
 
     &:active{
-        background-color: rgba(6, 6, 79, 0.679);
-        color: white;
+        background-color: rgb(102, 30, 103);
     }
 }
 
 .filter-vacancy__throwoff {
     margin: 10px 0px 0px 0px;
-    background-color: rgb(255, 255, 255);
-    color: black;
+    background-color:rgb(0, 102, 255);
+    color: white;
         &:hover {
-            box-shadow: 0px 0px 3px 3px rgba(10, 10, 112, 0.595);
-            color: rgb(0, 0, 0);
+            background-color: rgb(34, 100, 198);
         }
     
         &:active{
-            box-shadow: inset 0px 0px 3px 3px rgba(10, 10, 112, 0.595);
-            color: rgb(0, 0, 0);
+            background-color: rgb(10, 71, 162);
         }
     }
 
-.filter-vacancy__btns{
-    margin: 10px 0px 0px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.search-container__card {
-    border: 1px solid;
-    width: 500px;
-    height: 100px;
-}
+
+
+    .__select {
+        display: flex;
+        width: 230px;
+        height: 204px;
+        margin: 0 auto;
+        overflow: hidden;
+        
+        border-radius: 5px;
+        border: solid 1px #c7ccd1;
+      }
+      
+      .__select__content {
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        width: 100%;
+        
+        overflow-y: auto;
+
+      }
+      
+      .__select__input {
+        display: none;
+      
+        &:checked + label {
+          background-color: #dedede;
+        }
+        &:disabled + label {
+          opacity: 0.6;
+          pointer-events: none;
+        }
+      }
+      
+      .__select__label {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        height: 40px;
+        padding: 0 16px;
+        
+        transition: all 0.2s ease-out;
+      
+        cursor: pointer;
+        
+        & + input + & {
+          border-top: 1px solid #C7CCD160;
+        }
+      
+        &:hover {
+          background-color: #D8093A !important;
+      
+          color: #ffffff;
+        }
+      }
