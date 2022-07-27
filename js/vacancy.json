@@ -1,0 +1,121 @@
+[{
+  "company":"Google",
+  "keyWords": ["developer","разработчик", "frontend", "junior", "Mountain View", "Маунтин-Вью", "Калифорния", "California", "Google"],
+  "experience": "1",
+  "level": "junior",
+  "occupation": "Junior Frontend developer",
+  "jobFormat": [ "Офис", "Гибрид"],
+  "salary": "500",
+  "city": "Маунтин-Вью"
+},
+{
+  "company":"RevBoss",
+  "keyWords": ["developer","разработчик", "программист", "React", "junior", "Дарем", "Durham", "RevBoss"],
+  "experience": "1",
+  "level": "junior",
+  "occupation": "Junior React Js Frontend developer",
+  "jobFormat": ["Офис", "Гибрид"],
+  "salary": "600",
+  "city": "Дарем"
+},
+{
+  "company":"USAA",
+  "keyWords": ["developer","разработчик", "junior", "HTML", "CSS", "Денвер", "Denver", "USAA"],
+  "experience": "3",
+  "level": "junior",
+  "occupation": "Junior Frontend HTML/CSS Developer",
+  "jobFormat": ["Офис"],
+  "salary": "600",
+  "city": "Денвер"
+},
+{
+  "company":"BiSoft",
+  "keyWords": ["developer","разработчик", "программист", "Wordpress", "senior", "Колумбия", "Columbia", "BiSoft"],
+  "experience": "8",
+  "level": "senior",
+  "occupation": "Senior Wordpress Developer",
+  "jobFormat": ["Удаленный", "Гибрид"],
+  "salary": "3000",
+  "city": "Колумбия"
+},
+{
+  "company":"CACI",
+  "keyWords": ["developer","разработчик", "программист", "python", "Денвер", "Denver", "CACI"],
+  "experience": "7",
+  "level": "senior",
+  "occupation": "Senior Python Developer",
+  "jobFormat": ["Удаленный", "Гибрид"],
+  "salary": "2500",
+  "city": "Денвер"
+},
+{
+  "company":"Noodle",
+  "keyWords": ["developer","разработчик", "программист", "JavaScript", "c#", "Нью-Йорк", "New York", "Noodle"],
+  "experience": "6",
+  "level": "middle",
+  "occupation": "JavaScript Developer",
+  "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+  "salary": "1500",
+  "city": "Нью-Йорк"
+},
+{
+  "company":"Webxloo",
+  "keyWords": ["developer","разработчик", "программист", "HTML", "Тампа", "Tampa", "Webxloo"],
+  "experience": "7",
+  "level": "middle",
+  "occupation": "HTML Developer ",
+  "jobFormat": ["Удаленный"],
+  "salary": "1600",
+  "city": "Тампа"
+},
+{
+  "company":"DNT",
+  "keyWords": ["React","разработчик", "программист", "Senior", "developer", "DNT", "Сан-Диего", "San Diego", "DNT"],
+  "experience": "8",
+  "level": "senior",
+  "occupation": "Senior React Frontend Developer",
+  "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+  "salary": "4000",
+  "city": "Сан-Диего"
+},
+{
+  "company":"Docker",
+  "keyWords": ["developer","разработчик", "программист", "php", "Docker", "Сан-Франциско", "San Francisco"],
+  "experience": "9",
+  "level": "senior",
+  "occupation": "Senior PHP Developer",
+  "jobFormat": ["Удаленный"],
+  "salary": "6000",
+  "city": "Сан-Франциско"
+},
+{
+  "company":"Stacline",
+  "keyWords": ["developer","разработчик", "программист", "ruby", "ruby on rails", "Stacline", "Сиэтл", "Seattle"],
+  "experience": "10",
+  "level": "senior",
+  "occupation": "Senior React Developer",
+  "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+  "salary": "6500",
+  "city": "Сиэтл"
+},
+{
+  "company":"KNI",
+  "keyWords": ["developer","разработчик", "программист", "Java", "Сан-Франциско", "San Francisco"],
+  "experience": "11",
+  "level": "senior",
+  "occupation": "Senior Java developer",
+  "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+  "salary": "6000",
+  "city": "Сан-Франциско"
+},
+{
+  "company":"DTiQ",
+  "keyWords": ["developer", "PHP", "разработчик", "MySQL", "DTiQ", "Лас-Вегас", "Las Vegas"],
+  "experience": "12",
+  "level": "senior",
+  "occupation": "Senior PHP/MySQL Developer",
+  "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+  "salary": "5000",
+  "city": "Лас-Вегас"
+}
+]
