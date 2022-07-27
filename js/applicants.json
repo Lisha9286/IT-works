@@ -1,6 +1,6 @@
 [{
-    "name":"Вася",
-    "keyWords": ["developer","разработчик", "программист", "frontend"],
+    "name":"Василий",
+    "keyWords": ["developer","разработчик", "программист", "frontend","junior", "Офис", "Гибрид", "Frontend developer"],
     "age": "27",
     "experience": "1",
     "level": "junior",
@@ -8,23 +8,69 @@
     "jobFormat": ["Удаленный", "Офис", "Гибрид"],
     "education": "MTI",
     "photo": "https://wildfauna.ru/wp-content/uploads/2019/03/obl-opossu.jpg",
-    "city": "Псков"
+    "city": "Псков",
+    "salary": "1000",
+    "id": "0"
 },
 {
     "name":"Лариса",
-    "keyWords": ["developer","разработчик", "программист", "backend"],
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
     "age": "27",
     "experience": "2",
     "level": "junior",
     "occupation": "Backend developer",
     "jobFormat": ["Удаленный", "Офис", "Гибрид"],
     "education": "MTI",
+    "photo": "https://pristor.ru/wp-content/uploads/2017/07/Всратые-животные-смешные-ржачные-веселые-прикольные-12.jpg",
+    "city": "Псков",
+    "salary": "1000",
+    "id": "1"
+},
+{
+    "name":"Василий",
+    "keyWords": ["developer","разработчик", "программист", "frontend","junior", "Офис", "Гибрид", "Frontend developer"],
+    "age": "27",
+    "experience": "1",
+    "level": "junior",
+    "occupation": "Frontend developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
     "photo": "https://wildfauna.ru/wp-content/uploads/2019/03/obl-opossu.jpg",
-    "city": "Вологда"
+    "city": "Вологда",
+    "salary": "1000",
+    "id": "0"
+},
+{
+    "name":"Лариса",
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
+    "age": "27",
+    "experience": "2",
+    "level": "junior",
+    "occupation": "Backend developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
+    "photo": "https://pristor.ru/wp-content/uploads/2017/07/Всратые-животные-смешные-ржачные-веселые-прикольные-12.jpg",
+    "city": "Вологда",
+    "salary": "1000",
+    "id": "1"
+},
+{
+    "name":"Лариса",
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
+    "age": "27",
+    "experience": "2",
+    "level": "junior",
+    "occupation": "Backend developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
+    "photo": "https://pristor.ru/wp-content/uploads/2017/07/Всратые-животные-смешные-ржачные-веселые-прикольные-12.jpg",
+    "city": "Кострома",
+    "salary": "1000",
+    "id": "1"
 },
 {
     "name":"Владлен",
-    "keyWords": ["developer","разработчик", "программист", "java"],
+    "keyWords": ["developer","разработчик", "программист", "java", "junior", "Удаленно", "Офис", "Удаленка", "Гибрид", "Java Developer"],
     "age": "27",
     "experience": "3",
     "level": "junior",
@@ -32,23 +78,41 @@
     "jobFormat": ["Удаленный"],
     "education": "MTI",
     "photo": "https://wildfauna.ru/wp-content/uploads/2019/03/obl-opossu.jpg",
-    "city": "Кострома"
+    "city": "Кострома",
+    "salary": "1000",
+    "id": "2"
 },
 {
     "name":"Георгий",
-    "keyWords": ["developer","разработчик", "программист", "javascript"],
+    "keyWords": ["developer","разработчик", "программист", "javascript", "js","middle", "Удаленно", "Удаленка", "Гибрид", "Javascript Developer"],
     "age": "27",
     "experience": "4",
     "level": "middle",
     "occupation": "Javascript Developer",
     "jobFormat": ["Удаленный", "Офис", "Гибрид"],
     "education": "MTI",
-    "photo": "https://www.meme-arsenal.com/memes/cde26802734184eebce9bc9b160b83ff.jpg",
-    "city": "Нарва"
+    "photo": "https://pristor.ru/wp-content/uploads/2017/07/Всратые-животные-смешные-ржачные-веселые-прикольные-11.jpg",
+    "city": "Нарва",
+    "salary": "2000",
+    "id": "3"
+},
+{
+    "name":"Лариса",
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
+    "age": "27",
+    "experience": "2",
+    "level": "junior",
+    "occupation": "Backend developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
+    "photo": "https://pristor.ru/wp-content/uploads/2017/07/Всратые-животные-смешные-ржачные-веселые-прикольные-12.jpg",
+    "city": "Нарва",
+    "salary": "1000",
+    "id": "1"
 },
 {
     "name":"Евгения",
-    "keyWords": ["developer","разработчик", "программист", "python"],
+    "keyWords": ["developer","разработчик", "программист", "python","middle", "Удаленно", "Удаленка", "Гибрид", "Python Developer"],
     "age": "27",
     "experience": "5",
     "level": "middle",
@@ -56,11 +120,27 @@
     "jobFormat": ["Удаленный"],
     "education": "MTI",
     "photo": "https://www.meme-arsenal.com/memes/cde26802734184eebce9bc9b160b83ff.jpg",
-    "city": "Тбилиси"
+    "city": "Тбилиси",
+    "salary": "2000",
+    "id": "4"
+},
+{
+    "name":"Лариса",
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
+    "age": "27",
+    "experience": "2",
+    "level": "junior",
+    "occupation": "Backend developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
+    "photo": "https://pristor.ru/wp-content/uploads/2017/07/Всратые-животные-смешные-ржачные-веселые-прикольные-12.jpg",
+    "city": "Тбилиси",
+    "salary": "1000",
+    "id": "1"
 },
 {
     "name":"Мария",
-    "keyWords": ["developer","разработчик", "программист", "c", "c#"],
+    "keyWords": ["developer","разработчик", "программист", "C#","middle", "Удаленно", "Удаленка", "Гибрид", "C# Developer"],
     "age": "27",
     "experience": "6",
     "level": "middle",
@@ -68,11 +148,27 @@
     "jobFormat": ["Удаленный", "Офис", "Гибрид"],
     "education": "MTI",
     "photo": "https://www.meme-arsenal.com/memes/cde26802734184eebce9bc9b160b83ff.jpg",
-    "city": "Петрозаводск"
+    "city": "Петрозаводск",
+    "salary": "2000",
+    "id": "5"
+},
+{
+    "name":"Лариса",
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
+    "age": "27",
+    "experience": "2",
+    "level": "junior",
+    "occupation": "Backend developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
+    "photo": "https://pristor.ru/wp-content/uploads/2017/07/Всратые-животные-смешные-ржачные-веселые-прикольные-12.jpg",
+    "city": "Петрозаводск",
+    "salary": "1000",
+    "id": "1"
 },
 {
     "name":"Михаил",
-    "keyWords": ["developer","разработчик", "программист", "c++", "+"],
+    "keyWords": ["developer","разработчик", "программист", "C++","middle", "Удаленно", "Удаленка", "Гибрид", "C++ Developer"],
     "age": "27",
     "experience": "7",
     "level": "middle",
@@ -80,11 +176,27 @@
     "jobFormat": ["Удаленный"],
     "education": "MTI",
     "photo": "https://www.meme-arsenal.com/memes/cde26802734184eebce9bc9b160b83ff.jpg",
-    "city": "Бобруйск"
+    "city": "Бобруйск",
+    "salary": "2000",
+    "id": "6"
+},
+{
+    "name":"Лариса",
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
+    "age": "27",
+    "experience": "2",
+    "level": "junior",
+    "occupation": "Backend developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
+    "photo": "https://pristor.ru/wp-content/uploads/2017/07/Всратые-животные-смешные-ржачные-веселые-прикольные-12.jpg",
+    "city": "Бобруйск",
+    "salary": "1000",
+    "id": "1"
 },
 {
     "name":"Глеб",
-    "keyWords": ["developer","разработчик", "программист", "1-c"],
+    "keyWords": ["developer","разработчик", "программист", "1-C", "1C", "1 C","middle", "Удаленно", "Удаленка","Гибрид", "1-C разработчик"],
     "age": "27",
     "experience": "8",
     "level": "middle",
@@ -92,11 +204,27 @@
     "jobFormat": ["Удаленный", "Офис", "Гибрид"],
     "education": "MTI",
     "photo": "https://www.meme-arsenal.com/memes/cde26802734184eebce9bc9b160b83ff.jpg",
-    "city": "Ужгород"
+    "city": "Ужгород",
+    "salary": "2000",
+    "id": "7"
+},
+{
+    "name":"Лариса",
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
+    "age": "27",
+    "experience": "2",
+    "level": "junior",
+    "occupation": "Backend developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
+    "photo": "https://pristor.ru/wp-content/uploads/2017/07/Всратые-животные-смешные-ржачные-веселые-прикольные-12.jpg",
+    "city": "Ужгород",
+    "salary": "1000",
+    "id": "1"
 },
 {
     "name":"Ольга",
-    "keyWords": ["developer","разработчик", "программист", "php"],
+    "keyWords": ["developer","разработчик", "программист", "php","senior", "Удаленно", "Удаленка","Гибрид", "PHP Developer"],
     "age": "27",
     "experience": "9",
     "level": "senior",
@@ -104,11 +232,27 @@
     "jobFormat": ["Удаленный"],
     "education": "MTI",
     "photo": "https://img.freepik.com/premium-photo/opossum-or-possum-mother-with-joeys-riding-on-her-back_218530-313.jpg?w=2000",
-    "city": "Гданьск"
+    "city": "Гданьск",
+    "salary": "3000",
+    "id": "8"
+},
+{
+    "name":"Лариса",
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
+    "age": "27",
+    "experience": "2",
+    "level": "junior",
+    "occupation": "Backend developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
+    "photo": "https://pristor.ru/wp-content/uploads/2017/07/Всратые-животные-смешные-ржачные-веселые-прикольные-12.jpg",
+    "city": "Гданьск",
+    "salary": "1000",
+    "id": "1"
 },
 {
     "name":"Александра",
-    "keyWords": ["developer","разработчик", "программист", "ruby", "ruby on rails"],
+    "keyWords": ["developer","разработчик", "программист", "ruby", "ruby on rails", "senior", "Удаленка", "Удаленно", "Гибрид", "Ruby on Rails Developer"],
     "age": "27",
     "experience": "10",
     "level": "senior",
@@ -116,11 +260,27 @@
     "jobFormat": ["Удаленный", "Офис", "Гибрид"],
     "education": "MTI",
     "photo": "https://img.freepik.com/premium-photo/opossum-or-possum-mother-with-joeys-riding-on-her-back_218530-313.jpg?w=2000",
-    "city": "Сараево"
+    "city": "Сараево",
+    "salary": "3000",
+    "id": "9"
+},
+{
+    "name":"Лариса",
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
+    "age": "27",
+    "experience": "2",
+    "level": "junior",
+    "occupation": "Backend developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
+    "photo": "https://pristor.ru/wp-content/uploads/2017/07/Всратые-животные-смешные-ржачные-веселые-прикольные-12.jpg",
+    "city": "Сараево",
+    "salary": "1000",
+    "id": "1"
 },
 {
     "name":"Владислав",
-    "keyWords": ["developer","разработчик", "программист", "flutter"],
+    "keyWords": ["developer","разработчик", "программист", "flutter", "senior", "Удаленно", "Удаленка", "Гибрид", "Flutter developer"],
     "age": "27",
     "experience": "11",
     "level": "senior",
@@ -128,11 +288,27 @@
     "jobFormat": ["Удаленный", "Офис", "Гибрид"],
     "education": "MTI",
     "photo": "https://img.freepik.com/premium-photo/opossum-or-possum-mother-with-joeys-riding-on-her-back_218530-313.jpg?w=2000",
-    "city": "Тулун"
+    "city": "Тулун",
+    "salary": "3000",
+    "id": "10"
+},
+{
+    "name":"Лариса",
+    "keyWords": ["developer","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид", "Backend developer"],
+    "age": "27",
+    "experience": "2",
+    "level": "junior",
+    "occupation": "Backend developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
+    "photo": "https://pristor.ru/wp-content/uploads/2017/07/Всратые-животные-смешные-ржачные-веселые-прикольные-12.jpg",
+    "city": "Тулун",
+    "salary": "1000",
+    "id": "1"
 },
 {
     "name":"Светлана",
-    "keyWords": ["developer", "fullstack", "арзработчик", "программист"],
+    "keyWords": ["developer", "Fullstack","разработчик", "программист", "senior", "Удаленно", "Удаленка","Гибрид", "Fullstack Developer"],
     "age": "27",
     "experience": "12",
     "level": "senior",
@@ -140,6 +316,8 @@
     "jobFormat": ["Удаленный", "Офис", "Гибрид"],
     "education": "MTI",
     "photo": "https://img.freepik.com/premium-photo/opossum-or-possum-mother-with-joeys-riding-on-her-back_218530-313.jpg?w=2000",
-    "city": "Уфа"
+    "city": "Уфа",
+    "salary": "3000",
+    "id": "11"
 }
 ]

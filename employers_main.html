@@ -51,7 +51,7 @@
                 </div>
                 <ul class="nav navbar-nav nav-empl__links d-flex">
                     <li class="nav-item">
-                        <button type="button" class="btn btn-outline-secondary btn-sm me-1 btn-signin__employer"
+                        <button type="button" class="btn btn-outline-secondary btn-sm me-2 btn-signin__employer"
                             data-bs-toggle="modal" data-bs-target="#modal_sign-in" id="sign-up">Войти</button>
                     </li>
                     <!-- Modal -->
@@ -62,7 +62,7 @@
                                 <div class="modal-header">
                                     <div>
                                         <img class="nav__logo-img" src="./assets/images/logo.png" alt="logo">
-                                        <p class="header__subtitle subtitle__employer">Твоя первая работа в мире IT</p>
+                                        <p class="header__subtitle subtitle__employer">Твоя свежая кровь в мире IT</p>
                                     </div>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
@@ -113,7 +113,7 @@
                                 <div class="modal-header">
                                     <div>
                                         <img class="nav__logo-img" src="./assets/images/logo.png" alt="logo">
-                                        <p class="header__subtitle subtitle__employer">Твоя первая работа в мире IT</p>
+                                        <p class="header__subtitle subtitle__employer">Твоя свежая кровь в мире IT</p>
                                     </div>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
@@ -151,7 +151,6 @@
                                                         placeholder="Email" required>
                                                     <div class="error-message"></div>
                                                 </div>
-
                                                 <div class=" row registration__group mt-4">
                                                     <button class="btn btn-primary btn-block create-account"
                                                         type="submit" id="register">Отправить</button>
@@ -168,9 +167,6 @@
                             </div>
                         </div>
                     </div>
-                    <li class="nav-item active header__box pt-1">
-                        <a class="header__lang" href="#">EN</a>
-                    </li>
                 </ul>
             </nav>
             <!--Motto-->
@@ -183,65 +179,67 @@
             <div class="container d-flex justify-content-center">
                 <div class="card w-100 mt-2 p-4">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Поиск">
-                        <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"><i
-                                    class="class=bi bi-search bi_employer"></i></button></div>
+                        <input type="text" class="form-control" placeholder="Поиск" id="searchRequest">
+                        <div class="input-group-append"><a href="./views/search.html"
+                                class="btn btn-primary btn__search-employermain"><i
+                                    class="class=bi bi-search bi_employer"></i></ф>
+                        </div>
                     </div>
                     <!--Block Information-->
-                    <div class="row popular justify-content-center pt-1">
+                    <div class="row popular justify-content-center pt-1 ">
                         <div class="col-10 popular__block">
                             <div class="popular__title fs-5"> Популярные заголовки</div>
-                            <div class="row  pt-3 ">
+                            <div class="row  pt-3 popular__title-first-row">
                                 <div class="col-md-2 col-sm-6 pe-md-0">
                                     <p class="popular__titles fs-6">
-                                        Lorem ipsum
+                                        Frontend
                                     </p>
                                 </div>
                                 <div class=" col-md-2 col-sm-6 pe-md-0">
                                     <p class="popular__titles fs-6">
-                                        Lorem ipsum
+                                        Backend
                                     </p>
                                 </div>
                                 <div class=" col-md-2 col-sm-6 pe-md-0">
                                     <p class="popular__titles fs-6">
-                                        Lorem ipsum
+                                        Java
                                     </p>
                                 </div>
                                 <div class="col-md-2 col-sm-6 pe-md-0">
                                     <p class="popular__titles fs-6">
-                                        Lorem ipsum
+                                        Python
                                     </p>
                                 </div>
                                 <div class="col-md-2 col-sm-6 pe-md-0">
                                     <p class="popular__titles fs-6">
-                                        Lorem ipsum
+                                        Javascript
                                     </p>
                                 </div>
                                 <div class="col-md-2 col-sm-6 pe-md-0">
                                     <p class="popular__titles fs-6">
-                                        Lorem ipsum
+                                        C#
                                     </p>
                                 </div>
                             </div>
-                            <div class="row d-flex justify-content-center pt-3">
+                            <div class="row d-flex justify-content-center pt-3 popular__title-secondrow">
                                 <div class="col-md-2 col-sm-6 pe-md-0">
                                     <p class="popular__titles title__one fs-6">
-                                        Lorem ipsum
+                                        PHP
                                     </p>
                                 </div>
                                 <div class="col-md-2 col-sm-6 pe-md-0">
                                     <p class="popular__titles title__two fs-6">
-                                        Lorem ipsum
+                                        1-C
                                     </p>
                                 </div>
                                 <div class="col-md-2 col-sm-6 pe-md-0">
                                     <p class="popular__titles title_three fs-6">
-                                        Lorem ipsum
+                                        Flutter
                                     </p>
                                 </div>
                                 <div class="col-md-2 col-sm-6 pe-md-0">
                                     <p class="popular__titles title__four fs-6">
-                                        Lorem ipsum
+                                        Ruby
                                     </p>
                                 </div>
                                 <div class="col-md-2 col-sm-6 pe-md-0">
@@ -338,6 +336,7 @@
     </div>
     <script type="module" src="./js/employers_sign-in.js"></script>
     <script type="module" src="./js/reg_applicants.js"></script>
+    <script type="module" src="./js/search_app_from_main.js"></script>
 </body>
 
 </html>
