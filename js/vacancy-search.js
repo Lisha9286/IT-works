@@ -22,7 +22,7 @@ input.addEventListener('keydown', (e)=>{
     return keyword}
 
     async function fetchToDo () {
-    const responce = await fetch('../dist/vac.json')
+    const responce = await fetch('https://raw.githubusercontent.com/nas-tay/WorkIT-project/dasha-new/js/vac.json')
     try {
       data = await responce.json()
     return data
