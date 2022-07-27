@@ -4,11 +4,8 @@
 
     .homepage__header {
 
-        
-
         .header__logo{
-            max-width: 100px;
-            margin-right: 0 auto;
+            max-width: 300px;
         }
 
         .header__lang {
@@ -27,7 +24,7 @@
     }
 
     .header-top{
-        margin-top: 5%;
+        margin-top: 3%;
     }
 
     .header__subtitle {
@@ -36,7 +33,7 @@
         font-size: 3rem;
         text-transform: uppercase;
         margin-bottom: 4%;
-        color: $light-gray;
+        color: #999;
 
     }
 
@@ -134,6 +131,5 @@
 .linka{
 text-decoration: none;
 color: $background;
-
-
+padding: 44px 64px;
 }
