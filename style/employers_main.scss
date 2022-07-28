@@ -152,6 +152,18 @@ Navbar Style
 
 .card{
 	border: none;
+    &_modal {
+        display: block;
+    
+        img {
+            width: 50%;
+            float:left;
+            margin: 0 20px 10px 0;
+        }
+    }
+}
+.card-body_modal {
+    padding: 0;
 }
 .form-control{
 	@include searching-form;
@@ -280,6 +292,16 @@ margin-bottom: 7px;
     margin-right: 0.5em;
 }
 
+.card{
+    &_modal {
+    
+        img {
+            width: 100%;
+            margin: 0 20px 10px 0;
+        }
+    }
+}
+
 }
 
 /* ---------------------------------------------------
@@ -310,4 +332,5 @@ margin-bottom: 7px;
     margin-top: 10px;
     color: #2557a7;
 }
+
 

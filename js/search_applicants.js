@@ -21,10 +21,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     cards = await response.json();
 
     if (localStorage.getItem("searchRequest")) {
-        console.log("ok");
-        let searchRequest = localStorage.getItem("searchRequest");
-        document.querySelector("#inputSearchApp").value = searchRequest;
-        serchApp(searchRequest);
+        document.querySelector("#inputSearchApp").value = localStorage.getItem("searchRequest");
+        searchApp();
+        localStorage.removeItem("searchRequest");
     } else {
         for (card of cards) {
             searchResult(card);
@@ -46,20 +45,18 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 });
 
-const searchText = document.querySelector("#inputSearchApp").value;
-
-function serchApp(searchText) {
+function searchApp() {
+    let searchText = document.querySelector("#inputSearchApp").value;
     list.innerHTML = "";
     for (card of cards) {
-        if (!searchText == "") {
+        if (searchText) {
             const search = new RegExp(searchText, "gi");
             const rez = search.test(card.keyWords);
-            console.log(rez);
             if (rez) {
                 searchResult(card);
             }
         }
-        if (searchText == "") {
+        if (!searchText) {
             searchResult(card);
         }
     }
@@ -101,16 +98,14 @@ const btnFilter = document.querySelector("#btnFilter");
 const btnReboot = document.querySelector("#btnReboot");
 
 btnSearch.addEventListener("click", () => {
-    serchApp();
-    createObject();
+    searchApp();
 });
 btnFilter.addEventListener("click", () => {
     createObject();
 });
 inputSearchApp.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
-        serchApp();
-        createObject();
+        searchApp();
     }
 });
 
