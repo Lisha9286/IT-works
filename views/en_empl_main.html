@@ -6,23 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style_global/style.scss">
-    <title>Main Applicants</title>
+    <title>Main Employers</title>
 </head>
 
 <body class="page_employers">
     <div id="app"></div>
     <div class="wrapper-empl d-flex">
         <!-- Sidebar  -->
-        <nav class="sidebar-empl sidebar-appl">
+        <nav class="sidebar-empl">
             <div class="sidebar-empl__wrapper sticky-top">
                 <div class="sidebar-empl__header">
                     <h3 class="py-4">Menu</h3>
                 </div>
                 <ul class=" sidebar-empl__list list-unstyled components flex-md justify-content-md-center">
                     <li>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal_create-resume">
-                            <i class="bi bi-pencil-square pe-2"></i><span class="sidebar-empl__item"> Create a
-                                resume</span></a>
+                        <a href="./en_create_vac.html"> <i class="bi bi-pencil-square pe-2"></i><span
+                                class="sidebar-empl__item"> Post a
+                                job</span></a>
                     </li>
                     <li>
                         <a href="../pages/homepage/en/index.html"><i class="bi bi-house-door pe-2"></i><span
@@ -37,72 +37,36 @@
                                 About us</span></a>
                     </li>
                     <li>
-                        <a href="./contacts.html"><i class="bi bi-envelope pe-2"></i> <span
+                        <a href="contacts.html"><i class="bi bi-envelope pe-2"></i> <span
                                 class="sidebar-empl__item">Contact
                                 us</span> </a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <!-- Modal -->
-        <div class="modal fade" id="modal_create-resume" data-bs-backdrop="static" data-bs-keyboard="false"
-            tabindex="-1" aria-labelledby="modal_create-resumeLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div>
-                            <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo">
-                            <p class="header__subtitle subtitle__employer">Your first job in the IT world</p>
-                        </div>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row form-reg m-4">
-                            <div class="col-md-12">
-                                <p class="header__second">Upload your resume so employers can easily
-                                    find you</p>
-                                <div class="input-group">
-                                    <input type="file" class="form-control" id="applicant-resume"
-                                        aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                                    <button class="btn btn-outline-secondary" type="button"
-                                        id="inputGroupFileAddon04">Upload your resume</button>
-                                </div>
-                                <div class="mt-4">
-                                    <a href="../views/en_create_resume.html" class="btn btn-primary"
-                                        id="create-resume">Create a resume</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Page Content  -->
         <div id="content">
             <nav class="navbar-empl navbar-expand-lg navbar-light bg-light d-flex ">
                 <div class="navbar-empl__logo">
                     <a href="#">
                         <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo"></a>
-                    <h3 class="header__second pt-3">For Applicants</h3>
+                    <h3 class="header__second pt-3"> For Employers</h3>
                 </div>
                 <ul class="nav navbar-nav nav-empl__links d-flex">
                     <li class="nav-item">
-                        <button type="button" class="btn btn-outline-secondary btn-sm me-1 btn-signin__employer"
+                        <button type="button" class="btn btn-outline-secondary btn-sm me-2 btn-signin__employer"
                             data-bs-toggle="modal" data-bs-target="#modal_sign-in" id="sign-up">Log in</button>
-                    </li><a class="nav-item" href="../applicants_main.html"><span
+                    </li><a class="nav-item" href="../employers_main.html"><span
                             class="btn btn-outline-secondary btn-sm me-1 btn-signin__employer">RU</span></a>
                     <!-- Modal -->
                     <div class="modal fade" id="modal_sign-in" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="modal_sign-inLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-bg">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <div>
                                         <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo">
-                                        <p class="header__subtitle subtitle__employer">Your first job in the IT world
+                                        <p class="header__subtitle subtitle__employer">YOUNG BLOOD IN IT WORLD
                                         </p>
                                     </div>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -139,14 +103,14 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
+                                        data-bs-dismiss="modal">CLose</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <li class="nav-item">
                         <button class="btn btn-sign-up btn-outline-primary btn-sm me-3" data-bs-toggle="modal"
-                            data-bs-target="#modal_sign-up">Sign Up</button>
+                            data-bs-target="#modal_sign-up">Sign up</button>
                     </li>
                     <!-- Modal -->
                     <div class="modal fade" id="modal_sign-up" data-bs-backdrop="static" data-bs-keyboard="false"
@@ -156,7 +120,7 @@
                                 <div class="modal-header">
                                     <div>
                                         <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo">
-                                        <p class="header__subtitle subtitle__employer">Your first job in the IT world
+                                        <p class="header__subtitle subtitle__employer">YOUNG BLOOD IN IT WORLD
                                         </p>
                                     </div>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -179,7 +143,7 @@
                                                 <div class="row ">
                                                     <label for="password" class="form-label g-2">Password</label>
                                                     <input class="form-control" type="password" name="Пароль"
-                                                        minlength="6" id="password" placeholder="Пароль" required>
+                                                        minlength="6" id="password" placeholder="Password" required>
                                                     <div class="error-message"></div>
                                                 </div>
                                                 <div class="row ">
@@ -196,7 +160,6 @@
                                                         placeholder="Email" required>
                                                     <div class="error-message"></div>
                                                 </div>
-
                                                 <div class=" row registration__group mt-4">
                                                     <button class="btn btn-primary btn-block create-account"
                                                         type="submit" id="register">Create</button>
@@ -218,22 +181,24 @@
             <!--Motto-->
             <div class="row m-3 p-4">
                 <div class="col-12 d-flex justify-content-center">
-                    <p class="header__subtitle subtitle__employer">YOUR FIRST JOB IN THE IT WORLD</p>
+                    <p class="header__subtitle subtitle__employer">YOUNG BLOOD IN IT WORLD</p>
                 </div>
             </div>
             <!-- Searching form-->
             <div class="container d-flex justify-content-center">
                 <div class="card w-100 mt-2 p-4">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Searching">
-                        <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"><i
-                                    class="class=bi bi-search bi_employer"></i></button></div>
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"><a
+                                    href="./en_search_applicants.html"
+                                    class="btn btn-primary btn__search-employermain"><i
+                                        class="class=bi bi-search bi_employer"></i></button></div>
                     </div>
                     <!--Block Information-->
-                    <div class="row popular justify-content-center pt-1">
+                    <div class="row popular justify-content-center pt-1 ">
                         <div class="col-10 popular__block">
                             <div class="popular__title fs-5"> Trending jobs</div>
-                            <div class="row  pt-3 ">
+                            <div class="row  pt-3 popular__title-first-row">
                                 <div class="col-md-2 col-sm-6 pe-md-0">
                                     <p class="popular__titles fs-6">
                                         Lorem ipsum
@@ -265,7 +230,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="row d-flex justify-content-center pt-3">
+                            <div class="row d-flex justify-content-center pt-3 popular__title-secondrow">
                                 <div class="col-md-2 col-sm-6 pe-md-0">
                                     <p class="popular__titles title__one fs-6">
                                         Lorem ipsum
@@ -380,8 +345,7 @@
     </div>
     <script type="module" src="../js/employers_sign-in.js"></script>
     <script type="module" src="../js/reg_applicants.js"></script>
-    <script type="module" src="../js/applic-app.js"></script>
-
+    <script type="module" src="../js/empl-app.js"></script>
 
 </body>
 

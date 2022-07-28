@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkIT</title>
+    <link rel="stylesheet" href="../style_global/style.scss">
+</head>
+
+<body class="page-searching-applicants">
+    <div class="wrapper-empl d-flex">
+        <!-- Sidebar  -->
+        <nav class="sidebar-empl">
+            <div class="sidebar-empl__wrapper sticky-top">
+                <div class="sidebar-empl__header">
+                    <h3 class="py-4">Menu</h3>
+                </div>
+                <ul class=" sidebar-empl__list list-unstyled components flex-md justify-content-md-center">
+                    <li>
+                        <a href="../index.html"><i class="bi bi-house-door pe-2"></i><span
+                                class="sidebar-empl__item">Main page</span></a>
+                    </li>
+                    <li>
+                        <a href="./news.html"><i class="bi bi-newspaper pe-2"></i><span
+                                class="sidebar-empl__item">Blog</span></a>
+                    </li>
+                    <li>
+                        <a href="./about.html"><i class="bi bi-person pe-2"></i> <span class="sidebar-empl__item">
+                                About Us</span></a>
+                    </li>
+                    <li>
+                        <a href="./contacts.html"><i class="bi bi-envelope pe-2"></i> <span
+                                class="sidebar-empl__item">Contacts</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content  -->
+        <div id="content-appl">
+            <nav class="container  navbar-empl navbar-expand-lg navbar-light bg-light navbar-apl">
+                <div class=" row navbar-empl__logo"><a class="header__lang" href="./search_vacancies.html">RU</a>
+                    <a class=" col-2 ms-2" href="#">
+                        <img class="nav__logo-img logo-appl" src="../assets/images/logo.png" alt="logo"></a>
+                    <div class="col-8">
+                        <h3 class="header__second header__second-appl  pt-3">For Applicants</h3>
+                        <p class=" subtitle__apllsearch">YOUR FIRST JOB IN IT WORLD</p>
+                    </div>
+                </div>
+            </nav>
+            <!--Motto-->
+            <div class="row m-1 p-1">
+                <div class="col-12 d-flex justify-content-start">
+                    <!--  <p class="header__subtitle subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>-->
+                </div>
+            </div>
+            <!-- Searching form-->
+            <div class="container searching">
+                <div class="searching__form searching__form-applicants">
+                    <div class="card w-100 mt-1 p-2">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Searching" id="inputSearchvacancy">
+                            <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"
+                                    id="btnSearchvacancy"><i class="class=bi bi-search bi_employer"></i></button></div>
+                        </div>
+                        <div class="pt-3 w-100 searching__result">
+                            <div id="cards-vacancy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row searching__filters mt-1 ms-3 p-2">
+                    <div class="filter">
+                        <div class="filter-vacancy__filter-title">Filter</div>
+                        <div class="filter__card">
+                            <div class="filter__card-title">City</div>
+                            <select class="filter-vacancy__cities">
+                                <option selected>City is not selected</option>
+                            </select>
+                        </div>
+                        <div class="filter-vacancy__type">
+                            <div class="filter-vacancy__title">Level</div>
+                            <div class="filter-vacancy__point">
+                                <label class="filter-vacancy__card-label" for="junior">Junior</label>
+                                <input class="filter-vacancy__card-input form-check-input" type="checkbox" name="junior"
+                                    id="junior" />
+                            </div>
+                            <div class="filter-vacancy__point">
+                                <label class="filter-vacancy__card-label" for="middle">Middle</label>
+                                <input class="filter-vacancy__card-input form-check-input" type="checkbox" name="middle"
+                                    id="middle" />
+                            </div>
+                            <div class="filter-vacancy__point">
+                                <label class="filter-vacancy__card-label" for="senior">Senior</label>
+                                <input class="filter-vacancy__card-input form-check-input" type="checkbox" name="senior"
+                                    id="senior" />
+                            </div>
+                        </div>
+                        <div class="filter-vacancy__type">
+                            <div class="filter-vacancy__title">Work experience</div>
+                            <div class="filter-vacancy__point">
+                                <label class="filter-vacancy__card-label " for="zero">No experience</label>
+                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                    name="zero" />
+                            </div>
+                            <div class="filter-vacancy__point">
+                                <label class="filter-vacancy__card-label " for="small">1-3 years</label>
+                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                    name="small" />
+                            </div>
+                            <div class="filter-vacancy__point">
+                                <label class="filter-vacancy__card-label" for="medium">3-6 years</label>
+                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                    name="medium" />
+                            </div>
+                            <div class="filter-vacancy__point">
+                                <label class="filter-vacancy__card-label " name="large">Over 6 years</label>
+                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                    name="large" />
+                            </div>
+                        </div>
+                        <div class="filter-vacancy__type">
+                            <div class="filter-vacancy__title">Salary level</div>
+                            <div class="filter__card-salary">
+                                <input class="filter-vacancy__input-salary" type="number" placeholder="From" />
+                                <input class="filter-vacancy__input-salary" type="number" placeholder="To" /></div>
+                            <div class="filter-vacancy__point">
+                                <label class="filter-vacancy-label" for="salary">With salary</label>
+                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                    name="salary" />
+                            </div>
+                        </div>
+                        <div class="filter-vacancy__type">
+                            <div class="filter-vacancy__title">
+                                Work format</div>
+                            <div class="filter-vacancy__point">
+                                <label class="filter__card-label">Distant</label>
+                                <input class="filter-vacancy__card-input form-check-input" type="checkbox" />
+                            </div>
+                            <div class="filter-vacancy__point">
+                                <label class="filter__card-label">Office</label>
+                                <input class="filter-vacancy__card-input form-check-input" type="checkbox" />
+                            </div>
+                            <div class="filter-vacancy__point">
+                                <label class="filter__card-label">Hybrid</label>
+                                <input class="filter-vacancy__card-input form-check-input" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="filter-vacancy__btns">
+                            <div class="filter-vacancy__change">Apply</div>
+                            <div class="filter-vacancy__throwoff">Reset</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Searching Form end-->
+            <footer class="bg-light text-center text-lg-start">
+                <div class="container p-4">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Footer text</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                                molestias.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Footer text</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                                molestias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2020 Copyright:
+                    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="../js/search_vacancies.js"></script>
+
+</body>
+
+</html>

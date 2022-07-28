@@ -15,29 +15,29 @@
         <nav class="sidebar-empl">
             <div class="sidebar-empl__wrapper sticky-top">
                 <div class="sidebar-empl__header">
-                    <h3 class="py-4">Меню</h3>
+                    <h3 class="py-4">Menu</h3>
                 </div>
                 <ul class=" sidebar-empl__list list-unstyled components flex-md justify-content-md-center">
                     <li>
-                        <a href="./create-vacancy.html"> <i class="bi bi-pencil-square pe-2"></i><span
-                                class="sidebar-empl__item"> Создать
-                                Вакансию</span></a>
+                        <a href="./en_create_vac.html"> <i class="bi bi-pencil-square pe-2"></i><span
+                                class="sidebar-empl__item"> Create a
+                                vacancy</span></a>
                     </li>
                     <li>
-                        <a href="../index.html"><i class="bi bi-house-door pe-2"></i><span
-                                class="sidebar-empl__item">Главная</span></a>
+                        <a href="../pages/homepage/en/index.html"><i class="bi bi-house-door pe-2"></i><span
+                                class="sidebar-empl__item">Main page</span></a>
                     </li>
                     <li>
                         <a href="./news.html"><i class="bi bi-newspaper pe-2"></i><span
-                                class="sidebar-empl__item">Новости</span></a>
+                                class="sidebar-empl__item">Blog</span></a>
                     </li>
                     <li>
                         <a href="./about.html"><i class="bi bi-person pe-2"></i> <span class="sidebar-empl__item">
-                                О Нас</span></a>
+                                About Us</span></a>
                     </li>
                     <li>
                         <a href="./contacts.html"><i class="bi bi-envelope pe-2"></i> <span
-                                class="sidebar-empl__item">Контакты</span>
+                                class="sidebar-empl__item">Contacts</span>
                         </a>
                     </li>
                 </ul>
@@ -46,13 +46,17 @@
         <!-- Page Content  -->
         <div id="content-appl">
             <nav class="container  navbar-empl navbar-expand-lg navbar-light bg-light navbar-apl">
-                <div class=" row navbar-empl__logo"><a class="header__lang" href="./en_search_applicants.html">EN</a>
+                <a class="header__lang" href="./search_applicants.html">RU</a>
+                <div class=" row navbar-empl__logo">
                     <a class=" col-2 ms-2" href="#">
-                        <img class="nav__logo-img logo-appl" src="../assets/images/logo.png" alt="logo"></a>
-                    <div class="col-8">
-                        <h3 class="header__second header__second-appl  pt-3"> Работодателям</h3>
-                        <p class=" subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>
-                    </div>
+                        <a class=" col-2 ms-2" href="#">
+                            <img class="nav__logo-img logo-appl" src="../assets/images/logo.png" alt="logo"></a>
+                        <a class=" col-2 ms-2" href="#">
+                            <div class="col-8">
+                                <h3 class="header__second header__second-appl  pt-3">
+                                    For Employers</h3>
+                                <p class=" subtitle__apllsearch">YOUNG BLOOD IN IT WORLD</p>
+                            </div>
                 </div>
             </nav>
             <!--Motto-->
@@ -66,7 +70,7 @@
                 <div class="searching__form searching__form-applicants">
                     <div class="card w-100 mt-1 p-2">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Поиск" id="inputSearchApp">
+                            <input type="text" class="form-control" placeholder="Searching" id="inputSearchApp">
                             <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"
                                     id="btnSearchApp"><i class="class=bi bi-search bi_employer"></i></button></div>
                         </div>
@@ -79,26 +83,25 @@
                 <div class="row searching__filters mt-1 ms-3 p-2">
                     <div class="filter">
                         <div class="filter__card">
-                            <div class="filter__card-title">Город</div>
+                            <div class="filter__card-title">City</div>
                             <select class="form-select" id="cities">
-                                <option selected value="none">- не выбран -</option>
-                                <option value="Псков">Псков</option>
-                                <option value="Вологда">Вологда</option>
-                                <option value="Кострома">Кострома</option>
-                                <option value="Нарва">Нарва</option>
-                                <option value="Тбилиси">Тбилиси</option>
-                                <option value="Петрозаводск">Петрозаводск</option>
-                                <option value="Бобруйск">Бобруйск</option>
-                                <option value="Ужгород">Ужгород</option>
-                                <option value="Гданьск">Гданьск</option>
-                                <option value="Сараево">Сараево</option>
-                                <option value="Тулун">Тулун</option>
-                                <option value="Уфа">Уфа</option>
-                                <option value="Конь-Колодезь">Конь-Колодезь</option>
+                                <option selected value="none">- Not selected -</option>
+                                <option value="Псков">Pskov</option>
+                                <option value="Вологда">Vologda</option>
+                                <option value="Кострома">Kostroma</option>
+                                <option value="Нарва">Narva</option>
+                                <option value="Тбилиси">Tbilisi</option>
+                                <option value="Петрозаводск">Petrozavodsk</option>
+                                <option value="Бобруйск">Bobruisk</option>
+                                <option value="Ужгород">Uzhgorod</option>
+                                <option value="Гданьск">Gdansk</option>
+                                <option value="Сараево">Sarajevo</option>
+                                <option value="Тулун">Tulun</option>
+                                <option value="Уфа">Ufa</option>
                             </select>
                         </div>
                         <div class=" filter__card">
-                            <div class="filter__card-title">Уровень позиции</div>
+                            <div class="filter__card-title">Level</div>
                             <div><input class="filter__card-input form-check-input level" id="junior" value="junior"
                                     type="checkbox" name="junior" />
                                 <label class="filter__card-label" for="junior">Junior</label></div>
@@ -110,43 +113,45 @@
                                 <label class="filter__card-label" for="senior">Senior</label></div>
                         </div>
                         <div class="filter__card">
-                            <div class="filter__card-title">Опыт работы</div>
+                            <div class="filter__card-title">Work experience</div>
                             <div><input class="filter__card-input form-check-input experience" type="checkbox"
                                     name="zero" />
-                                <label class="filter__card-label " for="zero">Нет опыта </label></div>
+                                <label class="filter__card-label " for="zero">No experience</label></div>
                             <div><input class="filter__card-input form-check-input experience" type="checkbox"
                                     name="small" />
-                                <label class="filter__card-label " for="small">От 1 года до 3 лет </label></div>
+                                <label class="filter__card-label " for="small">1-3 years</label></div>
                             <div><input class="filter__card-input form-check-input experience" type="checkbox"
                                     name="medium" />
-                                <label class="filter__card-label " for="medium">От 3 до 6 лет</label></div>
+                                <label class="filter__card-label " for="medium">3-6 years</label></div>
                             <div><input class="filter__card-input form-check-input experience" type="checkbox"
                                     name="large" />
-                                <label class="filter__card-label " name="large">Более 6 лет</label></div>
+                                <label class="filter__card-label " name="large">Over 6 year</label></div>
                         </div>
                         <div class="filter__card">
-                            <div class="filter__card-title">Уровень дохода $</div>
+                            <div class="filter__card-title">Salary level $</div>
                             <div class="filter__card-salary">
-                                <input class="input-salary" type="number" placeholder="от" id="minSalary" />
-                                <input class="input-salary" type="number" placeholder="до" id="maxSalary" /></div>
+                                <input class="input-salary" type="number" placeholder="From" id="minSalary" />
+                                <input class="input-salary" type="number" placeholder="To" id="maxSalary" /></div>
                             <div>
                                 <input class="filter__card-input form-check-input" type="checkbox" name="salary" />
-                                <label class="filter__card-label" for="salary">Указан доход</label></div>
+                                <label class="filter__card-label" for="salary">With salary</label></div>
                         </div>
                         <div class="filter__card">
-                            <div class="filter__card-title">Формат работы</div>
+                            <div class="filter__card-title">Work format</div>
                             <div><input class="filter__card-input form-check-input format" value="eдаленный"
                                     type="checkbox" />
-                                <label class="filter__card-label">Удаленный</label></div>
+                                <label class="filter__card-label">Distant</label></div>
                             <div><input class="filter__card-input form-check-input format" value="jфис"
                                     type="checkbox" />
-                                <label class="filter__card-label">Офис</label></div>
+                                <label class="filter__card-label">Office</label></div>
                             <div><input class="filter__card-input form-check-input format" value="гибрид"
                                     type="checkbox" />
-                                <label class="filter__card-label">Гибрид</label></div>
+                                <label class="filter__card-label">Hybrid</label></div>
                         </div>
-                        <div class="filter__change" id="btnFilter">Применить</div>
-                        <div class="filter__throwoff" id="btnReboot">Сбросить</div>
+                        <div class="filter-vacancy__btns">
+                            <div class="filter-vacancy__change">Apply</div>
+                            <div class="filter-vacancy__throwoff">Reset</div>
+                        </div>
                     </div>
                 </div>
             </div>
