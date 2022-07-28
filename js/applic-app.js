@@ -83,7 +83,9 @@ xhttp.send();
             new Route("contacts", "contacts.html"),
             new Route("new-vacancy", "new-vacancy.html"),
             new Route("about", "about.html", true),
-            new Route("create-vacancy", "create-vacancy.html")
+            new Route("create-vacancy", "create-vacancy.html"),
+            new Route("main", "en_appl_main.html")
+            
         ]);
     }
     init();
