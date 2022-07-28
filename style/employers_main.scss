@@ -195,6 +195,7 @@ Navbar Style
     font-weight: 500;
     color: #999;
     text-align: center;
+    min-width: 101px;
 }
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -267,11 +268,7 @@ margin-bottom: 7px;
 .navbar {
     flex-wrap: nowrap;
 }
-.popular__title-secondrow {
-    .popular__titles {
-        display: none;
-    }
-}
+
 .navbar-empl {
     display: flex;
     flex-direction: column;
