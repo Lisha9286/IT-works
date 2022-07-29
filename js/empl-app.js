@@ -79,10 +79,12 @@ xhttp.send();
 (function () {
     function init() {
         let router = new Router([
-            new Route('search', 'search.html'),            
+            new Route("about", "about.html", true),
+            new Route('search', 'en_search_applicants.html'),            
             new Route('contacts', 'contacts.html'),
-            new Route('new-vacancy', 'new-vacancy.html'),
-            new Route('about', 'about.html')
+            new Route('new-vacancy', 'create-vacancy.html'),
+            new Route("en/create-vacancy", "en_create-vacancy.html"),
+            new Route("en/search", "en_search_applicants.html"),
         ]);
     }
     init();
