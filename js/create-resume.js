@@ -7,7 +7,6 @@ class Registration {
 
     validateOnSubmit() {
         let self = this;
-        // let users = [];
 
         this.form.addEventListener("submit", (e) => {
             e.preventDefault();
@@ -19,20 +18,36 @@ class Registration {
                 }
             });
             if (error == 0) {
-                document.querySelector("#success").innerHTML = "Данные успешно отправлены!<br/> Проверьте ваш Email и подтвердите регистрацию.";
-                setTimeout(() => document.querySelector("#success").remove(), 10000);
-                let user = {
-                    username: document.querySelector("#username").value,
-                    password: document.querySelector("#password").value,
+                document.querySelector(".success").innerHTML = "Данные успешно отправлены!<br/> После проверки ваше резюме будет доступно на сайте.";
+                setTimeout(() => document.querySelector(".success").remove(), 10000);
+                let educationAll = `${document.querySelector("#education1").value}`;
+                document.querySelectorAll(".extra-row-edu").forEach((element) => {
+                    educationAll += `, ${element.value}`;
+                });
+                let experienceAll = `${document.querySelector("#experience1").value}`;
+                document.querySelectorAll(".extra-row-exp").forEach((element) => {
+                    experienceAll += `, ${element.value}`;
+                });
+                let user_resume = {
+                    username: document.querySelector("#firstName").value,
+                    password: document.querySelector("#lastName").value,
                     email: document.querySelector("#email").value,
+                    phone: document.querySelector("#phone").value,
+                    country: document.querySelector("#country").value,
+                    city: document.querySelector("#city").value,
+                    zipCode: document.querySelector("#zipCode").value,
+                    education: educationAll,
+                    experience: experienceAll,
                 };
-                sendPost(user);
-                // users.push(user);
-                // localStorage.setItem("users", JSON.stringify(users));
+                sendPost(user_resume);
                 let inputs = document.querySelectorAll("input");
                 inputs.forEach((e) => {
                     e.value = "";
                 });
+                document.querySelector(".edu-extra_rows").innerHTML = "";
+                document.querySelector(".exp-extra_rows").innerHTML = "";
+                document.querySelector(".btn_delete-row-edu").classList.add("btn_delete-row-hide");
+                document.querySelector(".btn_delete-row-exp").classList.add("btn_delete-row-hide");
             }
         });
     }
@@ -41,48 +56,13 @@ class Registration {
         const errorIcon = `<svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>`;
 
         if (field.value.trim() == "") {
-            if (field.id == "passwordRepeat") {
-                this.setStatus(field, `${errorIcon}<span class="errorText">Повторите пароль</span>`, "error");
-                return false;
-            }
-            this.setStatus(field, `${errorIcon}<span class="errorText">Укажите ваш ${field.previousElementSibling.innerText}</span>`, "error");
+            this.setStatus(field, `${errorIcon}<span class="errorText">Поле "${field.previousElementSibling.innerText}" должно быть заполнено</span>`, "error");
             return false;
         } else {
-            if (field.id == "username") {
-                const fieldFormat = /^[a-zA-Z0-9_.-]*$/;
-                if (!field.value.match(fieldFormat)) {
-                    this.setStatus(
-                        field,
-                        `${errorIcon}<span class="errorText">Логин может включать латинские буквы (a-z), цифры, нижнее подчеркивание (_), тире (-) и точку (.).</span></span>`,
-                        "error"
-                    );
-                    return false;
-                }
-                if (field.validity.tooShort || field.validity.tooLong) {
-                    this.setStatus(field, `${errorIcon}<span class="errorText">Логин должен содержать от 5 до 20 символов.`, "error");
-                    return false;
-                }
-            }
             if (field.id == "email") {
                 const fieldFormat = /^((([0-9A-Za-z]{1}[-0-9A-z\.]{0,30}[0-9A-Za-z]?)|([0-9А-Яа-я]{1}[-0-9А-я\.]{0,30}[0-9А-Яа-я]?))@([-A-Za-z]{1,}\.){1,}[-A-Za-z]{2,})$/;
                 if (!field.value.match(fieldFormat)) {
                     this.setStatus(field, `${errorIcon}<span class="errorText">Email введен неверно`, "error");
-                    return false;
-                }
-            }
-            if (field.id == "password") {
-                const fieldFormat = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g;
-                if (field.value.length < 6) {
-                    this.setStatus(field, `${errorIcon}<span class="errorText">Пароль не может быть короче 6 символов</span>`, "error");
-                    return false;
-                } else if (!field.value.match(fieldFormat)) {
-                    this.setStatus(field, `${errorIcon}<span class="errorText">Пароль должен включать прописные и заглавные буквы, цифры и спецсимволы (!@#$%^&*).</span>`, "error");
-                    return false;
-                }
-            }
-            if (field.id == "passwordRepeat") {
-                if (field.value != document.querySelector("#password").value) {
-                    this.setStatus(field, `${errorIcon}<span class="errorText">Пароли не совпадают. Повторите попытку.</span>`, "error");
                     return false;
                 } else {
                     this.setStatus(field, null, "success");
@@ -111,23 +91,64 @@ class Registration {
     }
 }
 
-const form = document.querySelector(".registration__form");
+const form = document.querySelector(".new-resume-form");
 if (form) {
-    const fields = ["firstName", "lastName", "password", "email", "phone", "country", "city", "zipCode", "education", "experience"];
+    const fields = ["firstName", "lastName", "email", "phone", "country", "city", "zipCode", "education1", "experience1"];
     const validator = new Registration(form, fields);
 }
 
-function sendPost(user) {
+function sendPost(user_resume) {
     fetch("https://httpbin.org/post", {
         method: "POST",
-        body: JSON.stringify(user),
+        body: JSON.stringify(user_resume),
         headers: {
             "Content-Type": "application / json; charset=utf-8",
         },
     })
         .then((response) => response.json())
-        .then((user) => {
-            console.log(user);
+        .then((user_resume) => {
+            console.log(user_resume);
         })
         .catch((error) => console.log(error));
 }
+
+function addNewRow(name) {
+    name == "edu" ? iEdu++ : iExp++;
+    let newRow = document.createElement("input");
+    newRow.className = `form-control form-control-sm resume-item extra-row-${name}`;
+    newRow.id = name == "edu" ? `education${iEdu}` : `experience${iExp}`;
+    document.querySelector(`.${name}-extra_rows`).append(newRow);
+    document.querySelector(`.btn_delete-row-${name}`).classList.remove(`btn_delete-row-hide`);
+}
+
+function deleteRow(name) {
+    let extraRows = document.querySelectorAll(`.extra-row-${name}`);
+    if (extraRows.length) {
+        document.querySelector(`.${name}-extra_rows`).removeChild(extraRows[extraRows.length - 1]);
+    }
+    if (extraRows.length == 1) {
+        document.querySelector(`.btn_delete-row-${name}`).classList.add("btn_delete-row-hide");
+    }
+}
+
+let iEdu = 1;
+let iExp = 1;
+document.querySelector(".btn_add-row-edu").addEventListener("click", () => {
+    let edu = "edu";
+    addNewRow(edu);
+});
+
+document.querySelector(".btn_delete-row-edu").addEventListener("click", () => {
+    let edu = "edu";
+    deleteRow(edu);
+});
+
+document.querySelector(".btn_add-row-exp").addEventListener("click", () => {
+    let exp = "exp";
+    addNewRow(exp);
+});
+
+document.querySelector(".btn_delete-row-exp").addEventListener("click", () => {
+    let exp = "exp";
+    deleteRow(exp);
+});
