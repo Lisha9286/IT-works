@@ -87,7 +87,7 @@ class Registration {
 
 const form = document.querySelector(".new-vacancy-form");
 if (form) {
-    const fields = ["title", "minSalary", "maxSalary", "currency", "duties", "skills", "conditions", "details", "firstName", "lastName", "email", "phone", "country", "city", "zipCode"];
+    const fields = ["title", "minSalary", "maxSalary", "currency", "duties", "skills", "conditions", "firstName", "lastName", "email", "phone", "country", "city", "zipCode"];
     const validator = new Registration(form, fields);
 }
 
