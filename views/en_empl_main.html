@@ -10,7 +10,6 @@
 </head>
 
 <body class="page_employers">
-    <div id="app"></div>
     <div class="wrapper-empl d-flex">
         <!-- Sidebar  -->
         <nav class="sidebar-empl">
@@ -49,14 +48,13 @@
                 <div class="navbar-empl__logo">
                     <a href="#">
                         <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo"></a>
-                    <h3 class="header__second pt-3"> For Employers</h3>
+                    <h3 class="header__second pt-3">For Employers</h3>
                 </div>
                 <ul class="nav navbar-nav nav-empl__links d-flex">
                     <li class="nav-item">
                         <button type="button" class="btn btn-outline-secondary btn-sm me-2 btn-signin__employer"
                             data-bs-toggle="modal" data-bs-target="#modal_sign-in" id="sign-up">Log in</button>
-                    </li><a class="nav-item" href="../employers_main.html"><span
-                            class="btn btn-outline-secondary btn-sm me-1 btn-signin__employer">RU</span></a>
+                    </li>
                     <!-- Modal -->
                     <div class="modal fade" id="modal_sign-in" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="modal_sign-inLabel" aria-hidden="true">
@@ -65,8 +63,7 @@
                                 <div class="modal-header">
                                     <div>
                                         <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo">
-                                        <p class="header__subtitle subtitle__employer">YOUNG BLOOD IN IT WORLD
-                                        </p>
+                                        <p class="header__subtitle subtitle__employer">Young Blood in IT World</p>
                                     </div>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
@@ -88,7 +85,7 @@
                                                 <div class="row ">
                                                     <label for="password_sign-in"
                                                         class="form-label g-2">Password</label>
-                                                    <input class="form-control" type="password" name="Пароль"
+                                                    <input class="form-control" type="password" name="password"
                                                         minlength="6" id="password_sign-in" placeholder="Password"
                                                         required>
                                                     <div class="error-message"></div>
@@ -102,7 +99,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">CLose</button>
+                                        data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
@@ -119,8 +116,7 @@
                                 <div class="modal-header">
                                     <div>
                                         <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo">
-                                        <p class="header__subtitle subtitle__employer">YOUNG BLOOD IN IT WORLD
-                                        </p>
+                                        <p class="header__subtitle subtitle__employer">Young Blood in IT World</p>
                                     </div>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
@@ -141,16 +137,15 @@
                                                 </div>
                                                 <div class="row ">
                                                     <label for="password" class="form-label g-2">Password</label>
-                                                    <input class="form-control" type="password" name="Пароль"
+                                                    <input class="form-control" type="password" name="password"
                                                         minlength="6" id="password" placeholder="Password" required>
                                                     <div class="error-message"></div>
                                                 </div>
                                                 <div class="row ">
-                                                    <label for="password" class="form-label g-2">Confirm password
-                                                    </label>
-                                                    <input class="form-control" type="password" name="Пароль"
-                                                        minlength="6" id="passwordRepeat" placeholder="Confirm password"
-                                                        required>
+                                                    <label for="password" class="form-label g-2">Confirm
+                                                        password</label>
+                                                    <input class="form-control" type="password" minlength="6"
+                                                        id="passwordRepeat" placeholder="Confirm password" required>
                                                     <div class="error-message"></div>
                                                 </div>
                                                 <div class="row">
@@ -161,7 +156,7 @@
                                                 </div>
                                                 <div class=" row registration__group mt-4">
                                                     <button class="btn btn-primary btn-block create-account"
-                                                        type="submit" id="register">Create</button>
+                                                        type="submit" id="register">Send</button>
                                                 </div>
                                                 <div class="success" id="success"></div>
                                             </form>
@@ -180,77 +175,81 @@
             <!--Motto-->
             <div class="row m-3 p-4">
                 <div class="col-12 d-flex justify-content-center">
-                    <p class="header__subtitle subtitle__employer">YOUNG BLOOD IN IT WORLD</p>
+                    <p class="header__subtitle subtitle__employer">Young Blood in IT World</p>
                 </div>
             </div>
             <!-- Searching form-->
             <div class="container d-flex justify-content-center">
                 <div class="card w-100 mt-2 p-4">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"><a
-                                    href="./en_search_applicants.html"
-                                    class="btn btn-primary btn__search-employermain"><i
-                                        class="class=bi bi-search bi_employer"></i></button></div>
+                        <input type="text" class="form-control" placeholder="Search" id="searchRequest">
+                        <div class="input-group-append"><a href="./en_search_applicants.html"
+                                class="btn btn-primary btn__search btn__search-employermain"><i
+                                    class="class=bi bi-search bi_employer"></i></ф>
+                        </div>
                     </div>
                     <!--Block Information-->
                     <div class="row popular justify-content-center pt-1 ">
-                        <div class="col-10 popular__block">
-                            <div class="popular__title fs-5"> Trending jobs</div>
-                            <div class="row  pt-3 popular__title-first-row">
-                                <div class="col-md-2 col-sm-6 pe-md-0">
+                        <div class="col-12 popular__block">
+                            <div class="popular__title fs-5">Trending jobs</div>
+                            <div class="row justify-content-center pt-3">
+                                <div class="col-lg-2 col-md-3 col-sm-5 col-7 pe-md-0">
                                     <p class="popular__titles fs-6">
-                                        Lorem ipsum
+                                        Frontend
                                     </p>
                                 </div>
-                                <div class=" col-md-2 col-sm-6 pe-md-0">
+                                <div class="col-lg-2 col-md-3  col-sm-5 col-7 pe-md-0">
                                     <p class="popular__titles fs-6">
-                                        Lorem ipsum
+                                        Backend
                                     </p>
                                 </div>
-                                <div class=" col-md-2 col-sm-6 pe-md-0">
+                                <div class=" col-lg-2 col-md-3 col-sm-5 col-7 pe-md-0">
                                     <p class="popular__titles fs-6">
-                                        Lorem ipsum
+                                        Java
                                     </p>
                                 </div>
-                                <div class="col-md-2 col-sm-6 pe-md-0">
+                                <div class="col-lg-2 col-md-3  col-sm-5 col-7 pe-md-0">
                                     <p class="popular__titles fs-6">
-                                        Lorem ipsum
+                                        Python
                                     </p>
                                 </div>
-                                <div class="col-md-2 col-sm-6 pe-md-0">
+                                <div class="col-lg-2 col-md-3  col-sm-5 col-7  pe-md-0">
                                     <p class="popular__titles fs-6">
-                                        Lorem ipsum
+                                        Javascript
                                     </p>
                                 </div>
-                                <div class="col-md-2 col-sm-6 pe-md-0">
+                                <div class="col-lg-2 col-md-3  col-sm-5 col-7 pe-md-0">
                                     <p class="popular__titles fs-6">
-                                        Lorem ipsum
+                                        C#
                                     </p>
                                 </div>
-                            </div>
-                            <div class="row d-flex justify-content-center pt-3 popular__title-secondrow">
-                                <div class="col-md-2 col-sm-6 pe-md-0">
+
+                                <div class="col-lg-2 col-md-3  col-sm-5 col-7 pe-md-0">
                                     <p class="popular__titles title__one fs-6">
-                                        Lorem ipsum
+                                        PHP
                                     </p>
                                 </div>
-                                <div class="col-md-2 col-sm-6 pe-md-0">
+                                <div class="col-lg-2 col-md-3  col-sm-5 col-7 pe-md-0">
                                     <p class="popular__titles title__two fs-6">
-                                        Lorem ipsum
+                                        1-C
                                     </p>
                                 </div>
-                                <div class="col-md-2 col-sm-6 pe-md-0">
+                                <div class="col-lg-2 col-md-3  col-sm-5 col-7 pe-md-0">
                                     <p class="popular__titles title_three fs-6">
-                                        Lorem ipsum
+                                        Flutter
                                     </p>
                                 </div>
-                                <div class="col-md-2 col-sm-6 pe-md-0">
+                                <div class="col-lg-2 col-md-3  col-sm-5 col-7 pe-md-0">
                                     <p class="popular__titles title__four fs-6">
+                                        Ruby
+                                    </p>
+                                </div>
+                                <div class="col-lg-2 col-md-3  col-sm-5 col-7 pe-md-0">
+                                    <p class="popular__titles title__five fs-6">
                                         Lorem ipsum
                                     </p>
                                 </div>
-                                <div class="col-md-2 col-sm-6 pe-md-0">
+                                <div class="col-lg-2 col-md-3  col-sm-5 col-7 pe-md-0">
                                     <p class="popular__titles title__five fs-6">
                                         Lorem ipsum
                                     </p>
@@ -269,11 +268,54 @@
                             <div class="card">
                                 <img src="../assets/images/Information_Block.jpg" alt="" class="card-img-top">
                                 <div class="card-body">
-                                    <h6 class="card-title">Sunset</h6>
+                                    <h5 class="card-title">Sunset</h5>
                                     <p class="card-text fs-6">Lorem ipsum dolor sit amet consectetur,
                                         adipisicing elit.
                                     </p>
-                                    <a href="" class=" btn btn-outline-secondary btn-sm">Read More</a>
+                                    <a href="" class=" btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modal__read_more1">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Read More 1-->
+                        <div class="modal fade" id="modal__read_more1" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal__read_more1Label"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row form-reg m-4">
+                                            <div class="col-md-12">
+                                                <div class="card card_modal">
+                                                    <img src="../assets/images/Information_Block.jpg" alt=""
+                                                        class="card-img-top">
+                                                    <div class="card-body card-body_modal">
+                                                        <h5 class="card-title">Sunset</h5>
+                                                        <p class="card-text fs-6">Lorem ipsum dolor sit amet
+                                                            consectetur, adipisicing elit. Lorem ipsum dolor sit amet
+                                                            consectetur adipisicing elit. Sed dolorem, veniam sunt ad
+                                                            tempore ipsa aut, distinctio, voluptatibus neque iusto
+                                                            eligendi eius accusantium. Esse nostrum ipsam quibusdam
+                                                            doloribus amet recusandae! Lorem ipsum dolor sit amet
+                                                            consectetur, adipisicing elit. Lorem ipsum dolor sit amet
+                                                            consectetur adipisicing elit. Sed dolorem, veniam sunt ad
+                                                            tempore ipsa aut, distinctio, voluptatibus neque iusto
+                                                            eligendi eius accusantium. Esse nostrum ipsam quibusdam
+                                                            doloribus amet recusandae!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -285,7 +327,50 @@
                                     <p class="card-text fs-6">Lorem ipsum dolor sit amet consectetur,
                                         adipisicing elit.
                                     </p>
-                                    <a href="" class="btn btn-outline-secondary  btn-sm">Read More</a>
+                                    <a href="" class="btn btn-outline-secondary  btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modal__read_more2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Read More 2-->
+                        <div class="modal fade" id="modal__read_more2" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal__read_more2Label"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row form-reg m-4">
+                                            <div class="col-md-12">
+                                                <div class="card card_modal">
+                                                    <img src="../assets/images/Information_Block.jpg" alt=""
+                                                        class="card-img-top">
+                                                    <div class="card-body card-body_modal">
+                                                        <h5 class="card-title">Sunset</h5>
+                                                        <p class="card-text fs-6">Lorem ipsum dolor sit amet
+                                                            consectetur, adipisicing elit. Lorem ipsum dolor sit amet
+                                                            consectetur adipisicing elit. Sed dolorem, veniam sunt ad
+                                                            tempore ipsa aut, distinctio, voluptatibus neque iusto
+                                                            eligendi eius accusantium. Esse nostrum ipsam quibusdam
+                                                            doloribus amet recusandae! Lorem ipsum dolor sit amet
+                                                            consectetur, adipisicing elit. Lorem ipsum dolor sit amet
+                                                            consectetur adipisicing elit. Sed dolorem, veniam sunt ad
+                                                            tempore ipsa aut, distinctio, voluptatibus neque iusto
+                                                            eligendi eius accusantium. Esse nostrum ipsam quibusdam
+                                                            doloribus amet recusandae!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -297,7 +382,50 @@
                                     <p class="card-text fs-6">Lorem ipsum dolor sit amet consectetur,
                                         adipisicing elit.
                                     </p>
-                                    <a href="" class="btn btn-outline-secondary  btn-sm">Read More</a>
+                                    <a href="" class="btn btn-outline-secondary  btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modal__read_more3">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Read More 3-->
+                        <div class="modal fade" id="modal__read_more3" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal__read_more3Label"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row form-reg m-4">
+                                            <div class="col-md-12">
+                                                <div class="card card_modal">
+                                                    <img src="../assets/images/Information_Block.jpg" alt=""
+                                                        class="card-img-top">
+                                                    <div class="card-body card-body_modal">
+                                                        <h5 class="card-title">Sunset</h5>
+                                                        <p class="card-text fs-6">Lorem ipsum dolor sit amet
+                                                            consectetur, adipisicing elit. Lorem ipsum dolor sit amet
+                                                            consectetur adipisicing elit. Sed dolorem, veniam sunt ad
+                                                            tempore ipsa aut, distinctio, voluptatibus neque iusto
+                                                            eligendi eius accusantium. Esse nostrum ipsam quibusdam
+                                                            doloribus amet recusandae! Lorem ipsum dolor sit amet
+                                                            consectetur, adipisicing elit. Lorem ipsum dolor sit amet
+                                                            consectetur adipisicing elit. Sed dolorem, veniam sunt ad
+                                                            tempore ipsa aut, distinctio, voluptatibus neque iusto
+                                                            eligendi eius accusantium. Esse nostrum ipsam quibusdam
+                                                            doloribus amet recusandae!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -309,7 +437,50 @@
                                     <p class="card-text fs-6">Lorem ipsum dolor sit amet consectetur,
                                         adipisicing elit.
                                     </p>
-                                    <a href="" class="btn btn-outline-secondary btn-sm">Read More</a>
+                                    <a href="" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modal__read_more4">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Read More 4-->
+                        <div class="modal fade" id="modal__read_more4" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal__read_more4Label"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row form-reg m-4">
+                                            <div class="col-md-12">
+                                                <div class="card card_modal">
+                                                    <img src="../assets/images/Information_Block.jpg" alt=""
+                                                        class="card-img-top">
+                                                    <div class="card-body card-body_modal">
+                                                        <h5 class="card-title">Sunset</h5>
+                                                        <p class="card-text fs-6">Lorem ipsum dolor sit amet
+                                                            consectetur, adipisicing elit. Lorem ipsum dolor sit amet
+                                                            consectetur adipisicing elit. Sed dolorem, veniam sunt ad
+                                                            tempore ipsa aut, distinctio, voluptatibus neque iusto
+                                                            eligendi eius accusantium. Esse nostrum ipsam quibusdam
+                                                            doloribus amet recusandae! Lorem ipsum dolor sit amet
+                                                            consectetur, adipisicing elit. Lorem ipsum dolor sit amet
+                                                            consectetur adipisicing elit. Sed dolorem, veniam sunt ad
+                                                            tempore ipsa aut, distinctio, voluptatibus neque iusto
+                                                            eligendi eius accusantium. Esse nostrum ipsam quibusdam
+                                                            doloribus amet recusandae!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -344,6 +515,7 @@
     </div>
     <script type="module" src="../js/employers_sign-in.js"></script>
     <script type="module" src="../js/reg_applicants.js"></script>
+    <script type="module" src="../js/en-search_app_from_main.js"></script>
     <script type="module" src="../js/empl-app.js"></script>
 
 </body>

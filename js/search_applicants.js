@@ -100,19 +100,19 @@ const btnReboot = document.querySelector("#btnReboot");
 btnSearch.addEventListener("click", () => {
     searchApp();
 });
-btnFilter.addEventListener("click", () => {
-    createObject();
-});
+// btnFilter.addEventListener("click", () => {
+//     createObject();
+// });
 inputSearchApp.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
         searchApp();
     }
 });
 
-btnReboot.addEventListener("click", () => {
-    const inputs = document.querySelectorAll("input");
-    inputs.forEach((item) => {
-        item.checked = false;
-        item.value = "";
-    });
-});
+// btnReboot.addEventListener("click", () => {
+//     const inputs = document.querySelectorAll("input");
+//     inputs.forEach((item) => {
+//         item.checked = false;
+//         item.value = "";
+//     });
+// });
