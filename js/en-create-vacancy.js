@@ -18,7 +18,7 @@ class Registration {
                 }
             });
             if (error == 0) {
-                document.querySelector(".success").innerHTML = "Данные успешно отправлены!<br/> После проверки ваша вакансия будет доступна на сайте.";
+                document.querySelector(".success").innerHTML = "Thank you for creating a new job!<br/> It will be published right after review.";
                 setTimeout(() => document.querySelector(".success").remove(), 10000);
                 let vacancy = {
                     title: document.querySelector("#title").value,
@@ -50,13 +50,13 @@ class Registration {
         const errorIcon = `<svg aria-hidden="true" class="stUf5b LxE1Id" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>`;
 
         if (field.value.trim() == "") {
-            this.setStatus(field, `${errorIcon}<span class="errorText">Это поле должно быть заполнено</span>`, "error");
+            this.setStatus(field, `${errorIcon}<span class="errorText">This field cannot be empty</span>`, "error");
             return false;
         } else {
             if (field.id == "email") {
                 const fieldFormat = /^((([0-9A-Za-z]{1}[-0-9A-z\.]{0,30}[0-9A-Za-z]?)|([0-9А-Яа-я]{1}[-0-9А-я\.]{0,30}[0-9А-Яа-я]?))@([-A-Za-z]{1,}\.){1,}[-A-Za-z]{2,})$/;
                 if (!field.value.match(fieldFormat)) {
-                    this.setStatus(field, `${errorIcon}<span class="errorText">Email введен неверно`, "error");
+                    this.setStatus(field, `${errorIcon}<span class="errorText">Email is incorrect`, "error");
                     return false;
                 } else {
                     this.setStatus(field, null, "success");
