@@ -10,6 +10,7 @@ function searchResult(element) {
                 <div class="search__card-experience">${element.experience}</div>
                 <div class="search__card-subtitle">Expected salary</div>
                 <div class="search__card-salary">${element.salary} $</div>
+                <div class="search__card-subtitle">${element.city}</div>
             </div>
         <image src="${element.photo}" class="search__card-photo" alt="photo" />
         </div>`;
@@ -65,7 +66,7 @@ function searchApp() {
 function createObject() {
     //объект с параметрами из фильтра
     const filterObject = {
-        city: document.querySelector("#cities").value,
+        city: document.querySelector("#city").value,
         jobFormat: [],
         level: [],
         minSalary: +document.querySelector("#minSalary").value,
@@ -90,6 +91,13 @@ function createObject() {
     getFilter(jobFormat, filterObject.jobFormat);
     getFilter(experience, filterObject.experience);
     console.log(filterObject);
+    list.innerHTML = "";
+    cards.forEach(elem => {
+
+        if (elem.city == filterObject.city) {
+            searchResult(elem);
+        }
+    });
 }
 
 const btnSearch = document.querySelector("#btnSearchApp");
@@ -97,22 +105,27 @@ const inputSearchApp = document.querySelector("#inputSearchApp");
 const btnFilter = document.querySelector("#btnFilter");
 const btnReboot = document.querySelector("#btnReboot");
 
-btnSearch.addEventListener("click", () => {
+btnSearch.addEventListener('click', () => {
     searchApp();
+    if (document.querySelector("input[type='checkbox']:checked") || document.querySelector('#city').value != '') {
+        createObject();
+    }
 });
-// btnFilter.addEventListener("click", () => {
-//     createObject();
-// });
+btnFilter.addEventListener('click', () => {
+    searchApp();
+    createObject();
+});
+
 inputSearchApp.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
         searchApp();
     }
 });
 
-// btnReboot.addEventListener("click", () => {
-//     const inputs = document.querySelectorAll("input");
-//     inputs.forEach((item) => {
-//         item.checked = false;
-//         item.value = "";
-//     });
-// });
+btnReboot.addEventListener("click", () => {
+    const inputs = document.querySelectorAll("input");
+    inputs.forEach((item) => {
+        item.checked = false;
+        item.value = "";
+    });
+});
