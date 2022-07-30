@@ -43,14 +43,14 @@
             </div>
         </nav>
         <!-- Page Content  -->
-        <div id="content-appl">
-            <nav class="container  navbar-empl navbar-expand-lg navbar-light bg-light navbar-apl">
-                <div class=" row navbar-empl__logo">
-                    <a class=" col-2 ms-2" href="#">
-                        <img class="nav__logo-img logo-appl" src="../assets/images/logo.png" alt="logo"></a>
-                    <div class="col-8">
-                        <h3 class="header__second header__second-appl  pt-3"> Работодателям</h3>
-                        <p class=" subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>
+        <div id="content">
+            <nav class="navbar-empl create-resume__navbar navbar-expand-lg navbar-light bg-light d-flex ">
+                <div class="navbar-create-resume">
+                    <a href="#">
+                        <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo"></a>
+                    <div class="create-resume_header-content">
+                        <h3 class="header__second pt-3"> Работодателям</h3>
+                        <p class="header__subtitle create-resume__subtitle">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>
                     </div>
                 </div>
             </nav>
@@ -61,79 +61,94 @@
                 </div>
             </div>
             <!-- Create vacancy form-->
-            <div class="container mt-5">
-                <div class="create-vacancy form-group bg-white rounded col-md-7 m-auto shadow p-3 mb-5 bg-white">
-                    <form class="create-vacancy__name p-2 rounded bg">
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="vacancy"
-                                placeholder="Название вакансии/ стажировки">
-                        </div>
-                    </form>
-                    <form class="create-vacancy__income p-2 rounded bg mt-1">
-                        <p class="text-center fw-bold">Уровень дохода</p>
-                        <div class="row m-3">
+            <div class="create-vacancy form-group bg-white rounded col-md-7 m-auto shadow p-3 mb-5 bg-white">
+                <form class="new-vacancy-form create-vacancy__name p-2 rounded bg" novalidate>
+                    <div class="row mb-3">
+                        <input type="text" class="form-control" name="vacancy"
+                            placeholder="Название вакансии/ стажировки" id="title">
+                        <div class="error-message"></div>
+                    </div>
+                    <fieldset class="create-vacancy__income p-2 rounded bg mt-1">
+                        <legend class="text-center fw-bold">Уровень дохода</legend>
+                        <div class="row mb-3 salary">
                             <div class="col">
-                                <input type="text" class="form-control" name="from" placeholder="От:">
+                                <input type="number" class="form-control" name="from" placeholder="От:" id="minSalary">
+                                <div class="error-message"></div>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" name="to" placeholder="До:">
+                                <input type="number" class="form-control" name="to" placeholder="До:" id="maxSalary">
+                                <div class="error-message"></div>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" name="currency" placeholder="Валюта:">
+                                <input type="text" class="form-control" name="currency" placeholder="Валюта:"
+                                    id="currency">
+                                <div class="error-message"></div>
                             </div>
                         </div>
-                    </form>
-                    <form class="create-vacancy__description p-2 rounded bg mt-1">
-                        <p class="text-center fw-bold">Описание вакансии</p>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="obligations" placeholder="Обязанности">
+                    </fieldset>
+                    <fieldset class="create-vacancy__description p-2 rounded bg mt-1">
+                        <legend class="text-center fw-bold">Описание вакансии</legend>
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="obligations" placeholder="Обязанности"
+                                id="duties">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="skills" placeholder="Требования/навыки">
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="skills" placeholder="Требования/навыки"
+                                id="skills">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="conditions" placeholder="Условия">
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="conditions" placeholder="Условия"
+                                id="conditions">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="add" placeholder="Дополнительно">
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="add" placeholder="Дополнительно" id="details">
+                            <div class="error-message"></div>
                         </div>
-                    </form>
-                    <form class="create-vacancy__contact p-2 rounded bg mt-1">
-                        <p class="text-center fw-bold">Контакты</p>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="name" placeholder="Имя">
+                    </fieldset>
+                    <fieldset class="create-vacancy__contact p-2 rounded bg mt-1">
+                        <legend class="text-center fw-bold">Контакты</legend>
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="name" placeholder="Имя" id="firstName">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="surname" placeholder="Фамилия">
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="lastname" placeholder="Фамилия" id="lastName">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="name@example.com" required>
+                        <div class="row mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required
+                                id="email">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="tel" class="form-control" id="typePhone" name="tel"
-                                placeholder="+7(000)000-00-00">
+                        <div class="row mb-3">
+                            <input type="tel" class="form-control" name="tel" placeholder="Телефон" id="phone">
+                            <div class="error-message"></div>
                         </div>
-                    </form>
-                    <form class="create-vacancy__location p-2 rounded bg mt-1">
-                        <p class="text-center fw-bold">Место расположения</p>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="country" placeholder="Страна">
+                    </fieldset>
+                    <fieldset class="create-vacancy__location p-2 rounded bg mt-1">
+                        <legend class="text-center fw-bold">Место расположения</legend>
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="country" placeholder="Страна" id="country">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="locality" placeholder="Населенный пункт">
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="locality" placeholder="Населенный пункт"
+                                id="city">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="email" class="form-control" name="index" id="exampleFormControlInput1"
-                                placeholder="Индекс">
+                        <div class="row mb-3">
+                            <input type="number" class="form-control" name="zipCode" placeholder="Индекс" id="zipCode">
+                            <div class="error-message"></div>
                         </div>
-                    </form>
-                    <form class="create-vacancy__submit p-2 rounded bg mt-1">
-                        <div class="row m-3">
-                            <button type="submit" class="btn btn-primary btn-block" name="btn">Разместить</button>
-                        </div>
-                    </form>
-                </div>
+                    </fieldset>
+                    <div class="success"></div>
+                    <div class="row mb-3">
+                        <button type="submit" class="btn btn-primary btn-block" name="btn">Разместить</button>
+                    </div>
+                </form>
             </div>
 
             <!-- Create vacancy Form end-->
@@ -163,7 +178,7 @@
             </footer>
         </div>
     </div>
-    <script src="../js/search_applicants.js"></script>
+    <script type="module" src="../js/create-vacancy.js"></script>
 </body>
 
 </html>
