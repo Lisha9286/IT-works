@@ -29,8 +29,8 @@ class Registration {
                     experienceAll += `, ${element.value}`;
                 });
                 let user_resume = {
-                    username: document.querySelector("#firstName").value,
-                    password: document.querySelector("#lastName").value,
+                    firstName: document.querySelector("#firstName").value,
+                    lastName: document.querySelector("#lastName").value,
                     email: document.querySelector("#email").value,
                     phone: document.querySelector("#phone").value,
                     country: document.querySelector("#country").value,
