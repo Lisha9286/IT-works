@@ -80,7 +80,7 @@
                     <div class="row searching__filters mt-1 ms-3 p-2">
                         <div class="filter">
                             <div class="filter__card">
-                                <div class="filter__card-title">City</div>
+                                <div class="filter-vacancy__title">City</div>
                                 <input type="text" name="city" id="city" placeholder="City" list="cities">
                                 <datalist id="cities">
 
@@ -88,7 +88,7 @@
 
                             </div>
                             <div class=" filter__card">
-                                <div class="filter__card-title">Level</div>
+                                <div class="filter-vacancy__title">Level</div>
                                 <div><input class="filter__card-input form-check-input level" id="junior" value="junior"
                                         type="radio" name="level" />
                                     <label class="filter__card-label" for="junior">Junior</label></div>
@@ -100,7 +100,7 @@
                                     <label class="filter__card-label" for="senior">Senior</label></div>
                             </div>
                             <div class="filter__card">
-                                <div class="filter__card-title">Work experience</div>
+                                <div class="filter-vacancy__title">Work experience</div>
                                 <div><input class="filter__card-input form-check-input experience" type="radio"
                                         name="zero" value="zero" />
                                     <label class="filter__card-label " for="zero">No experience</label></div>
@@ -115,7 +115,7 @@
                                     <label class="filter__card-label " name="large">Over 6 year</label></div>
                             </div>
                             <div class="filter__card">
-                                <div class="filter__card-title">Salary level $</div>
+                                <div class="filter-vacancy__title">Salary level $</div>
                                 <div class="filter__card-salary">
                                     <input class="input-salary" type="number" placeholder="From" id="minSalary" />
                                     <input class="input-salary" type="number" placeholder="To" id="maxSalary" /></div>
@@ -124,7 +124,7 @@
                                     <label class="filter__card-label" for="salary">With salary</label></div>
                             </div>
                             <div class="filter__card">
-                                <div class="filter__card-title">Work format</div>
+                                <div class="filter-vacancy__title">Work format</div>
                                 <div><input class="filter__card-input form-check-input format" value="eдаленный"
                                         type="checkbox" />
                                     <label class="filter__card-label">Distant</label></div>
@@ -136,8 +136,8 @@
                                     <label class="filter__card-label">Hybrid</label></div>
                             </div>
                             <div class="filter-vacancy__btns">
-                                <div class="filter-vacancy__change">Apply</div>
-                                <div class="filter-vacancy__throwoff">Reset</div>
+                                <div class="filter-vacancy__change" id="btnFilter">Apply</div>
+                                <div class="filter-vacancy__throwoff" id="btnReboot">Reset</div>
                             </div>
                         </div>
                     </div>

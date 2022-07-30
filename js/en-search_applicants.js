@@ -10,6 +10,7 @@ function searchResult(element) {
                 <div class="search__card-experience">${element.experience}</div>
                 <div class="search__card-subtitle">Expected salary</div>
                 <div class="search__card-salary">${element.salary} $</div>
+                <div class="search__card-subtitle">${element.city}</div>
             </div>
         <image src="${element.photo}" class="search__card-photo" alt="photo" />
         </div>`;
@@ -109,10 +110,10 @@ inputSearchApp.addEventListener("keydown", (event) => {
     }
 });
 
-// btnReboot.addEventListener("click", () => {
-//     const inputs = document.querySelectorAll("input");
-//     inputs.forEach((item) => {
-//         item.checked = false;
-//         item.value = "";
-//     });
-// });
+btnReboot.addEventListener("click", () => {
+    const inputs = document.querySelectorAll("input");
+    inputs.forEach((item) => {
+        item.checked = false;
+        item.value = "";
+    });
+});
