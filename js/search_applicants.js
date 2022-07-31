@@ -1,5 +1,8 @@
 let cards, card;
-const list = document.querySelector("#cards");
+let newCards = [];
+let newCard;
+let firstCards
+const list = document.querySelector('#cards');
 
 function searchResult(element) {
     list.innerHTML += `
@@ -16,20 +19,15 @@ function searchResult(element) {
         </div>`;
 }
 
+
 document.addEventListener("DOMContentLoaded", async function () {
     let url = "https://raw.githubusercontent.com/nas-tay/WorkIT-project/main/js/applicants.json";
     let response = await fetch(url);
     cards = await response.json();
-
-    if (localStorage.getItem("searchRequest")) {
-        document.querySelector("#inputSearchApp").value = localStorage.getItem("searchRequest");
-        searchApp();
-        localStorage.removeItem("searchRequest");
-    } else {
-        for (card of cards) {
-            searchResult(card);
-        }
-    }
+    firstCards = cards;
+    for (card of cards) {
+        searchResult(card);
+    };
 
     let arrCity = [];
 
@@ -42,55 +40,66 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     //создание выпадающего списка из массива уникальных городов
     for (uniqCity of uniqArrCity) {
-        document.querySelector("#cities").innerHTML += `<option>${uniqCity}</option>`;
+        document.querySelector('#cities').innerHTML += `<option>${uniqCity}</option>`
     }
 });
-
-function searchApp() {
-    let searchText = document.querySelector("#inputSearchApp").value;
-    list.innerHTML = "";
-    for (card of cards) {
-        if (searchText) {
-            const search = new RegExp(searchText, "gi");
-            const rez = search.test(card.keyWords);
-            if (rez) {
-                searchResult(card);
-            }
-        }
-        if (!searchText) {
-            searchResult(card);
-        }
-    }
-}
 
 function createObject() {
     //объект с параметрами из фильтра
     const filterObject = {
-        city: document.querySelector("#city").value,
+        city: document.querySelector('#city').value,
+        experience: [],
         jobFormat: [],
         level: [],
-        minSalary: +document.querySelector("#minSalary").value,
-        maxSalary: +document.querySelector("#maxSalary").value,
-        experience: [],
-    };
+        minSalary: +document.querySelector('#minSalary').value,
+        maxSalary: +document.querySelector('#maxSalary').value,
+    }
+
 
     // функция получения свойств-массивов объекта из фильтра
     function getFilter(filter, objectPush) {
-        filter.forEach((element, index) => {
+        filter.forEach((element) => {
             if (element.checked) {
                 objectPush.push(element.value);
             }
         });
     }
 
-    const level = document.querySelectorAll(".level");
-    const jobFormat = document.querySelectorAll(".format");
-    const experience = document.querySelectorAll(".experience");
+    const level = document.querySelectorAll('.level');
+    const jobFormat = document.querySelectorAll('.format');
+    const experience = document.querySelectorAll('.experience');
 
     getFilter(level, filterObject.level);
     getFilter(jobFormat, filterObject.jobFormat);
     getFilter(experience, filterObject.experience);
-    console.log(filterObject);
+
+    console.log(filterObject)
+
+    function searchApp() {
+
+        list.innerHTML = "";
+        const searchText = document.querySelector('#inputSearchApp').value;
+        for (card of cards) {
+            if (!searchText == "") {
+                const search = new RegExp(searchText, "gi");
+                const rez = search.test(card.keyWords);
+                if (rez) {
+                    searchResult(card);
+                    newCards.push(card)
+                }
+            }
+            if (searchText == "") {
+                searchResult(card);
+                newCards.push(card)
+            }
+        };
+        cards = newCards;
+        newCards = [];
+    }
+
+    if (document.querySelector('#inputSearchApp').value !== '') {
+        searchApp();
+    }
 
     function searchCity() {
         list.innerHTML = "";
@@ -117,7 +126,7 @@ function createObject() {
         };
         cards = newCards;
         newCards = []
-        console.log(cards)
+
     }
     if (filterObject.level.length !== 0) {
         searchLevel()
@@ -147,15 +156,13 @@ function createObject() {
                 }
             }
         }
-        cards = newCards;
-        newCards = [];
     }
 
     if (filterObject.minSalary !== 0 || filterObject.maxSalary !== 0) {
         serchSalary()
     }
-    
-    function searchExp() {
+
+    function searchExperience() {
         list.innerHTML = "";
         for (card of cards) {
             let expYears = +card.experience.replace(/\D/g, '')
@@ -163,57 +170,100 @@ function createObject() {
             if (document.querySelector('#zero').checked)
                 if (expYears == 0) {
                     searchResult(card);
+                    newCards.push(card);
                 }
             if (document.querySelector('#small').checked) {
                 if (expYears >= 1 && expYears <= 3) {
                     searchResult(card);
+                    newCards.push(card);
                 }
             }
             if (document.querySelector('#medium').checked) {
                 if (expYears >= 3 && expYears <= 6) {
                     searchResult(card);
+                    newCards.push(card);
                 }
             }
             if (document.querySelector('#large').checked) {
                 if (expYears >= 6) {
                     searchResult(card);
+                    newCards.push(card);
                 }
             }
-            cards = newCards;
-            newCards = [];
+
         }
+        cards = newCards;
+        newCards = [];
     }
 
     if (filterObject.experience.length !== 0) {
-        searchExp();
+        searchExperience();
+    }
+
+
+    function searchFormat() {
+        list.innerHTML = "";
+        for (card of cards) {
+            if (document.querySelector('#distant').checked) {
+                const search = new RegExp("удален", "gi");
+                const rez = search.test(card.jobFormat);
+                if (rez) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+            }
+            if (document.querySelector('#office').checked) {
+                const search = new RegExp("офис", "gi");
+                const rez = search.test(card.jobFormat);
+                if (rez) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+            }
+            if (document.querySelector('#hybrid').checked) {
+                const search = new RegExp("гибрид", "gi");
+                const rez = search.test(card.jobFormat);
+                if (rez) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+            }
+
+        }
+        cards = newCards;
+        newCards = [];
+    }
+    if (filterObject.jobFormat.length !== 0) {
+        searchFormat();
     }
 }
 
-const btnSearch = document.querySelector("#btnSearchApp");
-const inputSearchApp = document.querySelector("#inputSearchApp");
-const btnFilter = document.querySelector("#btnFilter");
-const btnReboot = document.querySelector("#btnReboot");
+
+
+
+const btnSearch = document.querySelector('#btnSearchApp');
+const inputSearchApp = document.querySelector('#inputSearchApp');
+const btnFilter = document.querySelector('#btnFilter');
+const btnReboot = document.querySelector('#btnReboot');
 
 btnSearch.addEventListener('click', () => {
-    searchApp();
-    if (document.querySelector("input[type='checkbox']:checked") || document.querySelector('#city').value != '') {
+    cards = firstCards;
+    createObject();
+});
+btnFilter.addEventListener('click', () => {
+    cards = firstCards;
+    createObject();
+});
+inputSearchApp.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        cards = firstCards;
         createObject();
     }
 });
-btnFilter.addEventListener('click', () => {
-    searchApp();
-    createObject();
-});
 
-inputSearchApp.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-        searchApp();
-    }
-});
-
-btnReboot.addEventListener("click", () => {
+btnReboot.addEventListener('click', () => {
     const inputs = document.querySelectorAll("input");
-    inputs.forEach((item) => {
+    inputs.forEach(item => {
         item.checked = false;
         item.value = "";
     });
