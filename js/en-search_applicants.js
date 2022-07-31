@@ -149,11 +149,43 @@ function createObject() {
         }
         cards = newCards;
         newCards = [];
-        console.log(cards);
     }
 
     if (filterObject.minSalary !== 0 || filterObject.maxSalary !== 0) {
         serchSalary()
+    }
+
+    function searchExp() {
+        list.innerHTML = "";
+        for (card of cards) {
+            let expYears = +card.experience.replace(/\D/g, '')
+            console.log(expYears)
+            if (document.querySelector('#zero').checked)
+                if (expYears == 0) {
+                    searchResult(card);
+                }
+            if (document.querySelector('#small').checked) {
+                if (expYears >= 1 && expYears <= 3) {
+                    searchResult(card);
+                }
+            }
+            if (document.querySelector('#medium').checked) {
+                if (expYears >= 3 && expYears <= 6) {
+                    searchResult(card);
+                }
+            }
+            if (document.querySelector('#large').checked) {
+                if (expYears >= 6) {
+                    searchResult(card);
+                }
+            }
+            cards = newCards;
+            newCards = [];
+        }
+    }
+
+    if (filterObject.experience.length !== 0) {
+        searchExp();
     }
 }
 
