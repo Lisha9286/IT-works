@@ -91,12 +91,70 @@ function createObject() {
     getFilter(jobFormat, filterObject.jobFormat);
     getFilter(experience, filterObject.experience);
     console.log(filterObject);
-    list.innerHTML = "";
-    cards.forEach(elem => {
-        if (elem.city == filterObject.city) {
-            searchResult(elem);
+
+    function searchCity() {
+        list.innerHTML = "";
+        for (card of cards) {
+            if (card.city == filterObject.city) {
+                searchResult(card);
+                newCards.push(card);
+            }
+        };
+        cards = newCards;
+        newCards = []
+    }
+    if (document.querySelector('#city').value !== "") {
+        searchCity()
+    }
+
+    function searchLevel() {
+        list.innerHTML = "";
+        for (card of cards) {
+            if (card.level == filterObject.level) {
+                searchResult(card);
+                newCards.push(card);
+            }
+        };
+        cards = newCards;
+        newCards = []
+        console.log(cards)
+    }
+    if (filterObject.level.length !== 0) {
+        searchLevel()
+    }
+
+    function serchSalary() {
+        list.innerHTML = "";
+        for (card of cards) {
+            if (filterObject.minSalary !== 0 && card.salary >= filterObject.minSalary) {
+                if (filterObject.maxSalary !== 0 && card.salary <= filterObject.minSalary) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+                if (filterObject.maxSalary == 0) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+            }
+            if (filterObject.maxSalary !== 0 && card.salary <= filterObject.maxSalary) {
+                if (filterObject.minSalary !== 0 && card.salary >= filterObject.minSalary) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+                if (filterObject.minSalary == 0) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+            }
         }
-    });
+        cards = newCards;
+        newCards = [];
+        console.log(cards);
+    }
+
+    if (filterObject.minSalary !== 0 || filterObject.maxSalary !== 0) {
+        serchSalary()
+    }
 }
 
 const btnSearch = document.querySelector("#btnSearchApp");
