@@ -10,7 +10,7 @@ function searchResult(element) {
             <div>
                 <h5 class="search__card-title card-title">${element.occupation}<span class="card-title"> ${element.level}</span></h5>
                 <div class="search__card-subtitle">Опыт работы</div>
-                <div class="search__card-experience">${element.experience} (год/лет)</div>
+                <div class="search__card-experience">${element.experience}</div>
                 <div class="search__card-subtitle">Ожидаемая заработная плата</div>
                 <div class="search__card-salary">${element.salary} $</div>
                 <div class="search__card-subtitle">${element.city}</div>
