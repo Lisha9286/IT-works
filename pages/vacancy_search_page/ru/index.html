@@ -11,7 +11,6 @@
 
 <body class="page-searching-applicants">
     <div class="wrapper-empl d-flex">
-        <!-- Sidebar  -->
         <nav class="sidebar-empl">
             <div class="sidebar-empl__wrapper sticky-top">
                 <div class="sidebar-empl__header">
@@ -41,7 +40,7 @@
         <div id="content-appl">
             <nav class="container  navbar-empl navbar-expand-lg navbar-light bg-light navbar-apl">
                 <div class=" row navbar-empl__logo">
-                    <a class=" col-2 ms-2" href="#">
+                    <a class=" logo-vaca col-2 ms-2" href="#">
                         <img class="nav__logo-img logo-appl" src="../../../assets/images/logo.png" alt="logo"></a>
                     <div class="col-8">
                         <h3 class="header__second header__second-appl  pt-3"> Работодателям</h3>
@@ -49,23 +48,26 @@
                     </div>
                 </div>
             </nav>
-            <!--Motto-->
             <div class="row m-1 p-1">
                 <div class="col-12 d-flex justify-content-start">
-                    <!--  <p class="header__subtitle subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>-->
                 </div>
             </div>
-            <!-- Searching form-->
             <div class="container searching">
-                <div class="searching__form searching__form-applicants">
-                    <div class="card w-100 mt-1 p-2">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Поиск" id="inputSearchvacancy">
-                            <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"
-                                    id="btnSearchvacancy"><i class="class=bi bi-search bi_employer"></i></button></div>
-                        </div>
-                        <div class="pt-3 w-100 searching__result">
-                            <div id="cards-vacancy">
+                <div class="container-searching__mobile w-100 mt-1 p-2">
+                    <div class="filter-vacancy__filter-mobile">
+
+                    </div>
+                    <div class="searching__form searching__form-applicants">
+                        <div class="card w-100 mt-1 p-2">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Поиск" id="inputSearchvacancy">
+                                <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"
+                                        id="btnSearchvacancy"><i class="class=bi bi-search bi_employer"></i></button>
+                                </div>
+                            </div>
+                            <div class="pt-3 w-100 searching__result">
+                                <div id="cards-vacancy">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -73,87 +75,90 @@
                 <div class="row searching__filters mt-1 ms-3 p-2">
                     <div class="filter">
                         <div class="filter-vacancy__filter-title">Фильтр</div>
-                        <div class="filter__card">
-                            <div class="filter__card-title">Город</div>
-                            <select class="filter-vacancy__cities">
-                                <option selected>Город не выбран</option>
-                            </select>
-                        </div>
-                        <div class="filter-vacancy__type">
-                            <div class="filter-vacancy__title">Уровень позиции</div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label" for="junior">Junior</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="junior" />
+                        <div class="filter-vacancy__all">
+                            <div class="filter-vacancy__type">
+                                <div class="filter-vacancy__title">Город</div>
+                                <input type="text" name="city" placeholder="Город не выбран" list="cities"
+                                    class="filter-vacancy__cities">
+                                <datalist id="cities">
+
+                                </datalist>
                             </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label" for="middle">Middle</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="middle" />
+                            <div class="filter-vacancy__type">
+                                <div class="filter-vacancy__title">Уровень позиции</div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label" for="junior">Junior</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="junior" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label" for="middle">Middle</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="middle" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label" for="senior">Senior</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="senior" />
+                                </div>
                             </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label" for="senior">Senior</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="senior" />
+                            <div class="filter-vacancy__type">
+                                <div class="filter-vacancy__title">Опыт работы</div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label " for="zero">Нет опыта </label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="zero" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label " for="small">От 1 года до 3 лет </label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="small" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label" for="medium">От 3 до 6 лет</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="medium" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label " name="large">Более 6 лет</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="large" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="filter-vacancy__type">
-                            <div class="filter-vacancy__title">Опыт работы</div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label " for="zero">Нет опыта </label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="zero" />
+                            <div class="filter-vacancy__type">
+                                <div class="filter-vacancy__title">Уровень дохода</div>
+                                <div class="filter__vacancy-salary">
+                                    <input class="filter-vacancy__input-salary" type="number" placeholder="от" />
+                                    <input class="filter-vacancy__input-salary" type="number" placeholder="до" /></div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy-label" for="salary">Указан доход</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="salary" />
+                                </div>
                             </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label " for="small">От 1 года до 3 лет </label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="small" />
+                            <div class="filter-vacancy__type">
+                                <div class="filter-vacancy__title">Формат работы</div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter__card-label">Удаленный</label>
+                                    <input class="filter__card-input form-check-input" type="checkbox" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter__card-label">Офис</label>
+                                    <input class="filter__card-input form-check-input" type="checkbox" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter__card-label">Гибрид</label>
+                                    <input class="filter__card-input form-check-input" type="checkbox" />
+                                </div>
                             </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label" for="medium">От 3 до 6 лет</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="medium" />
+                            <div class="filter-vacancy__btns">
+                                <div class="filter-vacancy__change">Применить</div>
+                                <div class="filter-vacancy__throwoff">Сбросить</div>
                             </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label " name="large">Более 6 лет</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="large" />
-                            </div>
-                        </div>
-                        <div class="filter-vacancy__type">
-                            <div class="filter-vacancy__title">Уровень дохода</div>
-                            <div class="filter__card-salary">
-                                <input class="filter-vacancy__input-salary" type="number" placeholder="от" />
-                                <input class="filter-vacancy__input-salary" type="number" placeholder="до" /></div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy-label" for="salary">Указан доход</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="salary" />
-                            </div>
-                        </div>
-                        <div class="filter-vacancy__type">
-                            <div class="filter-vacancy__title">Формат работы</div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label">Удаленный</label>
-                                <input class="filter__card-input form-check-input" type="checkbox" />
-                            </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label">Офис</label>
-                                <input class="filter__card-input form-check-input" type="checkbox" />
-                            </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label">Гибрид</label>
-                                <input class="filter__card-input form-check-input" type="checkbox" />
-                            </div>
-                        </div>
-                        <div class="filter-vacancy__btns">
-                            <div class="filter-vacancy__change">Применить</div>
-                            <div class="filter-vacancy__throwoff">Сбросить</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Searching Form end-->
             <footer class="bg-light text-center text-lg-start">
                 <div class="container p-4">
                     <div class="row">
@@ -180,7 +185,7 @@
             </footer>
         </div>
     </div>
-    <script type="module" src="../../../js/vacancy-search.js"></script>
+    <script type="module" src="../../../js/search_vacancies.js"></script>
 
 </body>
 

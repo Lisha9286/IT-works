@@ -11,7 +11,6 @@
 
 <body class="page-searching-applicants">
     <div class="wrapper-empl d-flex">
-        <!-- Sidebar  -->
         <nav class="sidebar-empl">
             <div class="sidebar-empl__wrapper sticky-top">
                 <div class="sidebar-empl__header">
@@ -38,7 +37,6 @@
                 </ul>
             </div>
         </nav>
-        <!-- Page Content  -->
         <div id="content-appl">
             <nav class="container  navbar-empl navbar-expand-lg navbar-light bg-light navbar-apl">
                 <div class=" row navbar-empl__logo">
@@ -50,23 +48,26 @@
                     </div>
                 </div>
             </nav>
-            <!--Motto-->
             <div class="row m-1 p-1">
                 <div class="col-12 d-flex justify-content-start">
-                    <!--  <p class="header__subtitle subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>-->
                 </div>
             </div>
-            <!-- Searching form-->
             <div class="container searching">
-                <div class="searching__form searching__form-applicants">
-                    <div class="card w-100 mt-1 p-2">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Searching" id="inputSearchvacancy">
-                            <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"
-                                    id="btnSearchvacancy"><i class="class=bi bi-search bi_employer"></i></button></div>
-                        </div>
-                        <div class="pt-3 w-100 searching__result">
-                            <div id="cards-vacancy">
+                <div class="container-searching__mobile w-100 mt-1 p-2">
+                    <div class="filter-vacancy__filter-mobile">
+
+                    </div>
+                    <div class="searching__form searching__form-applicants">
+                        <div class="card w-100 mt-1 p-2">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Searching" id="inputSearchvacancy">
+                                <div class="input-group-append"><button class="btn btn-primary btn__search-employermain"
+                                        id="btnSearchvacancy"><i class="class=bi bi-search bi_employer"></i></button>
+                                </div>
+                            </div>
+                            <div class="pt-3 w-100 searching__result">
+                                <div id="cards-vacancy">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -74,88 +75,89 @@
                 <div class="row searching__filters mt-1 ms-3 p-2">
                     <div class="filter">
                         <div class="filter-vacancy__filter-title">Filter</div>
-                        <div class="filter__card">
-                            <div class="filter__card-title">City</div>
-                            <select class="filter-vacancy__cities">
-                                <option selected>City is not selected</option>
-                            </select>
-                        </div>
-                        <div class="filter-vacancy__type">
-                            <div class="filter-vacancy__title">Level</div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label" for="junior">Junior</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox" name="junior"
-                                    id="junior" />
+                        <div class="filter-vacancy__all">
+                            <div class="filter-vacancy__type">
+                                <div class="filter-vacancy__title">City</div>
+                                <select class="filter-vacancy__cities">
+                                    <option class="filter-city__inside" selected>City is not selected</option>
+                                </select>
                             </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label" for="middle">Middle</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox" name="middle"
-                                    id="middle" />
+                            <div class="filter-vacancy__type">
+                                <div class="filter-vacancy__title">Level</div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label" for="junior">Junior</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="junior" id="junior" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label" for="middle">Middle</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="middle" id="middle" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label" for="senior">Senior</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="senior" id="senior" />
+                                </div>
                             </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label" for="senior">Senior</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox" name="senior"
-                                    id="senior" />
+                            <div class="filter-vacancy__type">
+                                <div class="filter-vacancy__title">Work experience</div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label " for="zero">No experience</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="zero" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label " for="small">1-3 years</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="small" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label" for="medium">3-6 years</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="medium" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy__card-label " name="large">Over 6 years</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="large" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="filter-vacancy__type">
-                            <div class="filter-vacancy__title">Work experience</div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label " for="zero">No experience</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="zero" />
+                            <div class="filter-vacancy__type">
+                                <div class="filter-vacancy__title">Salary level</div>
+                                <div class="filter__card-salary">
+                                    <input class="filter-vacancy__input-salary" type="number" placeholder="From" />
+                                    <input class="filter-vacancy__input-salary" type="number" placeholder="To" /></div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter-vacancy-label" for="salary">With salary</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox"
+                                        name="salary" />
+                                </div>
                             </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label " for="small">1-3 years</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="small" />
+                            <div class="filter-vacancy__type">
+                                <div class="filter-vacancy__title">
+                                    Work format</div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter__card-label">Distant</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter__card-label">Office</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox" />
+                                </div>
+                                <div class="filter-vacancy__point">
+                                    <label class="filter__card-label">Hybrid</label>
+                                    <input class="filter-vacancy__card-input form-check-input" type="checkbox" />
+                                </div>
                             </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label" for="medium">3-6 years</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="medium" />
+                            <div class="filter-vacancy__btns">
+                                <div class="filter-vacancy__change">Apply</div>
+                                <div class="filter-vacancy__throwoff">Reset</div>
                             </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label " name="large">Over 6 years</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="large" />
-                            </div>
-                        </div>
-                        <div class="filter-vacancy__type">
-                            <div class="filter-vacancy__title">Salary level</div>
-                            <div class="filter__card-salary">
-                                <input class="filter-vacancy__input-salary" type="number" placeholder="From" />
-                                <input class="filter-vacancy__input-salary" type="number" placeholder="To" /></div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy-label" for="salary">With salary</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="salary" />
-                            </div>
-                        </div>
-                        <div class="filter-vacancy__type">
-                            <div class="filter-vacancy__title">
-                                Work format</div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label">Distant</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox" />
-                            </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label">Office</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox" />
-                            </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label">Hybrid</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox" />
-                            </div>
-                        </div>
-                        <div class="filter-vacancy__btns">
-                            <div class="filter-vacancy__change">Apply</div>
-                            <div class="filter-vacancy__throwoff">Reset</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Searching Form end-->
             <footer class="bg-light text-center text-lg-start">
                 <div class="container p-4">
                     <div class="row">
@@ -182,7 +184,7 @@
             </footer>
         </div>
     </div>
-    <script src="../js/search_vacancies.js"></script>
+    <script src="../js/vacancy-search_en.js"></script>
 
 </body>
 

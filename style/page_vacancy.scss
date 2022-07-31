@@ -1,0 +1,93 @@
+.search__card1 {
+    margin: 20px 0px 0px 0px;
+    padding: 20px;
+    border: 1px rgb(206, 206, 206) solid;
+    box-shadow: 15px 10px 20px 10px rgb(240, 240, 240);
+    border-radius: 10px;
+    &:first-child {
+margin: 0px 0px 0px 0px;
+    }
+}
+
+.search__card2 {
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.search__card-subtitle1{
+    font-size: 17px;
+    color: #686868;
+    line-height: 19px;
+    margin-top: 20px;
+}
+
+.search__card-subcontainer {
+    display: flex;
+    padding: 0;
+    .search__card-list {
+        list-style-type: disc;
+        color: $minor-color;
+        font-size: 20px;
+        margin: 0px 30px 0px 0px;
+        &:first-child {
+            list-style: none;
+        }
+    }
+
+    .search__card-vacspan {
+        color: black;
+        font-size: 15px;
+    }
+}
+
+.search__card-salary1{
+    font-size: 20px;
+    padding: 10px 0px 0px 0px;
+}
+
+.search__card-subcontainer2{
+    .search__card-list2 {
+        list-style-type:"–";
+        color: $minor-color;
+        font-size: 25px;
+    }
+
+    .search__card-vacspan2 {
+        color: black;
+        font-size: 15px;
+        padding: 0px 0px 10px 10px;
+    }
+}
+
+.search__card-descriptvaca{
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0px 0px 20px 0px;
+}
+
+.search__card-descriptvacasubtitle{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.search__card-logocomp {
+    max-width: 200px;
+}
+.search__card-aboutcomp {
+    font-size: 17px;
+    color: #686868;
+}
+
+.search__card-companydis {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 0px 20px 0px;
+}
+
+.search__card-hrefcopm {
+    color: $main-color;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 20px 0px 0px 0px;
+}

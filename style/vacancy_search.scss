@@ -15,8 +15,9 @@
 .searching__form {
 flex-grow: 1;
 }
-.navbar-empl__logo {
-    width:100%;
+
+.logo-vaca img {
+    width: 100px;
 }
 .navbar-apl {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -32,13 +33,12 @@ flex-grow: 1;
     font-weight: 500;
 }
 .searching__filters {
-    flex-basis: 23%;
     background-color: #fff;
     box-shadow: $cardsshadow;
     border-radius: 4px;
     justify-self: flex-start;
 }
-.search__card {
+.search__card{
     max-width: 700px;
     margin-top: 20px;
     padding: 20px;
@@ -66,11 +66,11 @@ flex-grow: 1;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 500;
-    margin: 20px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
 }
 
 .filter-vacancy__cities {
-    width: 240px;
+    width: 100%;
     height: 40px;
     border: 1px solid $light-gray;
     border-radius: 10px;
@@ -86,7 +86,7 @@ flex-grow: 1;
 }
 
 .filter-vacancy__input-salary{
-    max-width: 118px;
+    max-width: 49%;
     border: 1px solid $light-gray;
     border-radius: 10px;
     padding: 2px 10px;
@@ -156,62 +156,60 @@ flex-grow: 1;
         &:active{
             background-color: rgb(10, 71, 162);
         }
+}
+
+
+@media only screen and (min-width: 767.1px) {
+  .filter1 {
+    display: none;
+  }
+} 
+@media only screen and (max-width: 767.1px) {
+    .fiter {
+        display: none;
+    }
+    .fiter1 {
+        display: block;
+        background-color: #fff;
+        box-shadow: $cardsshadow;
+        border-radius: 4px;
+    }
+    .container-searching__mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    .filter-vacancy__all1,
+    .searching__filters{
+    display: none;
+    }
+    .btnvacafilter1 {
+        text-align: center;
+        background-color: #fff;
+        box-shadow: $cardsshadow;
+        border-radius: 4px;
     }
 
+    .filter-vacancy__all1 {
+        background-color: #fff;
+        box-shadow: $cardsshadow;
+        border-radius: 4px;
+    }
 
+    .filter-vacancy__type {
+        padding: 0px 50px 0px 50px;
+    }
 
-
-    .__select {
+    .filter-vacancy__point1 {
         display: flex;
-        width: 230px;
-        height: 204px;
-        margin: 0 auto;
-        overflow: hidden;
-        
-        border-radius: 5px;
-        border: solid 1px #c7ccd1;
-      }
-      
-      .__select__content {
-        display: flex;
-        flex-shrink: 0;
-        flex-direction: column;
-        width: 100%;
-        
-        overflow-y: auto;
+        justify-content: space-between;
+        margin: 5px 0px 0px 0px;
+        max-width: 400px;
+    }
 
-      }
-      
-      .__select__input {
-        display: none;
-      
-        &:checked + label {
-          background-color: #dedede;
-        }
-        &:disabled + label {
-          opacity: 0.6;
-          pointer-events: none;
-        }
-      }
-      
-      .__select__label {
-        display: flex;
-        align-items: center;
-        flex-shrink: 0;
-        height: 40px;
-        padding: 0 16px;
-        
-        transition: all 0.2s ease-out;
-      
-        cursor: pointer;
-        
-        & + input + & {
-          border-top: 1px solid #C7CCD160;
-        }
-      
-        &:hover {
-          background-color: #D8093A !important;
-      
-          color: #ffffff;
-        }
-      }
+} 
+
+
+
+
+
+

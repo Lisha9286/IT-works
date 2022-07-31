@@ -108,7 +108,8 @@
     "watch9": "parcel pages/create-vacancy_page/ru/index.html --open --port 3007",
     "watch10": "parcel pages/search_applicants_page/en/index.html --open --port 1238",
     "watch11": "parcel pages/employers_main_page/en/index.html --open --port 1239",
-    "watch12": "parcel pages/applicants_main_page/en/index.html --open --port 1240"
+    "watch12": "parcel pages/applicants_main_page/en/index.html --open --port 1240",
+    "watch13": "parcel views/page_vacancy.html --open --port 1241"
   },
   "repository": {
     "type": "git",
