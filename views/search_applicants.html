@@ -45,13 +45,12 @@
         </nav>
         <!-- Page Content  -->
         <div id="content-appl">
-            <nav class="container  navbar-empl navbar-expand-lg navbar-light bg-light navbar-apl">
-                <div class=" row navbar-empl__logo">
-                    <a class=" col-2 ms-2" href="#">
-                        <img class="nav__logo-img logo-appl" src="../assets/images/logo.png" alt="logo"></a>
-                    <div class="col-8">
-                        <h3 class="header__second header__second-appl  pt-3"> Работодателям</h3>
-                        <p class=" subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>
+            <nav class="navbar-empl create-resume__navbar navbar-expand-lg navbar-light bg-light d-flex ">
+                <div class="navbar-create-resume">
+                    <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo">
+                    <div class="create-resume_header-content">
+                        <h3 class="header__second pt-3"> Работодателям</h3>
+                        <p class="header__subtitle create-resume__subtitle">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>
                     </div>
                 </div>
             </nav>
@@ -84,7 +83,7 @@
                             <div class="filter-vacancy__title">Город</div>
                             <input type="text" name="city" id="city" placeholder="Город" list="cities">
                             <datalist id="cities">
-                    
+
                             </datalist>
                         </div>
                         <div class=" filter__card">
@@ -101,17 +100,14 @@
                         </div>
                         <div class="filter__card">
                             <div class="filter-vacancy__title">Опыт работы</div>
-                            <div><input class="filter__card-input form-check-input experience" type="radio" name="experience"
-                                    value="zero" id="zero" />
-                                <label class="filter__card-label " for="zero"> Менее года</label></div>
-                            <div><input class="filter__card-input form-check-input experience" type="radio" name="experience"
-                                    value="small" id="small"/>
-                                    <label class=" filter__card-label " for=" small"> От 1 года до 3 лет</label></div>
                             <div><input class="filter__card-input form-check-input experience" type="radio"
-                                    name="experience" value="medium" id="medium"/>
+                                    name="experience" value="zero" id="zero" />
+                                <label class="filter__card-label " for="zero"> Менее года</label></div>
+                            <div><input class="filter__card-input form-check-input experience" type="radio"
+                                    name="experience" value="medium" id="medium" />
                                 <label class="filter__card-label " for="medium"> От 3 до 6 лет</label></div>
-                            <div><input class="filter__card-input form-check-input experience" type="radio" name="experience"
-                                    value="large" id="large"/>
+                            <div><input class="filter__card-input form-check-input experience" type="radio"
+                                    name="experience" value="large" id="large" />
                                 <label class="filter__card-label " name="large"> Более 6 лет</label></div>
                         </div>
                         <div class="filter__card">
@@ -127,8 +123,8 @@
                         </div>
                         <div class="filter__card">
                             <div class="filter-vacancy__title">Формат работы</div>
-                            <div><input class="filter__card-input form-check-input format" id="distant" value="удаленный"
-                                    type="checkbox" />
+                            <div><input class="filter__card-input form-check-input format" id="distant"
+                                    value="удаленный" type="checkbox" />
                                 <label class="filter__card-label">Удаленный</label></div>
                             <div><input class="filter__card-input form-check-input format" id="office" value="офис"
                                     type="checkbox" />
