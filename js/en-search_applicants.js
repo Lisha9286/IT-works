@@ -1,8 +1,8 @@
 let cards, card;
 let newCards = [];
 let newCard;
-let firstCards
-const list = document.querySelector('#cards');
+let firstCards;
+const list = document.querySelector("#cards");
 
 function searchResult(element) {
     list.innerHTML += `
@@ -24,9 +24,16 @@ document.addEventListener("DOMContentLoaded", async function () {
     let response = await fetch(url);
     cards = await response.json();
     firstCards = cards;
-    for (card of cards) {
-        searchResult(card);
-    };
+
+    if (localStorage.getItem("searchRequest")) {
+        document.querySelector("#inputSearchApp").value = localStorage.getItem("searchRequest");
+        createObject();
+        localStorage.removeItem("searchRequest");
+    } else {
+        for (card of cards) {
+            searchResult(card);
+        }
+    }
 
     let arrCity = [];
 
@@ -39,21 +46,20 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     //создание выпадающего списка из массива уникальных городов
     for (uniqCity of uniqArrCity) {
-        document.querySelector('#cities').innerHTML += `<option>${uniqCity}</option>`
+        document.querySelector("#cities").innerHTML += `<option>${uniqCity}</option>`;
     }
 });
 
 function createObject() {
     //объект с параметрами из фильтра
     const filterObject = {
-        city: document.querySelector('#city').value,
+        city: document.querySelector("#city").value,
         experience: [],
         jobFormat: [],
         level: [],
-        minSalary: +document.querySelector('#minSalary').value,
-        maxSalary: +document.querySelector('#maxSalary').value,
-    }
-
+        minSalary: +document.querySelector("#minSalary").value,
+        maxSalary: +document.querySelector("#maxSalary").value,
+    };
 
     // функция получения свойств-массивов объекта из фильтра
     function getFilter(filter, objectPush) {
@@ -64,39 +70,38 @@ function createObject() {
         });
     }
 
-    const level = document.querySelectorAll('.level');
-    const jobFormat = document.querySelectorAll('.format');
-    const experience = document.querySelectorAll('.experience');
+    const level = document.querySelectorAll(".level");
+    const jobFormat = document.querySelectorAll(".format");
+    const experience = document.querySelectorAll(".experience");
 
     getFilter(level, filterObject.level);
     getFilter(jobFormat, filterObject.jobFormat);
     getFilter(experience, filterObject.experience);
 
-    console.log(filterObject)
+    console.log(filterObject);
 
     function searchApp() {
-
         list.innerHTML = "";
-        const searchText = document.querySelector('#inputSearchApp').value;
+        const searchText = document.querySelector("#inputSearchApp").value;
         for (card of cards) {
             if (!searchText == "") {
                 const search = new RegExp(searchText, "gi");
                 const rez = search.test(card.keyWords);
                 if (rez) {
                     searchResult(card);
-                    newCards.push(card)
+                    newCards.push(card);
                 }
             }
             if (searchText == "") {
                 searchResult(card);
-                newCards.push(card)
+                newCards.push(card);
             }
-        };
+        }
         cards = newCards;
         newCards = [];
     }
 
-    if (document.querySelector('#inputSearchApp').value !== '') {
+    if (document.querySelector("#inputSearchApp").value !== "") {
         searchApp();
     }
 
@@ -107,12 +112,12 @@ function createObject() {
                 searchResult(card);
                 newCards.push(card);
             }
-        };
+        }
         cards = newCards;
-        newCards = []
+        newCards = [];
     }
-    if (document.querySelector('#city').value !== "") {
-        searchCity()
+    if (document.querySelector("#city").value !== "") {
+        searchCity();
     }
 
     function searchLevel() {
@@ -122,13 +127,12 @@ function createObject() {
                 searchResult(card);
                 newCards.push(card);
             }
-        };
+        }
         cards = newCards;
-        newCards = []
-
+        newCards = [];
     }
     if (filterObject.level.length !== 0) {
-        searchLevel()
+        searchLevel();
     }
 
     function serchSalary() {
@@ -158,32 +162,32 @@ function createObject() {
     }
 
     if (filterObject.minSalary !== 0 || filterObject.maxSalary !== 0) {
-        serchSalary()
+        serchSalary();
     }
 
     function searchExperience() {
         list.innerHTML = "";
         for (card of cards) {
-            let expYears = +card.experience.replace(/\D/g, '')
-            console.log(expYears)
-            if (document.querySelector('#zero').checked)
+            let expYears = +card.experience.replace(/\D/g, "");
+            console.log(expYears);
+            if (document.querySelector("#zero").checked)
                 if (expYears == 0) {
                     searchResult(card);
                     newCards.push(card);
                 }
-            if (document.querySelector('#small').checked) {
+            if (document.querySelector("#small").checked) {
                 if (expYears >= 1 && expYears <= 3) {
                     searchResult(card);
                     newCards.push(card);
                 }
             }
-            if (document.querySelector('#medium').checked) {
+            if (document.querySelector("#medium").checked) {
                 if (expYears >= 3 && expYears <= 6) {
                     searchResult(card);
                     newCards.push(card);
                 }
             }
-            if (document.querySelector('#large').checked) {
+            if (document.querySelector("#large").checked) {
                 if (expYears >= 6) {
                     searchResult(card);
                     newCards.push(card);
@@ -198,11 +202,10 @@ function createObject() {
         searchExperience();
     }
 
-
     function searchFormat() {
         list.innerHTML = "";
         for (card of cards) {
-            if (document.querySelector('#distant').checked) {
+            if (document.querySelector("#distant").checked) {
                 const search = new RegExp("distant", "gi");
                 const rez = search.test(card.jobFormat);
                 if (rez) {
@@ -210,7 +213,7 @@ function createObject() {
                     newCards.push(card);
                 }
             }
-            if (document.querySelector('#office').checked) {
+            if (document.querySelector("#office").checked) {
                 const search = new RegExp("office", "gi");
                 const rez = search.test(card.jobFormat);
                 if (rez) {
@@ -218,7 +221,7 @@ function createObject() {
                     newCards.push(card);
                 }
             }
-            if (document.querySelector('#hybrid').checked) {
+            if (document.querySelector("#hybrid").checked) {
                 const search = new RegExp("hybrid", "gi");
                 const rez = search.test(card.jobFormat);
                 if (rez) {
@@ -235,29 +238,29 @@ function createObject() {
     }
 }
 
-const btnSearch = document.querySelector('#btnSearchApp');
-const inputSearchApp = document.querySelector('#inputSearchApp');
-const btnFilter = document.querySelector('#btnFilter');
-const btnReboot = document.querySelector('#btnReboot');
+const btnSearch = document.querySelector("#btnSearchApp");
+const inputSearchApp = document.querySelector("#inputSearchApp");
+const btnFilter = document.querySelector("#btnFilter");
+const btnReboot = document.querySelector("#btnReboot");
 
-btnSearch.addEventListener('click', () => {
+btnSearch.addEventListener("click", () => {
     cards = firstCards;
     createObject();
 });
-btnFilter.addEventListener('click', () => {
+btnFilter.addEventListener("click", () => {
     cards = firstCards;
     createObject();
 });
-inputSearchApp.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
+inputSearchApp.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
         cards = firstCards;
         createObject();
     }
 });
 
-btnReboot.addEventListener('click', () => {
+btnReboot.addEventListener("click", () => {
     const inputs = document.querySelectorAll("input");
-    inputs.forEach(item => {
+    inputs.forEach((item) => {
         item.checked = false;
         item.value = "";
     });
