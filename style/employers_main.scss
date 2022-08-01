@@ -10,9 +10,7 @@
 }
 
 p {
-    font-size: 1.5em;
     font-weight: 300;
-    line-height: 1.7em;
     color: #999;
 }
 
@@ -268,7 +266,8 @@ Navbar Style
     justify-content: space-around;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-    height: 14em;
+    height: 10em;
+    margin-bottom: 15px;
 }
 .navbar-empl__logo {
     display: flex;
@@ -281,6 +280,11 @@ Navbar Style
 .nav-empl__links {
     display: flex;
     flex-direction: row;
+} 
+.navbar-create-resume {
+    display: flex;
+    flex-flow: column;
+    align-items: start;
 }
 .btn-signin__employer {
     margin-right: 0.5em;
@@ -295,7 +299,17 @@ Navbar Style
         }
     }
 }
-
+footer {
+    p {
+        font-size: 1em ;
+    }
+}
+.navbar-create-resume .create-resume__subtitle {
+    font-size: 0.9em;
+}
+.navbar-create-resume .create-resume_header-content {
+    margin-left: 1px;
+}
 }
 
 /* ---------------------------------------------------

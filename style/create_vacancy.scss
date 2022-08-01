@@ -85,46 +85,6 @@ a:focus {
 Navbar Style
 ----------------------------------*/
 
-.navbar-empl {
-    display: flex;
-    justify-content:space-between;
-    padding: 15px 10px;
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-.navbar-empl__logo {
-    display: flex;
-}
-.header__second {
-    color:rgb(63, 72, 204);
-    font-weight: 700;
-}
-.navbar-btn {
-    box-shadow: none;
-    outline: none !important;
-    border: none;
-}
-.nav__logo {
-    &-img {
-        height: 70px;
-        max-width: 100%;
-        border-radius: 10px;
-    }
-}
-
-.btn-signin__employer {
-@include button-lilac
-}
-.btn-signin__employer:hover {
-    @include button-lilac-hover;
-    }
-.btn-signin__employer:active  {
-    @include button-lilac-hover;
-    box-shadow: none !important;
-}
 
 /* ---------------------------------------------------
     CONTENT STYLE
