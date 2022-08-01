@@ -13,6 +13,20 @@
     "id": "0"
 },
 {
+    "name":"Василий",
+    "keyWords": ["developer","разработчик", "Frontend Developer", "Frontend Developer junior", "программист", "frontend", "javascript", "junior", "Офис", "Гибрид"],
+    "age": "27",
+    "experience": "менее года",
+    "level": "junior",
+    "occupation": "Frontend Developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png",
+    "city": "Псков",
+    "salary": "",
+    "id": "0"
+},
+{
     "name":"Лариса",
     "keyWords": ["developer", "Backend Developer", "Backend Developer junior","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
     "age": "27",
