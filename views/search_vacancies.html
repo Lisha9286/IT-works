@@ -20,6 +20,11 @@
                 </div>
                 <ul class=" sidebar-empl__list list-unstyled components flex-md justify-content-md-center">
                     <li>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal_create-resume"> <i
+                                class="bi bi-pencil-square pe-2"></i><span class="sidebar-empl__item"> Создать
+                                Резюме</span></a>
+                    </li>
+                    <li>
                         <a href="../index.html"><i class="bi bi-house-door pe-2"></i><span
                                 class="sidebar-empl__item">Главная</span></a>
                     </li>
@@ -39,6 +44,42 @@
                 </ul>
             </div>
         </nav>
+        <!-- Modal -->
+        <div class="modal fade" id="modal_create-resume" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="modal_create-resumeLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div>
+                            <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo">
+                            <p class="subtitle__apllsearch">ТВОЯ ПЕРВАЯ РАБОТА В МИРЕ IT</p>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row form-reg m-4">
+                            <div class="col-md-12">
+                                <p class="header__second">Загрузите своё резюме, чтобы работодатели могли легко
+                                    найти вас</p>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" id="applicant-resume"
+                                        aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                                    <button class="btn btn-outline-secondary btn-send-resume" type="button"
+                                        id="inputGroupFileAddon04">Загрузить резюме</button>
+                                </div>
+                                <div class="mt-4">
+                                    <a href="./create_resume.html" class="btn btn-primary" id="create-resume">Создать
+                                        резюме</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Page Content  -->
         <div id="content-appl">
             <nav class="navbar-empl create-resume__navbar navbar-expand-lg navbar-light bg-light d-flex ">
