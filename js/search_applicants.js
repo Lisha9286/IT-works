@@ -85,8 +85,9 @@ function createObject() {
         const searchText = document.querySelector("#inputSearchApp").value;
         for (card of cards) {
             if (!searchText == "") {
-                const search = new RegExp(searchText, "gi");
+                let search = new RegExp(searchText, "gi");
                 const rez = search.test(card.keyWords);
+                console.log(card.keyWords)
                 if (rez) {
                     searchResult(card);
                     newCards.push(card);
@@ -135,107 +136,129 @@ function createObject() {
         searchLevel();
     }
 
-    function serchSalary() {
-        list.innerHTML = "";
-        for (card of cards) {
+
+
+
+// function searchSalaryFact() {
+//     list.innerHTML = "";
+//     for (card of cards) {
+        
+//             if (card.salary !== "") {
+//                 searchResult(card);
+//                 newCards.push(card);
+//             }
+//     }
+//     cards = newCards;
+//     newCards = [];
+// }
+// if (document.querySelector('#salary').checked) {
+//     searchSalaryFact();
+// }
+
+
+function serchSalary() {
+    list.innerHTML = "";
+    for (card of cards) {
+        if (filterObject.minSalary !== 0 && card.salary >= filterObject.minSalary) {
+            if (filterObject.maxSalary !== 0 && card.salary <= filterObject.minSalary) {
+                searchResult(card);
+                newCards.push(card);
+            }
+            if (filterObject.maxSalary == 0) {
+                searchResult(card);
+                newCards.push(card);
+            }
+        }
+        if (filterObject.maxSalary !== 0 && card.salary <= filterObject.maxSalary) {
             if (filterObject.minSalary !== 0 && card.salary >= filterObject.minSalary) {
-                if (filterObject.maxSalary !== 0 && card.salary <= filterObject.minSalary) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
-                if (filterObject.maxSalary == 0) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
+                searchResult(card);
+                newCards.push(card);
             }
-            if (filterObject.maxSalary !== 0 && card.salary <= filterObject.maxSalary) {
-                if (filterObject.minSalary !== 0 && card.salary >= filterObject.minSalary) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
-                if (filterObject.minSalary == 0) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
+            if (filterObject.minSalary == 0) {
+                searchResult(card);
+                newCards.push(card);
             }
         }
     }
+    cards = newCards;
+    newCards = [];
+}
 
-    if (filterObject.minSalary !== 0 || filterObject.maxSalary !== 0) {
-        serchSalary();
-    }
+if (filterObject.minSalary !== 0 || filterObject.maxSalary !== 0) {
+    serchSalary();
+}
 
-    function searchExperience() {
-        list.innerHTML = "";
-        for (card of cards) {
-            let expYears = +card.experience.replace(/\D/g, "");
-            console.log(expYears);
-            if (document.querySelector("#zero").checked)
-                if (expYears == 0) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
-            if (document.querySelector("#small").checked) {
-                if (expYears >= 1 && expYears <= 3) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
+function searchExperience() {
+    list.innerHTML = "";
+    for (card of cards) {
+        let expYears = +card.experience.replace(/\D/g, "");
+        console.log(expYears);
+        if (document.querySelector("#zero").checked)
+            if (expYears == 0) {
+                searchResult(card);
+                newCards.push(card);
             }
-            if (document.querySelector("#medium").checked) {
-                if (expYears >= 3 && expYears <= 6) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
-            }
-            if (document.querySelector("#large").checked) {
-                if (expYears >= 6) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
+        if (document.querySelector("#small").checked) {
+            if (expYears >= 1 && expYears <= 3) {
+                searchResult(card);
+                newCards.push(card);
             }
         }
-        cards = newCards;
-        newCards = [];
-    }
-
-    if (filterObject.experience.length !== 0) {
-        searchExperience();
-    }
-
-    function searchFormat() {
-        list.innerHTML = "";
-        for (card of cards) {
-            if (document.querySelector("#distant").checked) {
-                const search = new RegExp("удален", "gi");
-                const rez = search.test(card.jobFormat);
-                if (rez) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
-            }
-            if (document.querySelector("#office").checked) {
-                const search = new RegExp("офис", "gi");
-                const rez = search.test(card.jobFormat);
-                if (rez) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
-            }
-            if (document.querySelector("#hybrid").checked) {
-                const search = new RegExp("гибрид", "gi");
-                const rez = search.test(card.jobFormat);
-                if (rez) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
+        if (document.querySelector("#medium").checked) {
+            if (expYears >= 3 && expYears <= 6) {
+                searchResult(card);
+                newCards.push(card);
             }
         }
-        cards = newCards;
-        newCards = [];
+        if (document.querySelector("#large").checked) {
+            if (expYears >= 6) {
+                searchResult(card);
+                newCards.push(card);
+            }
+        }
     }
-    if (filterObject.jobFormat.length !== 0) {
-        searchFormat();
+    cards = newCards;
+    newCards = [];
+}
+
+if (filterObject.experience.length !== 0) {
+    searchExperience();
+}
+
+function searchFormat() {
+    list.innerHTML = "";
+    for (card of cards) {
+        if (document.querySelector("#distant").checked) {
+            const search = new RegExp("удален", "gi");
+            const rez = search.test(card.jobFormat);
+            if (rez) {
+                searchResult(card);
+                newCards.push(card);
+            }
+        }
+        if (document.querySelector("#office").checked) {
+            const search = new RegExp("офис", "gi");
+            const rez = search.test(card.jobFormat);
+            if (rez) {
+                searchResult(card);
+                newCards.push(card);
+            }
+        }
+        if (document.querySelector("#hybrid").checked) {
+            const search = new RegExp("гибрид", "gi");
+            const rez = search.test(card.jobFormat);
+            if (rez) {
+                searchResult(card);
+                newCards.push(card);
+            }
+        }
     }
+    cards = newCards;
+    newCards = [];
+}
+if (filterObject.jobFormat.length !== 0) {
+    searchFormat();
+}
 }
 
 const btnSearch = document.querySelector("#btnSearchApp");
@@ -270,7 +293,7 @@ function vacafiltermobile(screen) {
     if (screen.matches) {
         document.querySelector(".filter-vacancy__filter-mobile").innerHTML = `
         <div class="filter">
-        <div class="filter-vacancy__title btnappfilter1" id="btnappfilter">Фильтр</div>
+        <div class="filter-vacancy__title btnappfilter1">Фильтр</div>
         <div class="filter-vacancy__all1">
                         <div class="filter-vacancy__type">
                             <div class="filter-vacancy__title">Город</div>
