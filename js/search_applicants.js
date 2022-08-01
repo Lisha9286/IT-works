@@ -12,7 +12,7 @@ function searchResult(element) {
                 <div class="search__card-subtitle">Опыт работы</div>
                 <div class="search__card-experience">${element.experience}</div>
                 <div class="search__card-subtitle">Ожидаемая заработная плата</div>
-                <div class="search__card-salary">${element.salary} $</div>
+                <div class="search__card-salary">${element.salary} ${element.currency}</div>
                 <div class="search__card-subtitle">${element.city}</div>
             </div>
         <image src="${element.photo}" class="search__card-photo" alt="photo" />
@@ -136,21 +136,21 @@ function createObject() {
         searchLevel();
     }
 
-    // function searchSalaryFact() {
-    //     list.innerHTML = "";
-    //     for (card of cards) {
-
-    //             if (card.salary !== "") {
-    //                 searchResult(card);
-    //                 newCards.push(card);
-    //             }
-    //     }
-    //     cards = newCards;
-    //     newCards = [];
-    // }
-    // if (document.querySelector('#salary').checked) {
-    //     searchSalaryFact();
-    // }
+    function searchSalaryFact() {
+        list.innerHTML = "";
+        for (card of cards) {
+            let salary = +card.salary.replace(/\D/g, "");
+                if (salary !== 0) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+        }
+        cards = newCards;
+        newCards = [];
+    }
+    if (document.querySelector('#salary').checked) {
+        searchSalaryFact();
+    }
 
     function serchSalary() {
         list.innerHTML = "";
@@ -311,3 +311,4 @@ function filtermobile() {
 document.getElementById("btnappfilter1").addEventListener("click", () => {
     filtermobile();
 });
+

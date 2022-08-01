@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkIT</title>
     <link rel="stylesheet" href="../style_global/style.scss">
+    <link rel="shortcut icon" href="../assets/images/icon.png" type="image/png">
 </head>
 
 <body class="page-searching-applicants">
@@ -19,8 +20,13 @@
                 </div>
                 <ul class=" sidebar-empl__list list-unstyled components flex-md justify-content-md-center">
                     <li>
-                        <a href="../pages/homepage/en/index.html"><i class="bi bi-house-door pe-2"></i><span
-                                class="sidebar-empl__item">Main page</span></a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal_create-resume">
+                            <i class="bi bi-pencil-square pe-2"></i><span class="sidebar-empl__item"> Create a
+                                resume</span></a>
+                    </li>
+                    <li>
+                        <a href="./en-homepage.html"><i class="bi bi-house-door pe-2"></i><span
+                                class="sidebar-empl__item">Home</span></a>
                     </li>
                     <li>
                         <a href="./news.html"><i class="bi bi-newspaper pe-2"></i><span
@@ -38,6 +44,43 @@
                 </ul>
             </div>
         </nav>
+        <!-- Modal -->
+        <div class="modal fade" id="modal_create-resume" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="modal_create-resumeLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div>
+                            <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo">
+                            <p class="subtitle__apllsearch">YOUR FIRST JOB IN THE IT WORLD</p>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row form-reg m-4">
+                            <div class="col-md-12">
+                                <p class="header__second">Upload your resume so employers could easily
+                                    find you</p>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" id="applicant-resume"
+                                        aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                                    <button class="btn btn-outline-secondary btn-send-resume" type="button"
+                                        id="inputGroupFileAddon04">Upload your resume</button>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="header__second">or</p>
+                                    <a href="../views/en_create_resume.html" class="btn btn-primary"
+                                        id="create-resume">Create a resume</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Page Content  -->
         <div id="content-appl">
             <nav class="navbar-empl create-resume__navbar navbar-expand-lg navbar-light bg-light d-flex ">
@@ -52,7 +95,6 @@
             <!--Motto-->
             <div class="row m-1 p-1">
                 <div class="col-12 d-flex justify-content-start">
-                    <!--  <p class="header__subtitle subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>-->
                 </div>
             </div>
             <!-- Searching form-->
@@ -172,7 +214,7 @@
             </footer>
         </div>
     </div>
-    <script src="../js/search_vacancies.js"></script>
+    <script type="module" src="../js/search_vacancies.js"></script>
 
 </body>
 
