@@ -100,6 +100,20 @@
     "name":"Игорь",
     "keyWords": ["developer", "Java Developer", "Java Developer senior", "разработчик", "программист", "java", "junior", "Удаленно", "Офис", "Удаленка", "Гибрид"],
     "age": "27",
+    "experience": "12 лет",
+    "level": "senior",
+    "occupation": "Java Developer",
+    "jobFormat": ["Удаленный"],
+    "education": "MTI",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png",
+    "city": "Кострома",
+    "salary": "Уровень заработной платы не указан",
+    "id": "2"
+},
+{
+    "name":"Игорь",
+    "keyWords": ["developer", "Java Developer", "Java Developer senior", "разработчик", "программист", "java", "junior", "Удаленно", "Офис", "Удаленка", "Гибрид"],
+    "age": "27",
     "experience": "15 лет",
     "level": "c",
     "occupation": "Java Developer",
@@ -122,6 +136,20 @@
     "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png",
     "city": "Нарва",
     "salary": "2000",
+    "id": "3"
+},
+{
+    "name":"Георгий",
+    "keyWords": ["developer", "Javascript Developer", "Javascript Developer middle","разработчик", "программист", "javascript", "js","middle", "Удаленно", "Удаленка", "Гибрид"],
+    "age": "27",
+    "experience": "4 года",
+    "level": "middle",
+    "occupation": "Javascript Developer",
+    "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+    "education": "MTI",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png",
+    "city": "Нарва",
+    "salary": "Уровень заработной платы не указан",
     "id": "3"
 },
 {
