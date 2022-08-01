@@ -136,10 +136,8 @@ Navbar Style
         width: 15px;
         margin-left: 5px;
     }
-    .header__lang {
-        font-size: 14px;
-    }
     .subtitle__employer {
+        text-align: center;
         font-size: 2em;
         color:#999
     }
@@ -221,7 +219,7 @@ Navbar Style
         padding: 10px;
     }
 .subtitle__employer {
-    font-size: 1.3em !important;
+    font-size: 1.8em !important;
 }
 #content {
     padding: 5px;
@@ -254,9 +252,8 @@ Navbar Style
         padding: 5px;
     }
 .subtitle__employer {
-    font-size: 1.1em !important;
-    font-weight: 600;
-}
+    font-size: 1.3em !important;
+    }  
 #content {
     padding: 5px;
 }
@@ -273,7 +270,11 @@ Navbar Style
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     height: 14em;
 }
-
+.navbar-empl__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .header__second {
     font-size: 1.3em;
 }
