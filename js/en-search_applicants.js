@@ -286,4 +286,8 @@ btnReboot.addEventListener("click", () => {
         item.checked = false;
         item.value = "";
     });
+    cards = firstCards;
+    for (card of cards) {
+        searchResult(card);
+    };
 });

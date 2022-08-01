@@ -288,14 +288,16 @@ inputSearchApp.addEventListener("keydown", (event) => {
     }
 });
 
-
-
 btnReboot.addEventListener("click", () => {
     const inputs = document.querySelectorAll("input");
     inputs.forEach((item) => {
         item.checked = false;
         item.value = "";
     });
+    cards = firstCards;
+    for (card of cards) {
+        searchResult(card);
+    };
 });
 
 function vacafiltermobile(screen) {

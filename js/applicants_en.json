@@ -13,20 +13,6 @@
     "id": "0"
 },
 {
-    "name":"James",
-    "keyWords": ["developer","разработчик", "Frontend Developer", "Frontend Developer junior", "программист", "frontend", "javascript", "junior", "Офис", "Гибрид"],
-    "age": "27",
-    "experience": "less than a year",
-    "level": "junior",
-    "occupation": "Frontend developer",
-    "jobFormat": ["distant", "office", "hybrid"],
-    "education": "MTI",
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png",
-    "city": "Pusan",
-    "salary": "",
-    "id": "0"
-},
-{
     "name":"Robert",
     "keyWords": ["developer", "Backend Developer", "Backend Developer junior","разработчик", "программист", "backend","junior", "Удаленно", "Удаленка", "Офис", "Гибрид"],
     "age": "27",
