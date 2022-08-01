@@ -136,21 +136,21 @@ function createObject() {
         searchLevel();
     }
 
-    // function searchSalaryFact() {
-    //     list.innerHTML = "";
-    //     for (card of cards) {
-
-    //             if (card.salary !== "") {
-    //                 searchResult(card);
-    //                 newCards.push(card);
-    //             }
-    //     }
-    //     cards = newCards;
-    //     newCards = [];
-    // }
-    // if (document.querySelector('#salary').checked) {
-    //     searchSalaryFact();
-    // }
+    function searchSalaryFact() {
+        list.innerHTML = "";
+        for (card of cards) {
+            let salary = +card.experience.salary(/\D/g, "");
+                if (salary !== 0) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+        }
+        cards = newCards;
+        newCards = [];
+    }
+    if (document.querySelector('#salary').checked) {
+        searchSalaryFact();
+    }
 
     function serchSalary() {
         list.innerHTML = "";
@@ -311,3 +311,4 @@ function filtermobile() {
 document.getElementById("btnappfilter1").addEventListener("click", () => {
     filtermobile();
 });
+

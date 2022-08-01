@@ -79,6 +79,20 @@
     "education": "MTI",
     "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png",
     "city": "Kyoto",
+    "salary": "Salary not specified",
+    "id": "2"
+},
+{
+    "name":"Jennifer",
+    "keyWords": ["developer", "Java Developer", "Java Developer junior", "разработчик", "программист", "java", "junior", "Удаленно", "Офис", "Удаленка", "Гибрид"],
+    "age": "27",
+    "experience": "3 years",
+    "level": "junior",
+    "occupation": "Java Developer",
+    "jobFormat": ["distant"],
+    "education": "MTI",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png",
+    "city": "Kyoto",
     "salary": "1000",
     "id": "2"
 },
@@ -94,6 +108,20 @@
     "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png",
     "city": "Kyoto",
     "salary": "4000",
+    "id": "2"
+},
+{
+    "name":"Michael",
+    "keyWords": ["developer", "Java Developer", "Java Developer senior", "разработчик", "программист", "java", "junior", "Удаленно", "Офис", "Удаленка", "Гибрид"],
+    "age": "27",
+    "experience": "12 years",
+    "level": "senior",
+    "occupation": "Java Developer",
+    "jobFormat": ["distant"],
+    "education": "MTI",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png",
+    "city": "Kyoto",
+    "salary": "Salary not specified",
     "id": "2"
 },
 {
