@@ -1,3 +1,5 @@
+import "bootstrap";
+
 let cards, card;
 let newCards = [];
 let newCard;
