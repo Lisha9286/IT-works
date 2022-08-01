@@ -9,9 +9,9 @@ function searchResult(element) {
         <div class="search__card">
             <div>
                 <h5 class="search__card-title card-title">${element.occupation}<span class="card-title"> ${element.level}</span></h5>
-                <div class="search__card-subtitle">Опыт работы</div>
+                <div class="search__card-subtitle">Work experience</div>
                 <div class="search__card-experience">${element.experience}</div>
-                <div class="search__card-subtitle">Ожидаемая заработная плата</div>
+                <div class="search__card-subtitle">Expected salary</div>
                 <div class="search__card-salary">${element.salary} $</div>
                 <div class="search__card-subtitle">${element.city}</div>
             </div>
@@ -20,7 +20,7 @@ function searchResult(element) {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-    let url = "https://raw.githubusercontent.com/nas-tay/WorkIT-project/main/js/applicants.json";
+    let url = "https://raw.githubusercontent.com/nas-tay/WorkIT-project/main/js/applicants_en.json";
     let response = await fetch(url);
     cards = await response.json();
     firstCards = cards;
@@ -206,7 +206,7 @@ function createObject() {
         list.innerHTML = "";
         for (card of cards) {
             if (document.querySelector("#distant").checked) {
-                const search = new RegExp("удален", "gi");
+                const search = new RegExp("distant", "gi");
                 const rez = search.test(card.jobFormat);
                 if (rez) {
                     searchResult(card);
@@ -214,7 +214,7 @@ function createObject() {
                 }
             }
             if (document.querySelector("#office").checked) {
-                const search = new RegExp("офис", "gi");
+                const search = new RegExp("office", "gi");
                 const rez = search.test(card.jobFormat);
                 if (rez) {
                     searchResult(card);
@@ -222,7 +222,7 @@ function createObject() {
                 }
             }
             if (document.querySelector("#hybrid").checked) {
-                const search = new RegExp("гибрид", "gi");
+                const search = new RegExp("hybrid", "gi");
                 const rez = search.test(card.jobFormat);
                 if (rez) {
                     searchResult(card);

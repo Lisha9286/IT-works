@@ -58,83 +58,97 @@
             <!--Motto-->
             <div class="row m-1 p-1">
                 <div class="col-12 d-flex justify-content-start">
-                    <!--  <p class="header__subtitle subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>-->
                 </div>
             </div>
             <!-- Create vacancy form-->
-            <div class="container mt-5">
-                <div class="create-vacancy form-group bg-white rounded col-md-7 m-auto shadow p-3 mb-5 bg-white">
-                    <form class="create-vacancy__name p-2 rounded bg">
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="vacancy" placeholder="Job title">
-                        </div>
-                    </form>
-                    <form class="create-vacancy__income p-2 rounded bg mt-1">
-                        <p class="text-center fw-bold">Income level</p>
-                        <div class="row m-3">
+            <div class="create-vacancy form-group bg-white rounded col-md-7 m-auto shadow p-3 mb-5 bg-white">
+                <form class="new-vacancy-form create-vacancy__name p-2 rounded bg" novalidate>
+                    <div class="row mb-3">
+                        <input type="text" class="form-control" name="vacancy" placeholder="Job title" id="title">
+                        <div class="error-message"></div>
+                    </div>
+                    <fieldset class="create-vacancy__income p-2 rounded bg mt-1">
+                        <legend class="text-center fw-bold">Income level</legend>
+                        <div class="row mb-3 salary">
                             <div class="col">
-                                <input type="text" class="form-control" name="from" placeholder="From:">
+                                <input type="number" class="form-control" name="from" placeholder="From:"
+                                    id="minSalary">
+                                <div class="error-message"></div>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" name="to" placeholder="To:">
+                                <input type="number" class="form-control" name="to" placeholder="To:" id="maxSalary">
+                                <div class="error-message"></div>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" name="currency" placeholder="Currency:">
+                                <input type="text" class="form-control" name="currency" placeholder="Currency:"
+                                    id="currency">
+                                <div class="error-message"></div>
                             </div>
                         </div>
-                    </form>
-                    <form class="create-vacancy__description p-2 rounded bg mt-1">
-                        <p class="text-center fw-bold">Description</p>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="obligations"
-                                placeholder="Employee's obligations">
+                    </fieldset>
+                    <fieldset class="create-vacancy__description p-2 rounded bg mt-1">
+                        <legend class="text-center fw-bold">Description</legend>
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="obligations" placeholder="Duties" id="duties">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="skills" placeholder="Сompetencies/skills">
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="skills" placeholder="Skills" id="skills">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="conditions" placeholder="Working conditions ">
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="conditions" placeholder="Working conditions"
+                                id="conditions">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="add" placeholder="Additional information">
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="add" placeholder="Additional information"
+                                id="details">
+                            <div class="error-message"></div>
                         </div>
-                    </form>
-                    <form class="create-vacancy__contact p-2 rounded bg mt-1">
-                        <p class="text-center fw-bold">Contacts</p>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="name" placeholder="Name">
+                    </fieldset>
+                    <fieldset class="create-vacancy__contact p-2 rounded bg mt-1">
+                        <legend class="text-center fw-bold">Contacts</legend>
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="name" placeholder="First Name" id="firstName">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="surname" placeholder="Surname">
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="lastname" placeholder="Last Name"
+                                id="lastName">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="name@example.com" required>
+                        <div class="row mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required
+                                id="email">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="tel" class="form-control" id="typePhone" name="tel"
-                                placeholder="+7(000)000-00-00">
+                        <div class="row mb-3">
+                            <input type="tel" class="form-control" name="tel" placeholder="Phone number" id="phone">
+                            <div class="error-message"></div>
                         </div>
-                    </form>
-                    <form class="create-vacancy__location p-2 rounded bg mt-1">
-                        <p class="text-center fw-bold">Location</p>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="country" placeholder="Country">
+                    </fieldset>
+                    <fieldset class="create-vacancy__location p-2 rounded bg mt-1">
+                        <legend class="text-center fw-bold">Location</legend>
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="country" placeholder="Country" id="country">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="text" class="form-control" name="locality" placeholder="Locality">
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="locality" placeholder="City" id="city">
+                            <div class="error-message"></div>
                         </div>
-                        <div class="row m-3">
-                            <input type="email" class="form-control" name="index" id="exampleFormControlInput1"
-                                placeholder="Index">
+                        <div class="row mb-3">
+                            <input type="number" class="form-control" name="zipCode" placeholder="Zip Code"
+                                id="zipCode">
+                            <div class="error-message"></div>
                         </div>
-                    </form>
-                    <form class="create-vacancy__submit p-2 rounded bg mt-1">
-                        <div class="row m-3">
-                            <button type="submit" class="btn btn-primary btn-block" name="btn">Publish</button>
-                        </div>
-                    </form>
-                </div>
+                    </fieldset>
+                    <div class="success"></div>
+                    <div class="row mb-3">
+                        <button type="submit" class="btn btn-primary btn-block" name="btn">Continue</button>
+                    </div>
+                </form>
             </div>
 
             <!-- Create vacancy Form end-->
@@ -164,7 +178,7 @@
             </footer>
         </div>
     </div>
-    <script src="../js/search_applicants.js"></script>
+    <script type="module" src="../js/en-create-vacancy.js"></script>
 </body>
 
 </html>

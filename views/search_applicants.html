@@ -45,13 +45,12 @@
         </nav>
         <!-- Page Content  -->
         <div id="content-appl">
-            <nav class="container  navbar-empl navbar-expand-lg navbar-light bg-light navbar-apl">
-                <div class=" row navbar-empl__logo">
-                    <a class=" col-2 ms-2" href="#">
-                        <img class="nav__logo-img logo-appl" src="../assets/images/logo.png" alt="logo"></a>
-                    <div class="col-8">
-                        <h3 class="header__second header__second-appl  pt-3"> Работодателям</h3>
-                        <p class=" subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>
+            <nav class="navbar-empl create-resume__navbar navbar-expand-lg navbar-light bg-light d-flex ">
+                <div class="navbar-create-resume">
+                    <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo">
+                    <div class="create-resume_header-content">
+                        <h3 class="header__second pt-3"> Работодателям</h3>
+                        <p class="header__subtitle create-resume__subtitle">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>
                     </div>
                 </div>
             </nav>
@@ -79,96 +78,59 @@
                 </div>
                 <div class="row searching__filters mt-1 ms-3 p-2">
                     <div class="filter">
-                        <div class="filter-vacancy__filter-title">Фильтр</div>
                         <div class="filter-vacancy__type">
-                            <div class="filter__card-title ">Город</div>
-                            <select class="form-select filter-vacancy__cities" id="cities">
-                                <option selected value="none">Город не выбран</option>
-                                <option value="Псков">Псков</option>
-                                <option value="Вологда">Вологда</option>
-                                <option value="Кострома">Кострома</option>
-                                <option value="Нарва">Нарва</option>
-                                <option value="Тбилиси">Тбилиси</option>
-                                <option value="Петрозаводск">Петрозаводск</option>
-                                <option value="Бобруйск">Бобруйск</option>
-                                <option value="Ужгород">Ужгород</option>
-                                <option value="Гданьск">Гданьск</option>
-                                <option value="Сараево">Сараево</option>
-                                <option value="Тулун">Тулун</option>
-                                <option value="Уфа">Уфа</option>
-                                <option value="Конь-Колодезь">Конь-Колодезь</option>
-                            </select>
+                            <div class="filter-vacancy__title">Город</div>
+                            <input type="text" name="city" id="city" placeholder="Город" list="cities">
+                            <datalist id="cities">
+
+                            </datalist>
                         </div>
-                        <div class=" filter-vacancy__type">
+                        <div class=" filter__card">
                             <div class="filter-vacancy__title">Уровень позиции</div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label" for="junior">Junior</label>
-                                <input class="filter-vacancy__card-input form-check-input level" id="junior"
-                                    value="junior" type="checkbox" name="junior" />
-                            </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label" for="middle">Middle</label>
-                                <input class="filter-vacancy__card-input form-check-input level" id="middle"
-                                    value="middle" type="checkbox" name="middle" /></div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label" for="senior">Senior</label>
-                                <input class="filter-vacancy__card-input form-check-input level" id="senior"
-                                    value="senior" type="checkbox" name="senior" />
-                            </div>
+                            <div><input class="filter__card-input form-check-input level" id="junior" value="junior"
+                                    type="radio" name="level" />
+                                <label class="filter__card-label" for="junior">Junior</label></div>
+                            <div><input class="filter__card-input form-check-input level" id="middle" value="middle"
+                                    type="radio" name="level" />
+                                <label class="filter__card-label" for="middle">Middle</label></div>
+                            <div><input class="filter__card-input form-check-input level" id="senior" value="senior"
+                                    type="radio" name="level" />
+                                <label class="filter__card-label" for="senior">Senior</label></div>
                         </div>
-                        <div class="filter-vacancy__type">
+                        <div class="filter__card">
                             <div class="filter-vacancy__title">Опыт работы</div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label" for="zero">Нет опыта </label>
-                                <input class="filter-vacancy__card-input form-check-input experience" type="checkbox"
-                                    name="zero" />
-                            </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label " for="small">От 1 года до 3 лет </label>
-                                <input class="filter-vacancy__card-input form-check-input experience" type="checkbox"
-                                    name="small" />
-                            </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label " for="medium">От 3 до 6 лет</label>
-                                <input class="filter-vacancy__card-input form-check-input experience" type="checkbox"
-                                    name="medium" />
-                            </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter-vacancy__card-label " name="large">Более 6 лет</label>
-                                <input class="filter-vacancy__card-input form-check-input experience" type="checkbox"
-                                    name="large" />
-                            </div>
+                            <div><input class="filter__card-input form-check-input experience" type="radio"
+                                    name="experience" value="zero" id="zero" />
+                                <label class="filter__card-label " for="zero"> Менее года</label></div>
+                            <div><input class="filter__card-input form-check-input experience" type="radio"
+                                    name="experience" value="medium" id="medium" />
+                                <label class="filter__card-label " for="medium"> От 3 до 6 лет</label></div>
+                            <div><input class="filter__card-input form-check-input experience" type="radio"
+                                    name="experience" value="large" id="large" />
+                                <label class="filter__card-label " name="large"> Более 6 лет</label></div>
                         </div>
-                        <div class="filter-vacancy__type">
-                            <div class="filter-vacancy__title">Уровень дохода</div>
+                        <div class="filter__card">
+                            <div class="filter-vacancy__title">Уровень дохода $</div>
                             <div class="filter__card-salary">
-                                <input class="filter-vacancy__input-salary" type="number" placeholder="от"
+                                <input class="filter-vacancy__input-salary" type="number" placeholder="From"
                                     id="minSalary" />
-                                <input class="filter-vacancy__input-salary" type="number" placeholder="до"
+                                <input class="filter-vacancy__input-salary" type="number" placeholder="To"
                                     id="maxSalary" /></div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label" for="salary">Указан доход</label>
-                                <input class="filter-vacancy__card-input form-check-input" type="checkbox"
-                                    name="salary" />
-                            </div>
+                            <div>
+                                <input class="filter__card-input form-check-input" type="checkbox" name="salary" />
+                                <label class="filter__card-label" for="salary">Указан доход</label></div>
                         </div>
-                        <div class="filter-vacancy__type">
+                        <div class="filter__card">
                             <div class="filter-vacancy__title">Формат работы</div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label">Удаленный</label>
-                                <input class="filter-vacancy__card-input form-check-input format" value="eдаленный"
+                            <div><input class="filter__card-input form-check-input format" id="distant"
+                                    value="удаленный" type="checkbox" />
+                                <label class="filter__card-label">Удаленный</label></div>
+                            <div><input class="filter__card-input form-check-input format" id="office" value="офис"
                                     type="checkbox" />
-                            </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label">Офис</label>
-                                <input class="filter-vacancy__card-input form-check-input format" value="jфис"
+                                <label class="filter__card-label">Офис</label></div>
+                            <div><input class="filter__card-input form-check-input format" id="hybrid" value="гибрид"
                                     type="checkbox" />
-                            </div>
-                            <div class="filter-vacancy__point">
-                                <label class="filter__card-label">Гибрид</label>
-                                <input class="filter-vacancy__card-input form-check-input format" value="гибрид"
-                                    type="checkbox" />
-                            </div>
+                                <label class="filter__card-label">Гибрид</label></div>
                         </div>
                         <div class="filter-vacancy__btns">
                             <div class="filter-vacancy__change" id="btnFilter">Применить</div>
