@@ -135,6 +135,22 @@ function createObject() {
         searchLevel();
     }
 
+    // function searchSalaryFact() {
+    //     list.innerHTML = "";
+    //     for (card of cards) {
+
+    //             if (card.salary !== "") {
+    //                 searchResult(card);
+    //                 newCards.push(card);
+    //             }
+    //     }
+    //     cards = newCards;
+    //     newCards = [];
+    // }
+    // if (document.querySelector('#salary').checked) {
+    //     searchSalaryFact();
+    // }
+
     function serchSalary() {
         list.innerHTML = "";
         for (card of cards) {
@@ -242,6 +258,12 @@ const btnSearch = document.querySelector("#btnSearchApp");
 const inputSearchApp = document.querySelector("#inputSearchApp");
 const btnFilter = document.querySelector("#btnFilter");
 const btnReboot = document.querySelector("#btnReboot");
+
+inputSearchApp.onchange = () => {
+    cards = firstCards;
+    createObject();
+}
+
 
 btnSearch.addEventListener("click", () => {
     cards = firstCards;

@@ -139,132 +139,139 @@ function createObject() {
 
 
 
-// function searchSalaryFact() {
-//     list.innerHTML = "";
-//     for (card of cards) {
-        
-//             if (card.salary !== "") {
-//                 searchResult(card);
-//                 newCards.push(card);
-//             }
-//     }
-//     cards = newCards;
-//     newCards = [];
-// }
-// if (document.querySelector('#salary').checked) {
-//     searchSalaryFact();
-// }
+    // function searchSalaryFact() {
+    //     list.innerHTML = "";
+    //     for (card of cards) {
+
+    //             if (card.salary !== "") {
+    //                 searchResult(card);
+    //                 newCards.push(card);
+    //             }
+    //     }
+    //     cards = newCards;
+    //     newCards = [];
+    // }
+    // if (document.querySelector('#salary').checked) {
+    //     searchSalaryFact();
+    // }
 
 
-function serchSalary() {
-    list.innerHTML = "";
-    for (card of cards) {
-        if (filterObject.minSalary !== 0 && card.salary >= filterObject.minSalary) {
-            if (filterObject.maxSalary !== 0 && card.salary <= filterObject.minSalary) {
-                searchResult(card);
-                newCards.push(card);
-            }
-            if (filterObject.maxSalary == 0) {
-                searchResult(card);
-                newCards.push(card);
-            }
-        }
-        if (filterObject.maxSalary !== 0 && card.salary <= filterObject.maxSalary) {
+    function serchSalary() {
+        list.innerHTML = "";
+        for (card of cards) {
             if (filterObject.minSalary !== 0 && card.salary >= filterObject.minSalary) {
-                searchResult(card);
-                newCards.push(card);
+                if (filterObject.maxSalary !== 0 && card.salary <= filterObject.minSalary) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+                if (filterObject.maxSalary == 0) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
             }
-            if (filterObject.minSalary == 0) {
-                searchResult(card);
-                newCards.push(card);
+            if (filterObject.maxSalary !== 0 && card.salary <= filterObject.maxSalary) {
+                if (filterObject.minSalary !== 0 && card.salary >= filterObject.minSalary) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+                if (filterObject.minSalary == 0) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
             }
         }
+        cards = newCards;
+        newCards = [];
     }
-    cards = newCards;
-    newCards = [];
-}
 
-if (filterObject.minSalary !== 0 || filterObject.maxSalary !== 0) {
-    serchSalary();
-}
-
-function searchExperience() {
-    list.innerHTML = "";
-    for (card of cards) {
-        let expYears = +card.experience.replace(/\D/g, "");
-        console.log(expYears);
-        if (document.querySelector("#zero").checked)
-            if (expYears == 0) {
-                searchResult(card);
-                newCards.push(card);
-            }
-        if (document.querySelector("#small").checked) {
-            if (expYears >= 1 && expYears <= 3) {
-                searchResult(card);
-                newCards.push(card);
-            }
-        }
-        if (document.querySelector("#medium").checked) {
-            if (expYears >= 3 && expYears <= 6) {
-                searchResult(card);
-                newCards.push(card);
-            }
-        }
-        if (document.querySelector("#large").checked) {
-            if (expYears >= 6) {
-                searchResult(card);
-                newCards.push(card);
-            }
-        }
+    if (filterObject.minSalary !== 0 || filterObject.maxSalary !== 0) {
+        serchSalary();
     }
-    cards = newCards;
-    newCards = [];
-}
 
-if (filterObject.experience.length !== 0) {
-    searchExperience();
-}
-
-function searchFormat() {
-    list.innerHTML = "";
-    for (card of cards) {
-        if (document.querySelector("#distant").checked) {
-            const search = new RegExp("удален", "gi");
-            const rez = search.test(card.jobFormat);
-            if (rez) {
-                searchResult(card);
-                newCards.push(card);
+    function searchExperience() {
+        list.innerHTML = "";
+        for (card of cards) {
+            let expYears = +card.experience.replace(/\D/g, "");
+            console.log(expYears);
+            if (document.querySelector("#zero").checked)
+                if (expYears == 0) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+            if (document.querySelector("#small").checked) {
+                if (expYears >= 1 && expYears <= 3) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+            }
+            if (document.querySelector("#medium").checked) {
+                if (expYears >= 3 && expYears <= 6) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+            }
+            if (document.querySelector("#large").checked) {
+                if (expYears >= 6) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
             }
         }
-        if (document.querySelector("#office").checked) {
-            const search = new RegExp("офис", "gi");
-            const rez = search.test(card.jobFormat);
-            if (rez) {
-                searchResult(card);
-                newCards.push(card);
-            }
-        }
-        if (document.querySelector("#hybrid").checked) {
-            const search = new RegExp("гибрид", "gi");
-            const rez = search.test(card.jobFormat);
-            if (rez) {
-                searchResult(card);
-                newCards.push(card);
-            }
-        }
+        cards = newCards;
+        newCards = [];
     }
-    cards = newCards;
-    newCards = [];
-}
-if (filterObject.jobFormat.length !== 0) {
-    searchFormat();
-}
+
+    if (filterObject.experience.length !== 0) {
+        searchExperience();
+    }
+
+    function searchFormat() {
+        list.innerHTML = "";
+        for (card of cards) {
+            if (document.querySelector("#distant").checked) {
+                const search = new RegExp("удален", "gi");
+                const rez = search.test(card.jobFormat);
+                if (rez) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+            }
+            if (document.querySelector("#office").checked) {
+                const search = new RegExp("офис", "gi");
+                const rez = search.test(card.jobFormat);
+                if (rez) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+            }
+            if (document.querySelector("#hybrid").checked) {
+                const search = new RegExp("гибрид", "gi");
+                const rez = search.test(card.jobFormat);
+                if (rez) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+            }
+        }
+        cards = newCards;
+        newCards = [];
+    }
+    if (filterObject.jobFormat.length !== 0) {
+        searchFormat();
+    }
 }
 
 const btnSearch = document.querySelector("#btnSearchApp");
 const inputSearchApp = document.querySelector("#inputSearchApp");
 const btnFilter = document.querySelector("#btnFilter");
 const btnReboot = document.querySelector("#btnReboot");
+
+
+
+inputSearchApp.onchange = () => {
+    cards = firstCards;
+    createObject();
+}
 
 btnSearch.addEventListener("click", () => {
     cards = firstCards;
@@ -280,6 +287,8 @@ inputSearchApp.addEventListener("keydown", (event) => {
         createObject();
     }
 });
+
+
 
 btnReboot.addEventListener("click", () => {
     const inputs = document.querySelectorAll("input");
