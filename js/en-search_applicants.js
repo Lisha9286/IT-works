@@ -285,6 +285,7 @@ btnReboot.addEventListener("click", () => {
         item.value = "";
     });
     cards = firstCards;
+    list.innerHTML = "";
     for (card of cards) {
         searchResult(card);
     }
