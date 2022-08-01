@@ -262,8 +262,7 @@ const btnReboot = document.querySelector("#btnReboot");
 inputSearchApp.onchange = () => {
     cards = firstCards;
     createObject();
-}
-
+};
 
 btnSearch.addEventListener("click", () => {
     cards = firstCards;
@@ -289,5 +288,23 @@ btnReboot.addEventListener("click", () => {
     cards = firstCards;
     for (card of cards) {
         searchResult(card);
-    };
+    }
+});
+
+function filtermobile() {
+    var ele = document.querySelector(".filter-content");
+    var text = document.querySelector(".filter-mobile");
+    if (ele.style.display == "block") {
+        ele.style.display = "none";
+        text.innerHTML = "Фильтр";
+        document.querySelector(".searching__filters").classList.remove("shadow-on");
+    } else {
+        ele.style.display = "block";
+        text.innerHTML = "Скрыть фильтр";
+        document.querySelector(".searching__filters").classList.remove("searching__filters_shadow");
+        document.querySelector(".searching__filters").classList.add("shadow-on");
+    }
+}
+document.getElementById("btnappfilter1").addEventListener("click", () => {
+    filtermobile();
 });
