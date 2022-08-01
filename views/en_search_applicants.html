@@ -54,12 +54,6 @@
                     </div>
                 </div>
             </nav>
-            <!--Motto-->
-            <div class="row m-1 p-1">
-                <div class="col-12 d-flex justify-content-start">
-                    <!--  <p class="header__subtitle subtitle__apllsearch">ТВОЯ СВЕЖАЯ КРОВЬ В МИРЕ IT</p>-->
-                </div>
-            </div>
             <!-- Searching form-->
             <div class="container searching">
                 <div class="searching__form searching__form-applicants">
@@ -88,71 +82,76 @@
                         </div>
                     </div>
                 </div>
-                <div class="row searching__filters mt-1 ms-3 p-2">
-                    <div class="filter">
-                        <div class="filter__card">
-                            <div class="filter-vacancy__title">City</div>
-                            <input type="text" name="city" id="city" placeholder="City" list="cities">
-                            <datalist id="cities">
+                <div>
+                    <div class="filter-mobile" id="btnappfilter1">Фильтр</div>
+                    <div class="row searching__filters searching__filters_shadow mt-1 filter-desktop">
+                        <div class="filter">
+                            <div class="filter-content">
+                                <div class="filter-vacancy__type">
+                                    <div class="filter-vacancy__title">City</div>
+                                    <input type="text" name="city" id="city" placeholder="City" list="cities">
+                                    <datalist id="cities">
 
-                            </datalist>
+                                    </datalist>
 
-                        </div>
-                        <div class=" filter__card">
-                            <div class="filter-vacancy__title">Level</div>
-                            <div><input class="filter__card-input form-check-input level" id="junior" value="junior"
-                                    type="radio" name="level" />
-                                <label class="filter__card-label" for="junior">Junior</label></div>
-                            <div><input class="filter__card-input form-check-input level" id="middle" value="middle"
-                                    type="radio" name="level" />
-                                <label class="filter__card-label" for="middle">Middle</label></div>
-                            <div><input class="filter__card-input form-check-input level" id="senior" value="senior"
-                                    type="radio" name="level" />
-                                <label class="filter__card-label" for="senior">Senior</label></div>
-                        </div>
+                                </div>
+                                <div class=" filter__card">
+                                    <div class="filter-vacancy__title">Level</div>
+                                    <div><input class="filter__card-input form-check-input level" id="junior"
+                                            value="junior" type="radio" name="level" />
+                                        <label class="filter__card-label" for="junior">Junior</label></div>
+                                    <div><input class="filter__card-input form-check-input level" id="middle"
+                                            value="middle" type="radio" name="level" />
+                                        <label class="filter__card-label" for="middle">Middle</label></div>
+                                    <div><input class="filter__card-input form-check-input level" id="senior"
+                                            value="senior" type="radio" name="level" />
+                                        <label class="filter__card-label" for="senior">Senior</label></div>
+                                </div>
 
-                        <div class="filter__card">
-                            <div class="filter-vacancy__title">Work experience</div>
-                            <div><input class="filter__card-input form-check-input experience" type="radio"
-                                    name="experience" value="zero" id="zero" />
-                                <label class="filter__card-label " for="zero">Less than a year</label></div>
-                            <div><input class="filter__card-input form-check-input experience" type="radio"
-                                    name="experience" value="small" id="small" />
-                                <label class=" filter__card-label " for=" small">1-3 years</label></div>
-                            <div><input class="filter__card-input form-check-input experience" type="radio"
-                                    name="experience" value="medium" id="medium" />
-                                <label class="filter__card-label " for="medium">3-6 years</label></div>
-                            <div><input class="filter__card-input form-check-input experience" type="radio"
-                                    name="experience" value="large" id="large" />
-                                <label class="filter__card-label " name="large">Over 6 year</label></div>
-                        </div>
+                                <div class="filter__card">
+                                    <div class="filter-vacancy__title">Work experience</div>
+                                    <div><input class="filter__card-input form-check-input experience" type="radio"
+                                            name="experience" value="zero" id="zero" />
+                                        <label class="filter__card-label " for="zero">Less than a year</label></div>
+                                    <div><input class="filter__card-input form-check-input experience" type="radio"
+                                            name="experience" value="small" id="small" />
+                                        <label class=" filter__card-label " for=" small">1-3 years</label></div>
+                                    <div><input class="filter__card-input form-check-input experience" type="radio"
+                                            name="experience" value="medium" id="experience" />
+                                        <label class="filter__card-label " for="medium">3-6 years</label></div>
+                                    <div><input class="filter__card-input form-check-input experience" type="radio"
+                                            name="experience" value="large" id="large" />
+                                        <label class="filter__card-label " name="large">Over 6 year</label></div>
+                                </div>
 
-                        <div class="filter__card">
-                            <div class="filter-vacancy__title">Salary rate $</div>
-                            <div class="filter__card-salary">
-                                <input class="filter-vacancy__input-salary" type="number" placeholder="From"
-                                    id="minSalary" />
-                                <input class="filter-vacancy__input-salary" type="number" placeholder="To"
-                                    id="maxSalary" /></div>
-                            <!-- <div>
+                                <div class="filter__card">
+                                    <div class="filter-vacancy__title">Salary rate $</div>
+                                    <div class="filter__card-salary">
+                                        <input class="filter-vacancy__input-salary" type="number" placeholder="From"
+                                            id="minSalary" />
+                                        <input class="filter-vacancy__input-salary" type="number" placeholder="To"
+                                            id="maxSalary" /></div>
+                                    <!-- <div>
                                 <input class="filter__card-input form-check-input" type="checkbox" name="salary" />
                                 <label class="filter__card-label" for="salary">With salary</label></div> -->
-                        </div>
-                        <div class="filter__card">
-                            <div class="filter-vacancy__title">Work format</div>
-                            <div><input class="filter__card-input form-check-input format" id="distant" value="distant"
-                                    type="checkbox" />
-                                <label class="filter__card-label">Remote</label></div>
-                            <div><input class="filter__card-input form-check-input format" id="office" value="office"
-                                    type="checkbox" />
-                                <label class="filter__card-label">In-office</label></div>
-                            <div><input class="filter__card-input form-check-input format" id="hybrid" value="hybrid"
-                                    type="checkbox" />
-                                <label class="filter__card-label">Hybrid</label></div>
-                        </div>
-                        <div class="filter-vacancy__btns">
-                            <div class="filter-vacancy__change" id="btnFilter">Apply</div>
-                            <div class="filter-vacancy__throwoff" id="btnReboot">Reset</div>
+                                </div>
+                                <div class="filter__card">
+                                    <div class="filter-vacancy__title">Work format</div>
+                                    <div><input class="filter__card-input form-check-input format" id="distant"
+                                            value="distant" type="checkbox" />
+                                        <label class="filter__card-label">Remote</label></div>
+                                    <div><input class="filter__card-input form-check-input format" id="office"
+                                            value="office" type="checkbox" />
+                                        <label class="filter__card-label">In-office</label></div>
+                                    <div><input class="filter__card-input form-check-input format" id="hybrid"
+                                            value="hybrid" type="checkbox" />
+                                        <label class="filter__card-label">Hybrid</label></div>
+                                </div>
+                                <div class="filter-vacancy__btns">
+                                    <div class="filter-vacancy__change" id="btnFilter">Apply</div>
+                                    <div class="filter-vacancy__throwoff" id="btnReboot">Reset</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
