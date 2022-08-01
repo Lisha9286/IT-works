@@ -12,7 +12,7 @@ function searchResult(element) {
                 <div class="search__card-subtitle">Work experience</div>
                 <div class="search__card-experience">${element.experience}</div>
                 <div class="search__card-subtitle">Expected salary</div>
-                <div class="search__card-salary">${element.salary} $</div>
+                <div class="search__card-salary">${element.salary} ${element.currency}</div>
                 <div class="search__card-subtitle">${element.city}</div>
             </div>
         <image src="${element.photo}" class="search__card-photo" alt="photo" />
@@ -138,7 +138,7 @@ function createObject() {
     function searchSalaryFact() {
         list.innerHTML = "";
         for (card of cards) {
-            let salary = +card.experience.salary(/\D/g, "");
+            let salary = +card.salary.replace(/\D/g, "");
                 if (salary !== 0) {
                     searchResult(card);
                     newCards.push(card);
