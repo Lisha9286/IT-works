@@ -311,3 +311,4 @@ function filtermobile() {
 document.getElementById("btnappfilter1").addEventListener("click", () => {
     filtermobile();
 });
+
