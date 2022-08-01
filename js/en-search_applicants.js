@@ -9,9 +9,9 @@ function searchResult(element) {
         <div class="search__card">
             <div>
                 <h5 class="search__card-title card-title">${element.occupation}<span class="card-title"> ${element.level}</span></h5>
-                <div class="search__card-subtitle">Опыт работы</div>
+                <div class="search__card-subtitle">Work experience</div>
                 <div class="search__card-experience">${element.experience}</div>
-                <div class="search__card-subtitle">Ожидаемая заработная плата</div>
+                <div class="search__card-subtitle">Expected salary</div>
                 <div class="search__card-salary">${element.salary} $</div>
                 <div class="search__card-subtitle">${element.city}</div>
             </div>
@@ -20,7 +20,7 @@ function searchResult(element) {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-    let url = "https://raw.githubusercontent.com/nas-tay/WorkIT-project/main/js/applicants.json";
+    let url = "https://raw.githubusercontent.com/nas-tay/WorkIT-project/main/js/applicants_en.json";
     let response = await fetch(url);
     cards = await response.json();
     firstCards = cards;
@@ -85,9 +85,8 @@ function createObject() {
         const searchText = document.querySelector("#inputSearchApp").value;
         for (card of cards) {
             if (!searchText == "") {
-                let search = new RegExp(searchText, "gi");
+                const search = new RegExp(searchText, "gi");
                 const rez = search.test(card.keyWords);
-                console.log(card.keyWords);
                 if (rez) {
                     searchResult(card);
                     newCards.push(card);
@@ -176,8 +175,6 @@ function createObject() {
                 }
             }
         }
-        cards = newCards;
-        newCards = [];
     }
 
     if (filterObject.minSalary !== 0 || filterObject.maxSalary !== 0) {
@@ -225,7 +222,7 @@ function createObject() {
         list.innerHTML = "";
         for (card of cards) {
             if (document.querySelector("#distant").checked) {
-                const search = new RegExp("удален", "gi");
+                const search = new RegExp("distant", "gi");
                 const rez = search.test(card.jobFormat);
                 if (rez) {
                     searchResult(card);
@@ -233,7 +230,7 @@ function createObject() {
                 }
             }
             if (document.querySelector("#office").checked) {
-                const search = new RegExp("офис", "gi");
+                const search = new RegExp("office", "gi");
                 const rez = search.test(card.jobFormat);
                 if (rez) {
                     searchResult(card);
@@ -241,7 +238,7 @@ function createObject() {
                 }
             }
             if (document.querySelector("#hybrid").checked) {
-                const search = new RegExp("гибрид", "gi");
+                const search = new RegExp("hybrid", "gi");
                 const rez = search.test(card.jobFormat);
                 if (rez) {
                     searchResult(card);
@@ -265,7 +262,8 @@ const btnReboot = document.querySelector("#btnReboot");
 inputSearchApp.onchange = () => {
     cards = firstCards;
     createObject();
-};
+}
+
 
 btnSearch.addEventListener("click", () => {
     cards = firstCards;
@@ -291,103 +289,5 @@ btnReboot.addEventListener("click", () => {
     cards = firstCards;
     for (card of cards) {
         searchResult(card);
-    }
-});
-
-// function vacafiltermobile(screen) {
-//     if (screen.matches) {
-//         document.querySelector(".filter-desktop").style.display = "none";
-//         document.querySelector(".filter-vacancy__filter-mobile").innerHTML = `
-//         <div class="filter">
-//         <div class="filter-vacancy__all1">
-//                         <div class="filter-vacancy__type">
-//                             <div class="filter-vacancy__title">Город</div>
-//                             <input type="text" name="city" id="city" placeholder="Город" list="cities">
-//                             <datalist id="cities">
-
-//                             </datalist>
-//                         </div>
-//                         <div class=" filter__card">
-//                             <div class="filter-vacancy__title">Уровень позиции</div>
-//                             <div><input class="filter__card-input form-check-input level" id="junior" value="junior"
-//                                     type="radio" name="level" />
-//                                 <label class="filter__card-label" for="junior">Junior</label></div>
-//                             <div><input class="filter__card-input form-check-input level" id="middle" value="middle"
-//                                     type="radio" name="level" />
-//                                 <label class="filter__card-label" for="middle">Middle</label></div>
-//                             <div><input class="filter__card-input form-check-input level" id="senior" value="senior"
-//                                     type="radio" name="level" />
-//                                 <label class="filter__card-label" for="senior">Senior</label></div>
-//                         </div>
-//                         <div class="filter__card">
-//                         <div class="filter-vacancy__title">Опыт работы</div>
-//                         <div><input class="filter__card-input form-check-input experience" type="radio"
-//                                 name="experience" value="zero" id="zero" />
-//                             <label class="filter__card-label " for="zero"> Менее года</label></div>
-//                             <div><input class="filter__card-input form-check-input experience" type="radio"
-//                                 name="experience" value="small" id="small" />
-//                             <label class=" filter__card-label " for=" small"> От 1 до 3 лет</label></div>
-//                         <div><input class="filter__card-input form-check-input experience" type="radio"
-//                                 name="experience" value="small" id="small" />
-//                             <label class="filter__card-label " for="small"> От 1 года до 3 лет</label></div>
-//                         <div><input class="filter__card-input form-check-input experience" type="radio"
-//                                 name="experience" value="medium" id="medium" />
-//                             <label class="filter__card-label " for="medium"> От 3 до 6 лет</label></div>
-//                         <div><input class="filter__card-input form-check-input experience" type="radio"
-//                                 name="experience" value="large" id="large" />
-//                             <label class="filter__card-label " name="large"> Более 6 лет</label></div>
-//                         </div>
-//                         <div class="filter__card">
-//                             <div class="filter-vacancy__title">Уровень дохода $</div>
-//                             <div class="filter__card-salary">
-//                                 <input class="filter-vacancy__input-salary" type="number" placeholder="From"
-//                                     id="minSalary" />
-//                                 <input class="filter-vacancy__input-salary" type="number" placeholder="To"
-//                                     id="maxSalary" /></div>
-//                             <div>
-//                                 <input class="filter__card-input form-check-input" type="checkbox" name="salary" />
-//                                 <label class="filter__card-label" for="salary">Указан доход</label></div>
-//                         </div>
-//                         <div class="filter__card">
-//                             <div class="filter-vacancy__title">Формат работы</div>
-//                             <div><input class="filter__card-input form-check-input format" id="distant"
-//                                     value="удаленный" type="checkbox" />
-//                                 <label class="filter__card-label">Удаленный</label></div>
-//                             <div><input class="filter__card-input form-check-input format" id="office" value="офис"
-//                                     type="checkbox" />
-//                                 <label class="filter__card-label">Офис</label></div>
-//                             <div><input class="filter__card-input form-check-input format" id="hybrid" value="гибрид"
-//                                     type="checkbox" />
-//                                 <label class="filter__card-label">Гибрид</label></div>
-//                         </div>
-//                         <div class="filter-vacancy__btns">
-//                             <div class="filter-vacancy__change" id="btnFilter">Применить</div>
-//                             <div class="filter-vacancy__throwoff" id="btnReboot">Сбросить</div>
-//                         </div>
-//                     </div>
-//                     </div>
-//         `;
-//     }
-// }
-
-// let screen = window.matchMedia("(max-width: 797px)");
-// vacafiltermobile(screen);
-// screen.addEventListener("DOMContentLoaded", vacafiltermobile);
-
-function filtermobile() {
-    var ele = document.querySelector(".filter-content");
-    var text = document.querySelector(".filter-mobile");
-    if (ele.style.display == "block") {
-        ele.style.display = "none";
-        text.innerHTML = "Фильтр";
-        document.querySelector(".searching__filters").classList.remove("shadow-on");
-    } else {
-        ele.style.display = "block";
-        text.innerHTML = "Скрыть фильтр";
-        document.querySelector(".searching__filters").classList.remove("searching__filters_shadow");
-        document.querySelector(".searching__filters").classList.add("shadow-on");
-    }
-}
-document.getElementById("btnappfilter1").addEventListener("click", () => {
-    filtermobile();
+    };
 });

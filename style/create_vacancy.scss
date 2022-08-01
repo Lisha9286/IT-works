@@ -1,3 +1,15 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .createvacancy_page {
     width: 100%;
     font-family: 'Roboto', sans-serif;
@@ -171,10 +183,6 @@ Navbar Style
 }
 .navbar {
     flex-wrap: nowrap;
-}
-.btn-outline-secondary  {
-width: 101.7px;
-margin-bottom: 7px;
 }
 .header__lang {
  text-align: center  ;
