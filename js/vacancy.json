@@ -126,7 +126,7 @@
   "level": "senior",
   "occupation": "Senior Java developer",
   "jobFormat": ["Удаленный", "Офис", "Гибрид"],
-  "salary": "Уровень зароботной платы не указан",
+  "salary": "не указан",
   "currency": " ",
   "city": "Сан-Франциско"
 },
@@ -137,7 +137,7 @@
   "level": "senior",
   "occupation": "Senior Java developer",
   "jobFormat": ["Удаленный", "Офис", "Гибрид"],
-  "salary": "Уровень зароботной платы не указан",
+  "salary": "не указан",
   "currency": " ",
   "city": "Сан-Франциско"
 },{

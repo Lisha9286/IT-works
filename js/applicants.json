@@ -114,7 +114,7 @@
     "education": "MTI",
     "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png",
     "city": "Кострома",
-    "salary": "Уровень заработной платы не указан",
+    "salary": "не указан",
     "currency": " ",
     "id": "2"
 },
@@ -159,7 +159,7 @@
     "education": "MTI",
     "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png",
     "city": "Нарва",
-    "salary": "Уровень заработной платы не указан",
+    "salary": "не указан",
     "currency": " ",
     "id": "3"
 },
