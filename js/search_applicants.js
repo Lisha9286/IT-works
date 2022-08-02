@@ -188,7 +188,6 @@ function createObject() {
         list.innerHTML = "";
         for (card of cards) {
             let expYears = +card.experience.replace(/\D/g, "");
-            console.log(expYears);
             if (document.querySelector("#zero").checked)
                 if (expYears == 0) {
                     searchResult(card);
@@ -291,8 +290,9 @@ btnReboot.addEventListener("click", () => {
     const inputs = document.querySelectorAll("input");
     inputs.forEach((item) => {
         item.checked = false;
-        item.value = "";
     });
+    document.querySelector("#inputSearchApp").value = "";
+    document.querySelector("#city").value = "";
     cards = firstCards;
     list.innerHTML = "";
     for (card of cards) {
@@ -317,4 +317,3 @@ function filtermobile() {
 document.getElementById("btnappfilter1").addEventListener("click", () => {
     filtermobile();
 });
-

@@ -286,8 +286,9 @@ btnReboot.addEventListener("click", () => {
     const inputs = document.querySelectorAll("input");
     inputs.forEach((item) => {
         item.checked = false;
-        item.value = "";
     });
+    document.querySelector("#inputSearchApp").value = "";
+    document.querySelector("#city").value = "";
     cards = firstCards;
     list.innerHTML = "";
     for (card of cards) {
