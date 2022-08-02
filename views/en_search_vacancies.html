@@ -84,8 +84,8 @@
                 <div class="navbar-create-resume">
                     <img class="nav__logo-img" src="../assets/images/logo.png" alt="logo">
                     <div class="create-resume_header-content">
-                        <h3 class="header__second pt-3">Applicants</h3>
-                        <p class="header__subtitle create-resume__subtitle">YOUR FIRST JOB IN THE IT WORLD</p>
+                        <h3 class="header__second pt-md-3 ">For Applicants</h3>
+                        <p class="header__subtitle create-resume__subtitle">YOUR FIRST JOB IN IT WORLD</p>
                     </div>
                 </div>
             </nav>
@@ -109,7 +109,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class="filter-mobile" id="btnappfilter1">Фильтр</div>
+                    <div class="filter-mobile" id="btnappfilter1">Filter</div>
                     <div class="row searching__filters searching__filters_shadow mt-1 filter-desktop">
                         <div class="filter">
                             <div class="filter-content">
@@ -156,19 +156,22 @@
                                         <input class="filter-vacancy__input-salary" type="number" placeholder="From"
                                             id="minSalary" />
                                         <input class="filter-vacancy__input-salary" type="number" placeholder="To"
-                                            id="maxSalary" />
-                                    </div>
+                                            id="maxSalary" /></div>
+                                    <div>
+                                        <input class="filter__card-input form-check-input" type="checkbox" name="salary"
+                                            id="salary" />
+                                        <label class="filter__card-label" for="salary">With salary</label></div>
                                 </div>
                                 <div class="filter__card">
                                     <div class="filter-vacancy__title">Work format</div>
                                     <div><input class="filter__card-input form-check-input format" id="distant"
-                                            value="distant" type="checkbox" />
+                                            value="distant" type="radio" name="level" />
                                         <label class="filter__card-label">Remote</label></div>
                                     <div><input class="filter__card-input form-check-input format" id="office"
-                                            value="office" type="checkbox" />
+                                            value="office" type="radio" name="level" />
                                         <label class="filter__card-label">In-office</label></div>
                                     <div><input class="filter__card-input form-check-input format" id="hybrid"
-                                            value="hybrid" type="checkbox" />
+                                            value="hybrid" type="radio" name="level" />
                                         <label class="filter__card-label">Hybrid</label></div>
                                 </div>
                                 <div class="filter-vacancy__btns">

@@ -257,6 +257,7 @@ const btnSearch = document.querySelector("#btnSearchApp");
 const inputSearchApp = document.querySelector("#inputSearchApp");
 const btnFilter = document.querySelector("#btnFilter");
 const btnReboot = document.querySelector("#btnReboot");
+const inputCity = document.querySelector("#city");
 
 inputSearchApp.onchange = () => {
     cards = firstCards;
@@ -277,6 +278,9 @@ inputSearchApp.addEventListener("keydown", (event) => {
         createObject();
     }
 });
+inputCity.addEventListener("click", () => {
+    inputCity.value = "";
+})
 
 btnReboot.addEventListener("click", () => {
     const inputs = document.querySelectorAll("input");
@@ -285,6 +289,7 @@ btnReboot.addEventListener("click", () => {
         item.value = "";
     });
     cards = firstCards;
+    list.innerHTML = "";
     for (card of cards) {
         searchResult(card);
     }
@@ -295,11 +300,11 @@ function filtermobile() {
     var text = document.querySelector(".filter-mobile");
     if (ele.style.display == "block") {
         ele.style.display = "none";
-        text.innerHTML = "Фильтр";
+        text.innerHTML = "Filter";
         document.querySelector(".searching__filters").classList.remove("shadow-on");
     } else {
         ele.style.display = "block";
-        text.innerHTML = "Скрыть фильтр";
+        text.innerHTML = "Hide filter";
         document.querySelector(".searching__filters").classList.remove("searching__filters_shadow");
         document.querySelector(".searching__filters").classList.add("shadow-on");
     }

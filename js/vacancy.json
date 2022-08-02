@@ -124,6 +124,7 @@
   "keyWords": ["developer", "PHP", "разработчик", "MySQL", "DTiQ", "Лас-Вегас", "Las Vegas"],
   "experience": "12",
   "level": "senior",
+  "currency": "$",
   "occupation": "Senior PHP/MySQL Developer",
   "jobFormat": ["Удаленный", "Офис", "Гибрид"],
   "salary": "5000",

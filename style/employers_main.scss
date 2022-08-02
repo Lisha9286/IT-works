@@ -10,9 +10,7 @@
 }
 
 p {
-    font-size: 1.5em;
     font-weight: 300;
-    line-height: 1.7em;
     color: #999;
 }
 
@@ -136,10 +134,8 @@ Navbar Style
         width: 15px;
         margin-left: 5px;
     }
-    .header__lang {
-        font-size: 14px;
-    }
     .subtitle__employer {
+        text-align: center;
         font-size: 2em;
         color:#999
     }
@@ -221,7 +217,7 @@ Navbar Style
         padding: 10px;
     }
 .subtitle__employer {
-    font-size: 1.3em !important;
+    font-size: 1.8em !important;
 }
 #content {
     padding: 5px;
@@ -254,9 +250,8 @@ Navbar Style
         padding: 5px;
     }
 .subtitle__employer {
-    font-size: 1.1em !important;
-    font-weight: 600;
-}
+    font-size: 1.3em !important;
+    }  
 #content {
     padding: 5px;
 }
@@ -271,15 +266,25 @@ Navbar Style
     justify-content: space-around;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-    height: 14em;
+    height: 10em;
+    margin-bottom: 15px;
 }
-
+.navbar-empl__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .header__second {
     font-size: 1.3em;
 }
 .nav-empl__links {
     display: flex;
     flex-direction: row;
+} 
+.navbar-create-resume {
+    display: flex;
+    flex-flow: column;
+    align-items: start;
 }
 .btn-signin__employer {
     margin-right: 0.5em;
@@ -294,7 +299,17 @@ Navbar Style
         }
     }
 }
-
+footer {
+    p {
+        font-size: 1em ;
+    }
+}
+.navbar-create-resume .create-resume__subtitle {
+    font-size: 0.9em;
+}
+.navbar-create-resume .create-resume_header-content {
+    margin-left: 1px;
+}
 }
 
 /* ---------------------------------------------------

@@ -17,7 +17,7 @@ function searchResult(element) {
         <div class="search__card-subtitle">Город</div>
         <div class="search__card-city">${element.city}</div>
         <div class="search__card-subtitle">Ожидаемая заработная плата</div>
-        <div class="search__card-salary">${element.salary} $</div>
+        <div class="search__card-salary">${element.salary} ${element.currency}</div>
     </div>
 </div>`;
 }
@@ -43,11 +43,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     for (card of cards) {
         arrCity.push(card.city);
     }
-
-    //получение массива уникальных городов соискателей
     let uniqArrCity = [...new Set(arrCity)];
-
-    //создание выпадающего списка из массива уникальных городов
     for (uniqCity of uniqArrCity) {
         document.querySelector("#cities").innerHTML += `<option>${uniqCity}</option>`;
     }
@@ -56,7 +52,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
 function createObject() {
-    //объект с параметрами из фильтра
     const filterObject = {
         city: document.querySelector("#city").value,
         experience: [],
@@ -65,8 +60,6 @@ function createObject() {
         minSalary: +document.querySelector("#minSalary").value,
         maxSalary: +document.querySelector("#maxSalary").value,
     };
-
-    // функция получения свойств-массивов объекта из фильтра
     function getFilter(filter, objectPush) {
         filter.forEach((element) => {
             if (element.checked) {
@@ -139,7 +132,22 @@ function createObject() {
     if (filterObject.level.length !== 0) {
         searchLevel();
     }
-
+    function searchSalaryFact() {
+        list.innerHTML = "";
+        for (card of cards) {
+            let salary = +card.salary.replace(/\D/g, "");
+                if (salary !== 0) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+        }
+        cards = newCards;
+        newCards = [];
+    }
+    if (document.querySelector('#salary').checked) {
+        searchSalaryFact();
+    }
+    
     function serchSalary() {
         list.innerHTML = "";
         for (card of cards) {
@@ -247,6 +255,7 @@ const btnSearch = document.querySelector("#btnSearchvacancy");
 const inputSearchvacancy = document.querySelector("#inputSearchvacancy");
 const btnFilter = document.querySelector("#btnFilter");
 const btnReboot = document.querySelector("#btnReboot");
+const inputCity = document.querySelector("#city");
 
 btnSearch.addEventListener("click", () => {
     cards = firstCards;
@@ -262,6 +271,9 @@ inputSearchvacancy.addEventListener("keydown", (event) => {
         createObject();
     }
 });
+inputCity.addEventListener("click", () => {
+    inputCity.value = "";
+})
 
 btnReboot.addEventListener("click", () => {
     const inputs = document.querySelectorAll("input");

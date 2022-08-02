@@ -11,7 +11,7 @@ function searchResult(element) {
                 <h5 class="search__card-title card-title">${element.occupation}<span class="card-title"> ${element.level}</span></h5>
                 <div class="search__card-subtitle">Опыт работы</div>
                 <div class="search__card-experience">${element.experience}</div>
-                <div class="search__card-subtitle">Ожидаемая заработная плата</div>
+                <div class="search__card-subtitle">Уровень заработной платы</div>
                 <div class="search__card-salary">${element.salary} ${element.currency}</div>
                 <div class="search__card-subtitle">${element.city}</div>
             </div>
@@ -261,6 +261,7 @@ const btnSearch = document.querySelector("#btnSearchApp");
 const inputSearchApp = document.querySelector("#inputSearchApp");
 const btnFilter = document.querySelector("#btnFilter");
 const btnReboot = document.querySelector("#btnReboot");
+const inputCity = document.querySelector("#city");
 
 inputSearchApp.onchange = () => {
     cards = firstCards;
@@ -281,6 +282,10 @@ inputSearchApp.addEventListener("keydown", (event) => {
         createObject();
     }
 });
+inputCity.addEventListener("click", () => {
+    inputCity.value = "";
+})
+
 
 btnReboot.addEventListener("click", () => {
     const inputs = document.querySelectorAll("input");
@@ -289,6 +294,7 @@ btnReboot.addEventListener("click", () => {
         item.value = "";
     });
     cards = firstCards;
+    list.innerHTML = "";
     for (card of cards) {
         searchResult(card);
     }
