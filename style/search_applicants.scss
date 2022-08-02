@@ -75,8 +75,8 @@ flex-grow: 1;
 
 .search__card-photo {
     border-radius: 100px;
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+max-height: 100px;
     object-fit: cover;
 }
 
@@ -120,5 +120,10 @@ flex-grow: 1;
 
     .filter-vacancy__throwoff{
         margin-bottom: 10px;
+    }
+}
+@media only screen and  (max-width: 595px) {
+    #content-appl {
+        padding: 5px;
     }
 }
