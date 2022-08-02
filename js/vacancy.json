@@ -6,6 +6,7 @@
   "occupation": "Junior Frontend developer",
   "jobFormat": [ "Офис", "Гибрид"],
   "salary": "500",
+  "currency": "$",
   "city": "Маунтин-Вью"
 },
 {
@@ -16,6 +17,7 @@
   "occupation": "Junior React Js Frontend developer",
   "jobFormat": ["Офис", "Гибрид"],
   "salary": "600",
+  "currency": "$",
   "city": "Дарем"
 },
 {
@@ -26,6 +28,7 @@
   "occupation": "Junior Frontend HTML/CSS Developer",
   "jobFormat": ["Офис"],
   "salary": "600",
+  "currency": "$",
   "city": "Денвер"
 },
 {
@@ -36,6 +39,7 @@
   "occupation": "Senior Wordpress Developer",
   "jobFormat": ["Удаленный", "Гибрид"],
   "salary": "3000",
+  "currency": "$",
   "city": "Колумбия"
 },
 {
@@ -46,6 +50,7 @@
   "occupation": "Senior Python Developer",
   "jobFormat": ["Удаленный", "Гибрид"],
   "salary": "2500",
+  "currency": "$",
   "city": "Денвер"
 },
 {
@@ -56,6 +61,7 @@
   "occupation": "JavaScript Developer",
   "jobFormat": ["Удаленный", "Офис", "Гибрид"],
   "salary": "1500",
+  "currency": "$",
   "city": "Нью-Йорк"
 },
 {
@@ -66,6 +72,7 @@
   "occupation": "HTML Developer ",
   "jobFormat": ["Удаленный"],
   "salary": "1600",
+  "currency": "$",
   "city": "Тампа"
 },
 {
@@ -76,6 +83,7 @@
   "occupation": "Senior React Frontend Developer",
   "jobFormat": ["Удаленный", "Офис", "Гибрид"],
   "salary": "4000",
+  "currency": "$",
   "city": "Сан-Диего"
 },
 {
@@ -86,6 +94,7 @@
   "occupation": "Senior PHP Developer",
   "jobFormat": ["Удаленный"],
   "salary": "6000",
+  "currency": "$",
   "city": "Сан-Франциско"
 },
 {
@@ -96,6 +105,7 @@
   "occupation": "Senior React Developer",
   "jobFormat": ["Удаленный", "Офис", "Гибрид"],
   "salary": "6500",
+  "currency": "$",
   "city": "Сиэтл"
 },
 {
@@ -106,6 +116,39 @@
   "occupation": "Senior Java developer",
   "jobFormat": ["Удаленный", "Офис", "Гибрид"],
   "salary": "6000",
+  "currency": "$",
+  "city": "Сан-Франциско"
+},
+{
+  "company":"KNI",
+  "keyWords": ["developer","разработчик", "программист", "Java", "Сан-Франциско", "San Francisco"],
+  "experience": "11",
+  "level": "senior",
+  "occupation": "Senior Java developer",
+  "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+  "salary": "не указан",
+  "currency": " ",
+  "city": "Сан-Франциско"
+},
+{
+  "company":"KNI",
+  "keyWords": ["developer","разработчик", "программист", "Java", "Сан-Франциско", "San Francisco"],
+  "experience": "11",
+  "level": "senior",
+  "occupation": "Senior Java developer",
+  "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+  "salary": "не указан",
+  "currency": " ",
+  "city": "Сан-Франциско"
+},{
+  "company":"KNI",
+  "keyWords": ["developer","разработчик", "программист", "Java", "Сан-Франциско", "San Francisco"],
+  "experience": "11",
+  "level": "senior",
+  "occupation": "Senior Java developer",
+  "jobFormat": ["Удаленный", "Офис", "Гибрид"],
+  "salary": "6000",
+  "currency": "$",
   "city": "Сан-Франциско"
 },
 {
@@ -113,6 +156,7 @@
   "keyWords": ["developer", "PHP", "разработчик", "MySQL", "DTiQ", "Лас-Вегас", "Las Vegas"],
   "experience": "12",
   "level": "senior",
+  "currency": "$",
   "occupation": "Senior PHP/MySQL Developer",
   "jobFormat": ["Удаленный", "Офис", "Гибрид"],
   "salary": "5000",

@@ -17,7 +17,7 @@ function searchResult(element) {
         <div class="search__card-subtitle">Город</div>
         <div class="search__card-city">${element.city}</div>
         <div class="search__card-subtitle">Ожидаемая заработная плата</div>
-        <div class="search__card-salary">${element.salary} $</div>
+        <div class="search__card-salary">${element.salary} ${element.currency}</div>
     </div>
 </div>`;
 }
@@ -137,7 +137,22 @@ function createObject() {
     if (filterObject.level.length !== 0) {
         searchLevel();
     }
-
+    function searchSalaryFact() {
+        list.innerHTML = "";
+        for (card of cards) {
+            let salary = +card.salary.replace(/\D/g, "");
+                if (salary !== 0) {
+                    searchResult(card);
+                    newCards.push(card);
+                }
+        }
+        cards = newCards;
+        newCards = [];
+    }
+    if (document.querySelector('#salary').checked) {
+        searchSalaryFact();
+    }
+    
     function serchSalary() {
         list.innerHTML = "";
         for (card of cards) {
