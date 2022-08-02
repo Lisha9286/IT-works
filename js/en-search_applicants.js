@@ -257,6 +257,7 @@ const btnSearch = document.querySelector("#btnSearchApp");
 const inputSearchApp = document.querySelector("#inputSearchApp");
 const btnFilter = document.querySelector("#btnFilter");
 const btnReboot = document.querySelector("#btnReboot");
+const inputCity = document.querySelector("#city");
 
 inputSearchApp.onchange = () => {
     cards = firstCards;
@@ -277,6 +278,9 @@ inputSearchApp.addEventListener("keydown", (event) => {
         createObject();
     }
 });
+inputCity.addEventListener("click", () => {
+    inputCity.value = "";
+})
 
 btnReboot.addEventListener("click", () => {
     const inputs = document.querySelectorAll("input");
