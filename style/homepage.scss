@@ -101,10 +101,11 @@
     text-transform: uppercase;
     font-weight: 400;
     font-size: 1.2rem;
-    width: 18em;
+    width: 23em;
     height: 6em;
     border-radius: 3px;
     margin: 10px 50px;
+    padding: 45px;
     background-color: rgb(0, 102, 255);
     color: $deep-gray;
     border: none;
@@ -113,6 +114,7 @@
 
 .homepage__button:hover{
     background-color: rgb(162, 73, 164);
+    align-self: center;
 }
 
 .btn-title {
