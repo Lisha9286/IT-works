@@ -1,14 +1,22 @@
 document.querySelector(".btn__search-appmain").addEventListener("click", () => {
-    localStorage.setItem("searchRequest", document.querySelector("#searchRequest").value);
-    document.querySelector("#searchRequest").value = "";
-    document.location.href = "./views/search_vacancies.html";
+    if (document.querySelector("#searchRequest").value == "") {
+        return;
+    } else {
+        localStorage.setItem("searchRequest", document.querySelector("#searchRequest").value);
+        document.querySelector("#searchRequest").value = "";
+        document.location.href = "./views/search_vacancies.html";
+    }
 });
 
 document.querySelector("#searchRequest").addEventListener("keyup", (event) => {
-    localStorage.setItem("searchRequest", document.querySelector("#searchRequest").value);
     if (event.key == "Enter") {
-        document.querySelector("#searchRequest").value = "";
-        document.location.href = "./views/search_vacancies.html";
+        if (document.querySelector("#searchRequest").value == "") {
+            return;
+        } else {
+            localStorage.setItem("searchRequest", document.querySelector("#searchRequest").value);
+            document.querySelector("#searchRequest").value = "";
+            document.location.href = "./views/search_vacancies.html";
+        }
     }
 });
 
