@@ -78,8 +78,6 @@ function createObject() {
     getFilter(jobFormat, filterObject.jobFormat);
     getFilter(experience, filterObject.experience);
 
-    console.log(filterObject);
-
     function searchApp() {
         list.innerHTML = "";
         const searchText = document.querySelector("#inputSearchApp").value;
@@ -139,15 +137,15 @@ function createObject() {
         list.innerHTML = "";
         for (card of cards) {
             let salary = +card.salary.replace(/\D/g, "");
-                if (salary !== 0) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
+            if (salary !== 0) {
+                searchResult(card);
+                newCards.push(card);
+            }
         }
         cards = newCards;
         newCards = [];
     }
-    if (document.querySelector('#salary').checked) {
+    if (document.querySelector("#salary").checked) {
         searchSalaryFact();
     }
 
@@ -280,7 +278,7 @@ inputSearchApp.addEventListener("keydown", (event) => {
 });
 inputCity.addEventListener("click", () => {
     inputCity.value = "";
-})
+});
 
 btnReboot.addEventListener("click", () => {
     const inputs = document.querySelectorAll("input");

@@ -49,8 +49,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 });
 
-
-
 function createObject() {
     const filterObject = {
         city: document.querySelector("#city").value,
@@ -75,8 +73,6 @@ function createObject() {
     getFilter(level, filterObject.level);
     getFilter(jobFormat, filterObject.jobFormat);
     getFilter(experience, filterObject.experience);
-
-    console.log(filterObject);
 
     function searchApp() {
         list.innerHTML = "";
@@ -136,18 +132,18 @@ function createObject() {
         list.innerHTML = "";
         for (card of cards) {
             let salary = +card.salary.replace(/\D/g, "");
-                if (salary !== 0) {
-                    searchResult(card);
-                    newCards.push(card);
-                }
+            if (salary !== 0) {
+                searchResult(card);
+                newCards.push(card);
+            }
         }
         cards = newCards;
         newCards = [];
     }
-    if (document.querySelector('#salary').checked) {
+    if (document.querySelector("#salary").checked) {
         searchSalaryFact();
     }
-    
+
     function serchSalary() {
         list.innerHTML = "";
         for (card of cards) {
@@ -182,7 +178,6 @@ function createObject() {
         list.innerHTML = "";
         for (card of cards) {
             let expYears = +card.experience.replace(/\D/g, "");
-            console.log(expYears);
             if (document.querySelector("#zero").checked)
                 if (expYears == 0) {
                     searchResult(card);
@@ -273,14 +268,20 @@ inputSearchvacancy.addEventListener("keydown", (event) => {
 });
 inputCity.addEventListener("click", () => {
     inputCity.value = "";
-})
+});
 
 btnReboot.addEventListener("click", () => {
     const inputs = document.querySelectorAll("input");
     inputs.forEach((item) => {
         item.checked = false;
-        item.value = "";
     });
+    document.querySelector("#inputSearchvacancy").value = "";
+    document.querySelector("#city").value = "";
+    cards = firstCards;
+    list.innerHTML = "";
+    for (card of cards) {
+        searchResult(card);
+    }
 });
 
 function filtermobile() {
@@ -300,5 +301,3 @@ function filtermobile() {
 document.getElementById("btnappfilter1").addEventListener("click", () => {
     filtermobile();
 });
-
-

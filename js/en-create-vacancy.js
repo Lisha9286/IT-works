@@ -107,10 +107,8 @@ function sendPost(vacancy) {
 }
 
 // Mobile
-
 function myFunction(screen) {
     if (screen.matches) {
-        // If media query matches
         document.querySelector(".salary").innerHTML = `
         <input type="number" class="form-control mb-3" name="from" placeholder="От:" id="minSalary">
         <div class="error-message"></div>
@@ -124,5 +122,5 @@ function myFunction(screen) {
 }
 
 let screen = window.matchMedia("(max-width: 595px)");
-myFunction(screen); // Call listener function at run time
-screen.addEventListener("DOMContentLoaded", myFunction); // Attach listener function on state changes
+myFunction(screen);
+screen.addEventListener("DOMContentLoaded", myFunction);
