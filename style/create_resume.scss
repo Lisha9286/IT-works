@@ -8,8 +8,11 @@
 
 .navbar-create-resume{
     display: flex;
+    width: 100%;
+    
 
     .create-resume_header-content{
+        flex-grow: 1;
         margin-left: 15px;
     }
 
