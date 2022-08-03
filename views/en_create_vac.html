@@ -29,15 +29,15 @@
                                 Applicants search</span></a>
                     </li>
                     <li>
-                        <a href="./news.html"><i class="bi bi-newspaper pe-2"></i><span
+                        <a href="./en-news.html"><i class="bi bi-newspaper pe-2"></i><span
                                 class="sidebar-empl__item">Blog</span></a>
                     </li>
                     <li>
-                        <a href="./about.html"><i class="bi bi-person pe-2"></i> <span class="sidebar-empl__item">
+                        <a href="./en-about.html"><i class="bi bi-person pe-2"></i> <span class="sidebar-empl__item">
                                 About us</span></a>
                     </li>
                     <li>
-                        <a href="contacts.html"><i class="bi bi-envelope pe-2"></i> <span
+                        <a href="./en-contacts.html"><i class="bi bi-envelope pe-2"></i> <span
                                 class="sidebar-empl__item">Contacts</span>
                         </a>
                     </li>
@@ -64,11 +64,13 @@
             <!-- Create vacancy form-->
             <div class="create-vacancy form-group bg-white rounded col-md-7 m-auto shadow p-3 mb-5 bg-white">
                 <form class="new-vacancy-form create-vacancy__name p-2 rounded bg" novalidate>
-                    <div class="row mb-3">
+                    <fieldset class="create-vacancy__income p-2 rounded bg mt-1">
                         <legend class="text-center fw-bold">Job title</legend>
-                        <input type="text" class="form-control" name="vacancy" placeholder="Job title" id="title">
-                        <div class="error-message"></div>
-                    </div>
+                        <div class="row mb-3">
+                            <input type="text" class="form-control" name="vacancy" placeholder="Job title" id="title">
+                            <div class="error-message"></div>
+                        </div>
+                    </fieldset>
                     <fieldset class="create-vacancy__income p-2 rounded bg mt-1">
                         <legend class="text-center fw-bold">Salary rate</legend>
                         <div class="row mb-3 salary">
