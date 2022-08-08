@@ -99,18 +99,7 @@
     "yaml": "^1.10.2"
   },
   "scripts": {
-    "watch": "parcel index.html --open --port 3000",
-    "watch2": "parcel pages/registration_applicants/ru/index.html --open --port 1234",
-    "watch3": "parcel pages/registration_employers/ru/index.html --open --port 1235",
-    "watch4": "parcel pages/search_applicants_page/ru/index.html --open --port 1236",
-    "watch5": "parcel employers_main.html --open --port 3004",
-    "watch6": "parcel pages/create-resume_page/ru/index.html --open --port 3005",
-    "watch7": "parcel pages/vacancy_search_page/ru/index.html --open --port 1237",
-    "watch8": "parcel applicants_main.html --open --port 3009",
-    "watch9": "parcel pages/create-vacancy_page/ru/index.html --open --port 3007",
-    "watch10": "parcel pages/search_applicants_page/en/index.html --open --port 1238",
-    "watch11": "parcel pages/employers_main_page/en/index.html --open --port 1239",
-    "watch12": "parcel pages/applicants_main_page/en/index.html --open --port 1240"
+    "watch": "parcel index.html --open --port 3000"
   },
   "repository": {
     "type": "git",
