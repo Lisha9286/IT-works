@@ -6,11 +6,11 @@
 # Getting started
 - Clone the repository
 ```
-git clone [gitHub project url](https://github.com/nas-tay/WorkIT-project.git) <WorkIT-project>
+git clone  <git lab template url> <project_name>
 ```
 - Install dependencies
 ```
-cd WorkIT-project
+cd <project_name>
 npm install
 ```
 - Build and run the project
